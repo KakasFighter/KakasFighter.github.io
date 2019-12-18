@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Administrator</LastAuthor>
+  <Created>2011-03-23T06:48:49Z</Created>
+  <LastSaved>2017-05-07T07:10:02Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <KSOProductBuildVer dt:dt="string">2052-11.1.0.7849</KSOProductBuildVer>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <SupBook>
+   <Path>D:\ZVZ\脚本\卡牌生物和效果.xlsb</Path>
+   <SheetName>Define</SheetName>
+  </SupBook>
+  <WindowHeight>8940</WindowHeight>
+  <WindowWidth>14715</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <Calculation>ManualCalculation</Calculation>
+  <DoNotCalculateBeforeSave/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+  <Uncalced/>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s66">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Interior/>
+  </Style>
+  <Style ss:ID="s68">
+   <Interior ss:Color="#D9D9D9" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s69">
+   <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s70">
+   <Alignment ss:Vertical="Center"/>
+  </Style>
+  <Style ss:ID="s72">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="MoveSpeed"
+   ss:RefersTo="='D:\ZVZ\脚本\[卡牌生物和效果.xlsb]Define'!R2C25:R7C25"/>
+  <NamedRange ss:Name="MoveType"
+   ss:RefersTo="='D:\ZVZ\脚本\[卡牌生物和效果.xlsb]Define'!R2C24:R10C24"/>
+  <NamedRange ss:Name="Quality"
+   ss:RefersTo="='D:\ZVZ\脚本\[卡牌生物和效果.xlsb]Define'!R2C10:R8C15"/>
+  <NamedRange ss:Name="Quality1"
+   ss:RefersTo="='D:\ZVZ\脚本\[卡牌生物和效果.xlsb]Define'!R2C12:R8C15"/>
+ </Names>
+ <Worksheet ss:Name="monster">
+  <Table ss:ExpandedColumnCount="21" ss:ExpandedRowCount="6750" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="13.5">
+   <Column ss:AutoFitWidth="0" ss:Width="175.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="78.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="118.5"/>
+   <Column ss:Index="7" ss:AutoFitWidth="0" ss:Width="97.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="114"/>
+   <Column ss:AutoFitWidth="0" ss:Width="81.75" ss:Span="5"/>
+   <Column ss:Index="15" ss:AutoFitWidth="0" ss:Width="93.75"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Name</Data></Cell>
+    <Cell><Data ss:Type="String">ID</Data></Cell>
+    <Cell><Data ss:Type="String">animateitem</Data></Cell>
+    <Cell><Data ss:Type="String">Type</Data></Cell>
+    <Cell><Data ss:Type="String">Phyle</Data></Cell>
+    <Cell><Data ss:Type="String">HP</Data></Cell>
+    <Cell><Data ss:Type="String">Attack</Data></Cell>
+    <Cell><Data ss:Type="String">AIType</Data></Cell>
+    <Cell><Data ss:Type="String">AttackType</Data></Cell>
+    <Cell><Data ss:Type="String">ability1</Data></Cell>
+    <Cell><Data ss:Type="String">ability2</Data></Cell>
+    <Cell><Data ss:Type="String">ability3</Data></Cell>
+    <Cell><Data ss:Type="String">ability4</Data></Cell>
+    <Cell><Data ss:Type="String">ability5</Data></Cell>
+    <Cell><Data ss:Type="String">normalSkillID</Data></Cell>
+    <Cell><Data ss:Type="String">Unique</Data></Cell>
+    <Cell><Data ss:Type="String">Speed</Data></Cell>
+    <Cell><Data ss:Type="String">Aura</Data></Cell>
+    <Cell><Data ss:Type="String">MoveStyle</Data></Cell>
+    <Cell><Data ss:Type="String">IsTask</Data></Cell>
+    <Cell><Data ss:Type="String">Phyle</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="40.5">
+    <Cell><Data ss:Type="String">名稱</Data></Cell>
+    <Cell><Data ss:Type="String">編號</Data></Cell>
+    <Cell><Data ss:Type="String">動畫(Item.xml中節點名)</Data></Cell>
+    <Cell><Data ss:Type="String">類型(0未知1生物2牆)</Data></Cell>
+    <Cell><Data ss:Type="String">種族(0未知1人類2亡靈3野獸4地精5巨魔6精靈7獸人8異界9龍10天使11惡魔)</Data></Cell>
+    <Cell><Data ss:Type="String">生命值</Data></Cell>
+    <Cell><Data ss:Type="String">傷害</Data></Cell>
+    <Cell><Data ss:Type="String">AI類型(主動0/被動1/背刺2/狙擊3)</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">近戰0/遠程1/火2/冰3/電4/神聖5/暗影6</Data></Cell>
+    <Cell><Data ss:Type="String">特技1</Data></Cell>
+    <Cell><Data ss:Type="String">特技2</Data></Cell>
+    <Cell><Data ss:Type="String">特技3</Data></Cell>
+    <Cell><Data ss:Type="String">特技4</Data></Cell>
+    <Cell><Data ss:Type="String">特技5</Data></Cell>
+    <Cell><Data ss:Type="String">普通攻擊ID</Data></Cell>
+    <Cell><Data ss:Type="String">是否唯一</Data></Cell>
+    <Cell><Data ss:Type="String">移動速度</Data></Cell>
+    <Cell><Data ss:Type="String">光環</Data></Cell>
+    <Cell><Data ss:Type="String">移動方式</Data></Cell>
+    <Cell><Data ss:Type="String">是否是任務怪</Data></Cell>
+    <Cell><Data ss:Type="String">種族(0未知1人類2亡靈3野獸4地精5巨魔6精靈7獸人8異界9龍10天使11惡魔100戰士101遊俠102法師103牧師)</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s69">
+    <Cell><Data ss:Type="String">魔法老师娜玖</Data></Cell>
+    <Cell><Data ss:Type="Number">45306</Data></Cell>
+    <Cell><Data ss:Type="String">JP_MagicalAcademy_Teacher</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">217</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">6301</Data></Cell>
+    <Cell><Data ss:Type="Number">7108</Data></Cell>
+    <Cell><Data ss:Type="Number">230</Data></Cell>
+    <Cell><Data ss:Type="Number">149</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">doubujiaguanghuan</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">琳恩</Data></Cell>
+    <Cell><Data ss:Type="Number">10738</Data></Cell>
+    <Cell><Data ss:Type="String">JP_Indoor_shoes</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">184</Data></Cell>
+    <Cell><Data ss:Type="Number">12805</Data></Cell>
+    <Cell><Data ss:Type="Number">2446</Data></Cell>
+    <Cell><Data ss:Type="Number">3202</Data></Cell>
+    <Cell><Data ss:Type="Number">299</Data></Cell>
+    <Cell><Data ss:Type="Number">142</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">doubujiaguanghuan</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">阿蘇山奶牛</Data></Cell>
+    <Cell><Data ss:Type="Number">36565</Data></Cell>
+    <Cell><Data ss:Type="String">cow</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">679</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">47</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">12404</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">4802</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">doubujiaguanghuan</Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s67">
+    <Cell><Data ss:Type="String">艾草公主</Data></Cell>
+    <Cell><Data ss:Type="Number">45298</Data></Cell>
+    <Cell><Data ss:Type="String">ailisi</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">17833</Data></Cell>
+    <Cell><Data ss:Type="Number">3203</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">7013</Data></Cell>
+    <Cell><Data ss:Type="Number">7013</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">doubujiaguanghuan</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">愛戀之歌沙妮</Data></Cell>
+    <Cell><Data ss:Type="Number">10496</Data></Cell>
+    <Cell><Data ss:Type="String">qingrenjieluoli</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">2912</Data></Cell>
+    <Cell><Data ss:Type="Number">13406</Data></Cell>
+    <Cell><Data ss:Type="Number">15710</Data></Cell>
+    <Cell><Data ss:Type="Number">140</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">doubujiaguanghuan</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s69">
+    <Cell><Data ss:Type="String">古堡依琳</Data></Cell>
+    <Cell><Data ss:Type="Number">45311</Data></Cell>
+    <Cell><Data ss:Type="String">JP_MagicalAcademy_scholarship</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">59</Data></Cell>
+    <Cell><Data ss:Type="Number">1527</Data></Cell>
+    <Cell><Data ss:Type="Number">14173</Data></Cell>
+    <Cell><Data ss:Type="Number">10216</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">108</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">doubujiaguanghuan</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s67">
+    <Cell><Data ss:Type="String">獸人公主</Data></Cell>
+    <Cell><Data ss:Type="Number">45276</Data></Cell>
+    <Cell><Data ss:Type="String">JP_Beastmans_Princess</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">5101</Data></Cell>
+    <Cell><Data ss:Type="Number">441</Data></Cell>
+    <Cell><Data ss:Type="Number">355</Data></Cell>
+    <Cell><Data ss:Type="Number">230</Data></Cell>
+    <Cell><Data ss:Type="Number">408</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">doubujiaguanghuan</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">月夕女神顧菟</Data></Cell>
+    <Cell><Data ss:Type="Number">24060</Data></Cell>
+    <Cell><Data ss:Type="String">LaviniaEX</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">1519</Data></Cell>
+    <Cell><Data ss:Type="Number">916</Data></Cell>
+    <Cell><Data ss:Type="Number">13706</Data></Cell>
+    <Cell><Data ss:Type="Number">399</Data></Cell>
+    <Cell><Data ss:Type="Number">3609</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">doubujiaguanghuan</Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">銀龍公主昂熱</Data></Cell>
+    <Cell><Data ss:Type="Number">36162</Data></Cell>
+    <Cell><Data ss:Type="String">JP_Dragon_Angers</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">11501</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">14504</Data></Cell>
+    <Cell><Data ss:Type="Number">5094</Data></Cell>
+    <Cell><Data ss:Type="Number">8654</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">doubujiaguanghuan</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">昂熱（真龍）</Data></Cell>
+    <Cell><Data ss:Type="Number">36168</Data></Cell>
+    <Cell><Data ss:Type="String">hero_binglong_jh</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1507</Data></Cell>
+    <Cell><Data ss:Type="Number">5101</Data></Cell>
+    <Cell><Data ss:Type="Number">7028</Data></Cell>
+    <Cell><Data ss:Type="Number">7028</Data></Cell>
+    <Cell><Data ss:Type="Number">17701</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">doubujiaguanghuan</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">聖誕雪天使安琪兒</Data></Cell>
+    <Cell><Data ss:Type="Number">24063</Data></Cell>
+    <Cell><Data ss:Type="String">shengdan2015</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">1519</Data></Cell>
+    <Cell><Data ss:Type="Number">1537</Data></Cell>
+    <Cell><Data ss:Type="Number">6701</Data></Cell>
+    <Cell><Data ss:Type="Number">2004</Data></Cell>
+    <Cell><Data ss:Type="Number">15311</Data></Cell>
+    <Cell><Data ss:Type="Number">33</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">xuehuaguanghuan</Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">暴食</Data></Cell>
+    <Cell><Data ss:Type="Number">24055</Data></Cell>
+    <Cell><Data ss:Type="String">7Series_Gluttony</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">619</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">285</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">286</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">6702</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="Number">319</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">doubujiaguanghuan</Data></Cell>
+    <Cell ss:Index="21"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <FreezePanes/>
+   <FrozenNoSplit/>
+   <SplitHorizontal>2</SplitHorizontal>
+   <TopRowBottomPane>3297</TopRowBottomPane>
+   <SplitVertical>2</SplitVertical>
+   <LeftColumnRightPane>5</LeftColumnRightPane>
+   <ActivePane>0</ActivePane>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+    </Pane>
+    <Pane>
+     <Number>1</Number>
+     <ActiveCol>2</ActiveCol>
+    </Pane>
+    <Pane>
+     <Number>2</Number>
+     <ActiveRow>3172</ActiveRow>
+    </Pane>
+    <Pane>
+     <Number>0</Number>
+     <ActiveRow>3314</ActiveRow>
+     <ActiveCol>10</ActiveCol>
+     <RangeSelection>R3315C11:R3320C11</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

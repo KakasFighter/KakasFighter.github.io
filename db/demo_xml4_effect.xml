@@ -1,0 +1,750 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Administrator</LastAuthor>
+  <Created>2006-09-16T00:00:00Z</Created>
+  <LastSaved>2017-05-23T01:45:59Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <KSOProductBuildVer dt:dt="string">2052-11.1.0.7849</KSOProductBuildVer>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11040</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <Calculation>ManualCalculation</Calculation>
+  <DoNotCalculateBeforeSave/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+  <Uncalced/>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62" ss:Name="常规 2">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s63" ss:Name="常规 2 4">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s64" ss:Name="常规 5">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s66" ss:Parent="s64">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s67">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s69" ss:Parent="s64">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s71" ss:Parent="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s73" ss:Parent="s62">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s74" ss:Parent="s64">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s76" ss:Parent="s64">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#FF0000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s77">
+   <Alignment ss:Vertical="Center"/>
+  </Style>
+  <Style ss:ID="s78">
+   <Interior ss:Color="#BDD7EE" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s79">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s80">
+   <Interior/>
+  </Style>
+  <Style ss:ID="s81">
+   <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s82">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s83">
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s84">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="微软雅黑" x:CharSet="134" x:Family="Swiss" ss:Color="#000000"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="effect">
+  <Table ss:ExpandedColumnCount="21" ss:ExpandedRowCount="7775" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="13.5">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="179.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="93" ss:Span="1"/>
+   <Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="314.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="69.75"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">TypeID</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">TypeDes</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">EffectID</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Name</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">EffectDes</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">param1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">param2</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">param3</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">param4</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">param5</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">param6</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">param7</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">param8</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">sourceview</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">destview</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">類型ID</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">類型描述</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">效果ID</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">名字</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">效果描述</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">各個類型ID對應不同的參數要求</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell><Data ss:Type="Number">217</Data></Cell>
+    <Cell><Data ss:Type="String">碎銀風暴</Data></Cell>
+    <Cell><Data ss:Type="String">攻擊所有敵方士兵和英雄，造成的傷害無法被減免，令受傷士兵後退2格。</Data></Cell>
+    <Cell><Data ss:Type="Number">1022</Data></Cell>
+    <Cell><Data ss:Type="Number">5101</Data></Cell>
+    <Cell><Data ss:Type="Number">1507</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">63</Data></Cell>
+    <Cell><Data ss:Type="String">免疫狀態</Data></Cell>
+    <Cell><Data ss:Type="Number">6301</Data></Cell>
+    <Cell><Data ss:Type="String">無瑕屏障</Data></Cell>
+    <Cell><Data ss:Type="String">不受狀態效果的影響。</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+   </Row>
+   <Row ss:Height="16.5" ss:StyleID="s84">
+    <Cell><Data ss:Type="Number">71</Data></Cell>
+    <Cell><Data ss:Type="String">目标准备值伤害倍数</Data></Cell>
+    <Cell><Data ss:Type="Number">7108</Data></Cell>
+    <Cell><Data ss:Type="String">始末魔法·改</Data></Cell>
+    <Cell><Data ss:Type="String">对准备值小于或等于4的士兵造成的伤害×20。</Data></Cell>
+    <Cell><Data ss:Type="Number">-4</Data><Comment ss:Author="作者"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Size="9"
+         html:Color="#000000">作者:</Font></B><Font html:Size="9" html:Color="#000000">&#10;准备值 正数（准备值大于等于） 负数（小于等于）</Font></ss:Data></Comment></Cell>
+    <Cell><Data ss:Type="Number">20</Data><Comment ss:Author="作者"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Size="9"
+         html:Color="#000000">作者:</Font></B><Font html:Size="9" html:Color="#000000">&#10;增加倍数 0代表直接杀死</Font></ss:Data></Comment></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell><Data ss:Type="Number">230</Data></Cell>
+    <Cell><Data ss:Type="String">導電</Data></Cell>
+    <Cell><Data ss:Type="String">敵方所有士兵移動-1，友方所有其他士兵移動+1。</Data></Cell>
+    <Cell><Data ss:Type="Number">573</Data></Cell>
+    <Cell><Data ss:Type="Number">574</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s78">
+    <Cell><Data ss:Type="Number">300</Data></Cell>
+    <Cell><Data ss:Type="String">自己士兵數量到某值，自身準備值減Y</Data></Cell>
+    <Cell><Data ss:Type="Number">30003</Data></Cell>
+    <Cell><Data ss:Type="String">遅刻</Data></Cell>
+    <Cell><Data ss:Type="String">準備欄能力。召喚者的在場士兵數量大於或等於1時，每回合開始額外-4準備值。</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell><Data ss:Type="Number">184</Data></Cell>
+    <Cell><Data ss:Type="String">暗影波</Data></Cell>
+    <Cell><Data ss:Type="String">射程+2。令受傷士兵被詛咒，攻擊時對其自己造成與其攻擊力等值的傷害，持續1回合。</Data></Cell>
+    <Cell><Data ss:Type="Number">1011</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">128</Data></Cell>
+    <Cell><Data ss:Type="String">抽牌失敗</Data></Cell>
+    <Cell><Data ss:Type="Number">12805</Data></Cell>
+    <Cell><Data ss:Type="String">骯髒的污垢</Data></Cell>
+    <Cell><Data ss:Type="String">敵方英雄每次從牌庫抽取1張卡牌置於自己的準備欄，都有100%概率失敗。</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:Index="14"><Data ss:Type="String">mabiduyao</Data></Cell>
+    <Cell><Data ss:Type="String">mabiduyao_behit</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+    <Cell><Data ss:Type="String">每回合受傷害效果</Data></Cell>
+    <Cell><Data ss:Type="Number">2446</Data></Cell>
+    <Cell><Data ss:Type="String">使役代價5</Data></Cell>
+    <Cell><Data ss:Type="String">召喚者每回合受到5點火焰傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Index="14"><Data ss:Type="String">ranshao</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">32</Data></Cell>
+    <Cell><Data ss:Type="String">不滅</Data></Cell>
+    <Cell><Data ss:Type="Number">3202</Data></Cell>
+    <Cell><Data ss:Type="String">涅盤</Data></Cell>
+    <Cell><Data ss:Type="String">死亡後有100%機率在原地復活，僅能復活一次。</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Index="14"><Data ss:Type="String">shouhutianshi_status</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell><Data ss:Type="Number">299</Data></Cell>
+    <Cell><Data ss:Type="String">魔力抑制2</Data></Cell>
+    <Cell><Data ss:Type="String">召喚者使用技能時，召喚者準備欄中準備值最高的1張卡牌準備值+2。</Data></Cell>
+    <Cell><Data ss:Type="Number">10405</Data></Cell>
+    <Cell ss:Index="14"><Data ss:Type="String">shunshizhen</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">39</Data></Cell>
+    <Cell><Data ss:Type="String">光環效果</Data></Cell>
+    <Cell><Data ss:Type="Number">679</Data></Cell>
+    <Cell><Data ss:Type="String">治癒的面孔</Data></Cell>
+    <Cell><Data ss:Type="String">周圍一格內所有敵方士兵獲得能力：失憶，失去所有能力。</Data></Cell>
+    <Cell><Data ss:Type="Number">151</Data></Cell>
+    <Cell><Data ss:Type="Number">33</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">47</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">仗勢</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">在場的敵方士兵數量小於或等於己方時，攻擊力+3。</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">13303</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">13304</Data></Cell>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">124</Data></Cell>
+    <Cell><Data ss:Type="String">聖療遺言</Data></Cell>
+    <Cell><Data ss:Type="Number">12404</Data></Cell>
+    <Cell><Data ss:Type="String">聖療遺言4</Data></Cell>
+    <Cell><Data ss:Type="String">死亡時，為召喚者恢復4點生命。</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">48</Data></Cell>
+    <Cell><Data ss:Type="String">反彈</Data></Cell>
+    <Cell><Data ss:Type="Number">4802</Data></Cell>
+    <Cell><Data ss:Type="String">石刺2</Data></Cell>
+    <Cell><Data ss:Type="String">每次受到近戰傷害時，對攻擊者造成2點物理傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">178</Data></Cell>
+    <Cell><Data ss:Type="String">士兵進場時添加 【status】</Data></Cell>
+    <Cell><Data ss:Type="Number">17833</Data></Cell>
+    <Cell><Data ss:Type="String">寶劍2</Data></Cell>
+    <Cell><Data ss:Type="String">進場時，獲得能力：庇護祝福，反射所有傷害，持續2回合。</Data></Cell>
+    <Cell><Data ss:Type="Number">233</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">32</Data></Cell>
+    <Cell><Data ss:Type="String">不滅</Data></Cell>
+    <Cell><Data ss:Type="Number">3203</Data></Cell>
+    <Cell><Data ss:Type="String">倖存</Data></Cell>
+    <Cell><Data ss:Type="String">死亡後有50%機率在原地復活，僅能復活一次。</Data></Cell>
+    <Cell><Data ss:Type="Number">50</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Index="14"><Data ss:Type="String">shouhutianshi_status</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">70</Data></Cell>
+    <Cell><Data ss:Type="String">隨機傷害效果</Data></Cell>
+    <Cell><Data ss:Type="Number">7013</Data></Cell>
+    <Cell><Data ss:Type="String">落雷5</Data></Cell>
+    <Cell><Data ss:Type="String">每回合對隨機1名敵方士兵或英雄造5點閃電傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">29</Data></Cell>
+    <Cell><Data ss:Type="String">被傷害添加狀態</Data></Cell>
+    <Cell><Data ss:Type="Number">2912</Data></Cell>
+    <Cell><Data ss:Type="String">反彈·迷惑</Data></Cell>
+    <Cell><Data ss:Type="String">受到傷害時，33%概率使攻擊者被魅惑，持續2回合</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="Number">26</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">33</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">134</Data></Cell>
+    <Cell><Data ss:Type="String">強襲</Data></Cell>
+    <Cell><Data ss:Type="Number">13406</Data></Cell>
+    <Cell><Data ss:Type="String">高歌1</Data></Cell>
+    <Cell><Data ss:Type="String">對敵方士兵造成傷害時，50%概率對其召喚者造成等量的傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">50</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">157</Data></Cell>
+    <Cell><Data ss:Type="String">殺手</Data></Cell>
+    <Cell><Data ss:Type="Number">15710</Data></Cell>
+    <Cell><Data ss:Type="String">告白4</Data></Cell>
+    <Cell><Data ss:Type="String">對召喚者造成傷害時額外造成4點閃電傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">59</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">閃電爆裂</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">射程+3。攻擊目標及目標周圍十字格內的所有敵方士兵和英雄，有25%概率令受傷士兵無法行動，持續1回合。</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="Number">1012</Data></Cell>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1527</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">反彈3</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">受到近戰傷害時，對攻擊者造成3點無法被減免的傷害。</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">4803</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">5101</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">fantan_status</Data></Cell>
+    <Cell ss:StyleID="s67"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s81">
+    <Cell><Data ss:Type="Number">141</Data></Cell>
+    <Cell><Data ss:Type="String">狀態陷阱</Data></Cell>
+    <Cell><Data ss:Type="Number">14173</Data></Cell>
+    <Cell><Data ss:Type="String">降維</Data></Cell>
+    <Cell><Data ss:Type="String">令敵方召喚者召喚進場的士兵品質下降1個等級。</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">397</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">102</Data></Cell>
+    <Cell><Data ss:Type="String">種族英雄</Data></Cell>
+    <Cell><Data ss:Type="Number">10216</Data></Cell>
+    <Cell><Data ss:Type="String">起死回生1</Data></Cell>
+    <Cell><Data ss:Type="String">場內每存在1個友方士兵，攻擊力+1。生命+3。</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">51</Data></Cell>
+    <Cell><Data ss:Type="String">破甲</Data></Cell>
+    <Cell><Data ss:Type="Number">5101</Data></Cell>
+    <Cell><Data ss:Type="String">破甲</Data></Cell>
+    <Cell><Data ss:Type="String">造成的傷害無法被減免。</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">pojia_status</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="16.5" ss:StyleID="s81">
+    <Cell ss:StyleID="s82"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="Number">441</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">赤瞳</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">對準備值小於或等於4的士兵：造成傷害時，將其立即殺死。受到法術傷害時，反射傷害。</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="Number">7106</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="Number">4701</Data></Cell>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+    <Cell ss:StyleID="s82"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell><Data ss:Type="Number">355</Data></Cell>
+    <Cell><Data ss:Type="String">斬心劍3</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">每回合對1名敵方英雄造成1點物理傷害。對英雄造成傷害時，令其牌庫中的2張卡牌進入墓地。</Data></Cell>
+    <Cell><Data ss:Type="Number">4312</Data></Cell>
+    <Cell><Data ss:Type="Number">12611</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s79"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="Number">408</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">高速移動</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">移動力+99,攻擊完畢後，向身後移動。</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="Number">3801</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="Number">999</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="Number">4601</Data></Cell>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1519</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">聖光</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">射程+2，傷害無法被減免，消滅的士兵無法啟動能力重生、還魂或骷髏。</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">1011</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">移動格數</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">916</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">短裙</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">移動力-1。</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">137</Data></Cell>
+    <Cell><Data ss:Type="String">超度</Data></Cell>
+    <Cell><Data ss:Type="Number">13706</Data></Cell>
+    <Cell><Data ss:Type="String">回歸3</Data></Cell>
+    <Cell><Data ss:Type="String">每回合將3張士兵卡牌從召喚者的墓地置於召喚者的牌庫頂。</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s79"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="Number">399</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">月夕賜福5</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">友方召喚進場士兵攻擊力+5，生命+5。敵方召喚進場士兵攻擊力-5，生命-5。</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="Number">14156</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="Number">14157</Data></Cell>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+    <Cell ss:StyleID="s79"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">36</Data></Cell>
+    <Cell><Data ss:Type="String">加速</Data></Cell>
+    <Cell><Data ss:Type="Number">3609</Data></Cell>
+    <Cell><Data ss:Type="String">加速3</Data></Cell>
+    <Cell><Data ss:Type="String">每回合使召喚者準備欄中準備值最高的1張卡牌準備值-3。</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:Index="14"><Data ss:Type="String">shunshizhen</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">115</Data></Cell>
+    <Cell><Data ss:Type="String">按傷害類型強化傷害</Data></Cell>
+    <Cell><Data ss:Type="Number">11501</Data></Cell>
+    <Cell><Data ss:Type="String">近戰能量</Data></Cell>
+    <Cell><Data ss:Type="String">友方所有其他士兵造成的近戰傷害×2。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">145</Data></Cell>
+    <Cell><Data ss:Type="String">獨行</Data></Cell>
+    <Cell><Data ss:Type="Number">14504</Data></Cell>
+    <Cell><Data ss:Type="String">孤獨</Data></Cell>
+    <Cell><Data ss:Type="String">己方場上沒有其他士兵時，無法行動。</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">2801</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">50</Data></Cell>
+    <Cell><Data ss:Type="String">限制回合數的組合效果</Data></Cell>
+    <Cell><Data ss:Type="Number">5094</Data></Cell>
+    <Cell><Data ss:Type="String">真最強劍士召喚</Data></Cell>
+    <Cell><Data ss:Type="String">進場後第一回合在周圍一格隨機召喚1只逆天品質的的冥王、劍聖艾拉EX、神龍澤諾比婭或普通品質的地精流氓。</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">11727</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">85</Data></Cell>
+    <Cell><Data ss:Type="String">骷髏</Data></Cell>
+    <Cell><Data ss:Type="Number">8654</Data></Cell>
+    <Cell><Data ss:Type="String">化身真龍2</Data></Cell>
+    <Cell><Data ss:Type="String">死亡時，轉化為昂熱（真龍）（8/1/11冷風/破甲/活下去吧/活下去吧/逆襲）。</Data></Cell>
+    <Cell><Data ss:Type="Number">36168</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1507</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">冷風</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">射程+2。令受傷士兵後退2格。</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">1011</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">3701</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">70</Data></Cell>
+    <Cell><Data ss:Type="String">隨機傷害效果</Data></Cell>
+    <Cell><Data ss:Type="Number">7028</Data></Cell>
+    <Cell><Data ss:Type="String">活下去吧</Data></Cell>
+    <Cell><Data ss:Type="String">每回合對隨機1名敵方士兵或英雄造成15點物理傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">ranshao</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">177</Data></Cell>
+    <Cell><Data ss:Type="String">死亡時，殺死隨機1名敵方士兵。</Data></Cell>
+    <Cell><Data ss:Type="Number">17701</Data></Cell>
+    <Cell><Data ss:Type="String">逆襲</Data></Cell>
+    <Cell><Data ss:Type="String">死亡時，殺死隨機1名敵方士兵。</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell ss:StyleID="s71"><Data ss:Type="Number">1537</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">信仰3</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">造成治療時，攻擊力+3，生命+3。</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">6903</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">6803</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">67</Data></Cell>
+    <Cell><Data ss:Type="String">隱匿</Data></Cell>
+    <Cell><Data ss:Type="Number">6701</Data></Cell>
+    <Cell><Data ss:Type="String">隱匿</Data></Cell>
+    <Cell><Data ss:Type="String">不能被單體技能指定。</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell><Data ss:Type="String">每回合醫療所有友方士兵</Data></Cell>
+    <Cell><Data ss:Type="Number">2004</Data></Cell>
+    <Cell><Data ss:Type="String">全體治療5</Data></Cell>
+    <Cell><Data ss:Type="String">每回合對所有友方士兵治療5點傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">zhiliao_status</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">153</Data></Cell>
+    <Cell><Data ss:Type="String">降臨</Data></Cell>
+    <Cell><Data ss:Type="Number">15311</Data></Cell>
+    <Cell><Data ss:Type="String">冰霜壓制3</Data></Cell>
+    <Cell><Data ss:Type="String">行動時，對所有敵方士兵造成3點冰霜傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String">bingshuang_status</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">39</Data></Cell>
+    <Cell><Data ss:Type="String">光環效果</Data></Cell>
+    <Cell><Data ss:Type="Number">619</Data></Cell>
+    <Cell><Data ss:Type="String">暴食</Data></Cell>
+    <Cell><Data ss:Type="String">敵方所有士兵獲受到所有傷害×2，移動力-1。</Data></Cell>
+    <Cell><Data ss:Type="Number">242</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell><Data ss:Type="Number">285</Data></Cell>
+    <Cell><Data ss:Type="String">啃食</Data></Cell>
+    <Cell><Data ss:Type="String">敵方士兵死亡攻擊力+1，生命+2.</Data></Cell>
+    <Cell><Data ss:Type="Number">9101</Data></Cell>
+    <Cell><Data ss:Type="Number">9203</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell><Data ss:Type="Number">286</Data></Cell>
+    <Cell><Data ss:Type="String">吸收</Data></Cell>
+    <Cell><Data ss:Type="String">友方士兵死亡攻擊力+1，生命+2.</Data></Cell>
+    <Cell><Data ss:Type="Number">9109</Data></Cell>
+    <Cell><Data ss:Type="Number">9207</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">67</Data></Cell>
+    <Cell><Data ss:Type="String">隱匿</Data></Cell>
+    <Cell><Data ss:Type="Number">6702</Data></Cell>
+    <Cell><Data ss:Type="String">脂肪</Data></Cell>
+    <Cell><Data ss:Type="String">不能被單體技能指定。</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">組合特效</Data></Cell>
+    <Cell><Data ss:Type="Number">319</Data></Cell>
+    <Cell><Data ss:Type="String">屹立3</Data></Cell>
+    <Cell><Data ss:Type="String">每次受到近戰傷害時，對攻擊者造成3點物理傷害。減免3點受到的法術傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">4803</Data></Cell>
+    <Cell><Data ss:Type="Number">1213</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <TopRowVisible>1601</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1626</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Administrator</LastAuthor>
+  <Created>2011-03-23T06:48:49Z</Created>
+  <LastSaved>2017-04-29T07:21:45Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <KSOProductBuildVer dt:dt="string">2052-11.1.0.7849</KSOProductBuildVer>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <SupBook>
+   <Path>D:\ZVZ\脚本\卡牌生物和效果.xlsb</Path>
+   <SheetName>Define</SheetName>
+  </SupBook>
+  <WindowHeight>11040</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <Calculation>ManualCalculation</Calculation>
+  <DoNotCalculateBeforeSave/>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+  <Uncalced/>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Alignment ss:Vertical="Bottom"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s65">
+   <Interior/>
+  </Style>
+  <Style ss:ID="s68">
+   <Alignment ss:Vertical="Bottom"/>
+  </Style>
+  <Style ss:ID="s69">
+   <Alignment ss:Vertical="Center"/>
+  </Style>
+  <Style ss:ID="s74">
+   <Interior ss:Color="#9BC2E6" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Names>
+  <NamedRange ss:Name="MoveSpeed"
+   ss:RefersTo="='D:\ZVZ\脚本\[卡牌生物和效果.xlsb]Define'!R2C25:R11C25"/>
+  <NamedRange ss:Name="MoveType"
+   ss:RefersTo="='D:\ZVZ\脚本\[卡牌生物和效果.xlsb]Define'!R2C24:R10C24"/>
+  <NamedRange ss:Name="Quality"
+   ss:RefersTo="='D:\ZVZ\脚本\[卡牌生物和效果.xlsb]Define'!R2C10:R8C15"/>
+  <NamedRange ss:Name="Quality1"
+   ss:RefersTo="='D:\ZVZ\脚本\[卡牌生物和效果.xlsb]Define'!R2C12:R8C15"/>
+ </Names>
+ <Worksheet ss:Name="card">
+  <Names>
+   <NamedRange ss:Name="_FilterDatabase" ss:RefersTo="=card!R1C5:R7472C5"
+    ss:Hidden="1"/>
+  </Names>
+  <Table ss:ExpandedColumnCount="31" ss:ExpandedRowCount="7771" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="13.5">
+   <Column ss:AutoFitWidth="0" ss:Width="89.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="79.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="84"/>
+   <Column ss:AutoFitWidth="0" ss:Width="118.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="177"/>
+   <Column ss:AutoFitWidth="0" ss:Width="97.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="99"/>
+   <Column ss:AutoFitWidth="0" ss:Width="105"/>
+   <Column ss:AutoFitWidth="0" ss:Width="93"/>
+   <Column ss:Index="11" ss:Width="123.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="66.75"/>
+   <Column ss:Width="263.25"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Name</Data></Cell>
+    <Cell><Data ss:Type="String">ID</Data></Cell>
+    <Cell><Data ss:Type="String">ResID</Data></Cell>
+    <Cell><Data ss:Type="String">Type</Data></Cell>
+    <Cell><Data ss:Type="String">Quality</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">InitReady</Data></Cell>
+    <Cell><Data ss:Type="String">MonsterID</Data></Cell>
+    <Cell><Data ss:Type="String">SkillID</Data></Cell>
+    <Cell><Data ss:Type="String">Des</Data></Cell>
+    <Cell><Data ss:Type="String">NextCardID</Data></Cell>
+    <Cell><Data ss:Type="String">heChengRate</Data></Cell>
+    <Cell><Data ss:Type="String">returnRate</Data></Cell>
+    <Cell><Data ss:Type="String">file</Data></Cell>
+    <Cell><Data ss:Type="String">CardsForBuilding</Data></Cell>
+    <Cell><Data ss:Type="String">BGDes</Data></Cell>
+    <Cell><Data ss:Type="String">Artist</Data></Cell>
+    <Cell><Data ss:Type="String">Remarks</Data></Cell>
+    <Cell><Data ss:Type="String">Race</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Auction Reserve Price</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Auction Ceiling Price</Data></Cell>
+    <Cell><Data ss:Type="String">Flag</Data></Cell>
+    <Cell><Data ss:Type="String">ability1</Data></Cell>
+    <Cell><Data ss:Type="String">ability2</Data></Cell>
+    <Cell><Data ss:Type="String">ability3</Data></Cell>
+    <Cell><Data ss:Type="String">ability4</Data></Cell>
+    <Cell><Data ss:Type="String">ability5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="40.5">
+    <Cell><Data ss:Type="String">名稱</Data></Cell>
+    <Cell><Data ss:Type="String">ID</Data></Cell>
+    <Cell><Data ss:Type="String">圖示</Data></Cell>
+    <Cell><Data ss:Type="String">類型(1生物2技能)</Data></Cell>
+    <Cell><Data ss:Type="String">品質(0白1綠2藍3紫4橙5紅6金)</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="String">初始準備時間</Data></Cell>
+    <Cell><Data ss:Type="String">召喚生物ID</Data></Cell>
+    <Cell><Data ss:Type="String">使用法術ID</Data></Cell>
+    <Cell><Data ss:Type="String">描述</Data></Cell>
+    <Cell><Data ss:Type="String">合成成功後的卡片ID</Data></Cell>
+    <Cell><Data ss:Type="String">合成基礎成功率10000</Data></Cell>
+    <Cell><Data ss:Type="String">使用後回手機率，只有技能牌有效</Data></Cell>
+    <Cell><Data ss:Type="String">檔案名</Data></Cell>
+    <Cell><Data ss:Type="String">構築指定</Data></Cell>
+    <Cell><Data ss:Type="String">背景描述</Data></Cell>
+    <Cell><Data ss:Type="String">畫師</Data></Cell>
+    <Cell><Data ss:Type="String">備註</Data></Cell>
+    <Cell><Data ss:Type="String">種族</Data></Cell>
+    <Cell><Data ss:Type="String">拍賣售價下限</Data></Cell>
+    <Cell><Data ss:Type="String">拍賣售價上限</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">卡片標誌,按位元元元元元元元元元元元元元元元元元元元元元元元元元元元元元元相加。&#10;1 禁止廣播&#10;2 星座卡&#10;4 免疫偷襲&#10;8 免疫減速&#10;16 免疫加速&#10;32生肖卡</Data></Cell>
+    <Cell><Data ss:Type="String">特技1</Data></Cell>
+    <Cell><Data ss:Type="String">特技2</Data></Cell>
+    <Cell><Data ss:Type="String">特技3</Data></Cell>
+    <Cell><Data ss:Type="String">特技4</Data></Cell>
+    <Cell><Data ss:Type="String">特技5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s74">
+    <Cell><Data ss:Type="String">魔法老師娜玖</Data></Cell>
+    <Cell><Data ss:Type="Number">45306</Data></Cell>
+    <Cell><Data ss:Type="String">JP_MagicalAcademy_Teacher</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">45306</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">data/img/cards/cards_Human.swf</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">運營商</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+    <Cell><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:Index="22"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="Number">30003</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">琳恩</Data></Cell>
+    <Cell><Data ss:Type="Number">10738</Data></Cell>
+    <Cell><Data ss:Type="String">JP_Indoor_shoes</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">10738</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">data/img/cards/cards_Undead.swf</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">運營商</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+    <Cell><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:Index="22"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">阿蘇山奶牛</Data></Cell>
+    <Cell><Data ss:Type="Number">36565</Data></Cell>
+    <Cell><Data ss:Type="String">nainiu</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">36565</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">36566</Data></Cell>
+    <Cell><Data ss:Type="Number">225</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">data/img/cards/cards_Human.swf</Data></Cell>
+    <Cell ss:Index="17"><Data ss:Type="String">節日</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell><Data ss:Type="Number">20000</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s65">
+    <Cell><Data ss:Type="String">艾草公主</Data></Cell>
+    <Cell><Data ss:Type="Number">45298</Data></Cell>
+    <Cell><Data ss:Type="String">JP_Princess_of_Goblin</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">45298</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">45299</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">data/img/cards/cards_Gnome.swf</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">運營商</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:Index="22"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">愛戀之歌沙妮</Data></Cell>
+    <Cell><Data ss:Type="Number">10496</Data></Cell>
+    <Cell><Data ss:Type="String">qingrenjumoluoli</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">10496</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">10497</Data></Cell>
+    <Cell><Data ss:Type="Number">360</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">data/img/cards/cards_Troll.swf</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">畫師：pop</Data></Cell>
+    <Cell><Data ss:Type="String">運營商</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:Index="22"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s74">
+    <Cell><Data ss:Type="String">古堡依琳</Data></Cell>
+    <Cell><Data ss:Type="Number">45311</Data></Cell>
+    <Cell><Data ss:Type="String">JP_MagicalAcademy_scholarship</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">45311</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">45312</Data></Cell>
+    <Cell><Data ss:Type="Number">225</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">data/img/cards/cards_Elf.swf</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">運營商</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell><Data ss:Type="Number">20000</Data></Cell>
+    <Cell ss:Index="22"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s65">
+    <Cell><Data ss:Type="String">獸人公主</Data></Cell>
+    <Cell><Data ss:Type="Number">45276</Data></Cell>
+    <Cell><Data ss:Type="String">JP_Beastmans_Princess</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">45276</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">data/img/cards/cards_Orc.swf</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">運營商</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+    <Cell><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:Index="22"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">月夕女神顧菟</Data></Cell>
+    <Cell><Data ss:Type="Number">24060</Data></Cell>
+    <Cell><Data ss:Type="String">alteil2_1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">24060</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">data/img/cards/cards_EJ.swf</Data></Cell>
+    <Cell ss:Index="16"><Data ss:Type="String">畫師：</Data></Cell>
+    <Cell><Data ss:Type="String">覺醒</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">10000</Data></Cell>
+    <Cell><Data ss:Type="Number">2000000</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">銀龍公主昂熱</Data></Cell>
+    <Cell><Data ss:Type="Number">36162</Data></Cell>
+    <Cell><Data ss:Type="String">JP_Dragon_Angers</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">36162</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">data/img/cards/cards_Dragon.swf</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">運營商</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+    <Cell><Data ss:Type="Number">200000</Data></Cell>
+    <Cell ss:Index="22"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">昂熱（真龍）</Data></Cell>
+    <Cell><Data ss:Type="Number">36168</Data></Cell>
+    <Cell><Data ss:Type="String">jinhua_gelaixiya</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">36168</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">data/img/cards/card_jinhua.swf</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">運營商</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+    <Cell><Data ss:Type="Number">200000</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">聖誕雪天使安琪兒</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">24063</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">shengdanxuetianshi</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">24063</Data></Cell>
+    <Cell ss:StyleID="s63"/>
+    <Cell ss:StyleID="s63"/>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">data/img/cards/cards_Angel.swf</Data></Cell>
+    <Cell ss:StyleID="s63"/>
+    <Cell ss:StyleID="s63"/>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">畫師：Q</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">覺醒</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2000000</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">暴食</Data></Cell>
+    <Cell><Data ss:Type="Number">24055</Data></Cell>
+    <Cell><Data ss:Type="String">baoshi</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">24055</Data></Cell>
+    <Cell ss:Index="10"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">data/img/cards/cards_SevsnSeries.swf</Data></Cell>
+    <Cell ss:Index="15"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">畫師：</Data></Cell>
+    <Cell><Data ss:Type="String">覺醒</Data></Cell>
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="Number">10000</Data></Cell>
+    <Cell><Data ss:Type="Number">2000000</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <FreezePanes/>
+   <FrozenNoSplit/>
+   <SplitHorizontal>2</SplitHorizontal>
+   <TopRowBottomPane>3292</TopRowBottomPane>
+   <SplitVertical>2</SplitVertical>
+   <LeftColumnRightPane>2</LeftColumnRightPane>
+   <ActivePane>0</ActivePane>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+    </Pane>
+    <Pane>
+     <Number>1</Number>
+    </Pane>
+    <Pane>
+     <Number>2</Number>
+     <ActiveRow>2364</ActiveRow>
+    </Pane>
+    <Pane>
+     <Number>0</Number>
+     <ActiveRow>3309</ActiveRow>
+     <ActiveCol>5</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <AutoFilter x:Range="R1C5:R7472C5"
+   xmlns="urn:schemas-microsoft-com:office:excel">
+  </AutoFilter>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R7732C1:R7735C1</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(R7732C1:R7735C1,RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE;mso-pattern:none'/>
+   </Condition>
+  </ConditionalFormatting>
+ </Worksheet>
+</Workbook>
