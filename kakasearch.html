@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!-- Google HTML/CSS Style Guide https://google.github.io/styleguide/htmlcssguide.html#HTML_Style_Rules -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>測試-卡片資料查詢</title>
+  <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+  <link rel="stylesheet" media="screen" href="css/kakas.css">
+  <link rel="stylesheet" media="screen" href="css/jquery.handsontable.full.css">
+  <!--  [lib]警告(alert)視窗格式  -->
+  <link rel="stylesheet" media="screen" href="css/alertify.css">
+  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.handsontable.full.js"></script>
+  <script type="text/javascript" src="js/base64.min.js"></script>
+  <script type="text/javascript" src="js/alertify.js"></script>
+  <script type="text/javascript" src="js/progressbar.js"></script>
+  <!-- lazy loader for images: https://github.com/aFarkas/lazysizes  -->
+  <!-- <div class="lazyload" , background-image: url("temp.jpg") data-bg="target.jpg"> ===> <div class="lazyloaded" , background-image: url("target.jpg") data-bg="target.jpg"> -->
+  <script type="text/javascript" src="js/lazysizes.js"></script>
+  <script type="text/javascript" src="js/ls.unveilhooks.min.js"></script>
+</head>
+<body>
+  <div id="body">
+    <div id="header">
+      <h1>
+        卡卡們的大亂鬥-卡片查詢系統
+      </h1>
+    </div>
+    <div id="left">
+      <div id="bar-monster" class="progressbar" style="display:none">
+        <h5>monster</h5>
+      </div>
+      <div id="bar-effect" class="progressbar" style="display:none">
+        <h5>effect</h5>
+      </div>
+      <div id="bar-skill" class="progressbar" style="display:none">
+        <h5>skill</h5>
+      </div>
+      <div id="bar-card" class="progressbar" style="display:none">
+        <h5>card</h5>
+      </div>
+      <h4>Simple Demo:</h4>
+      <button id="demo-monster">怪物</button>
+      <button id="demo-effect">效果</button>
+      <button id="demo-card">卡片</button>
+      <h4>Real Data Demo:</h4>
+      <button id="real-monster">怪物</button>
+      <button id="real-effect">效果</button>
+      <button id="real-card">卡片</button>
+      <h4>特殊功能:</h4>
+      <button id="clean-monster">刪除怪物</button>
+      <button id="clean-effect">刪除效果</button>
+      <button id="clean-skill">刪除技能</button>
+      <button id="clean-card">刪除卡片</button>
+      <button id="clean-db">清空資料庫</button>
+      <h3> Tables and Fields:</h3>
+      <div id="schema"></div>
+    </div>
+    <div id="right">
+      <div>
+        <h3>SQL Examples:</h3>
+        <div class="sql row">
+          <!-- https://www.sqlite.org/lang_corefunc.html#sqlite_version -->
+          <button class="sql-btn col">執行</button>
+          <div class="sql-stmt col">SELECT sqlite_version()</div>
+        </div>
+        <div class="sql row">
+          <button class="sql-btn col">執行</button>
+          <div class="sql-stmt col">SELECT * from sqlite_master WHERE type = "table"</div>
+        </div>
+        <div class="sql row">
+          <button class="sql-btn col">執行</button>
+          <div class="sql-stmt col">SELECT * FROM `monster` WHERE Attack > 1 ORDER BY Attack LIMIT 10</div>
+        </div>
+        <div class="sql row">
+          <button class="sql-btn col">執行</button>
+          <div class="sql-stmt col">SELECT * FROM `monster` WHERE HP > 3 ORDER BY HP LIMIT 10</div>
+        </div>
+        <div class="sql row">
+          <button class="sql-btn col">執行</button>
+          <div class="sql-stmt col">SELECT * FROM `card` WHERE  id > 20000 ORDER BY id</div>
+        </div>
+        <div class="sql row">
+          <button class="sql-btn col">執行</button>
+          <div class="sql-stmt col">SELECT * FROM `effect` WHERE EffectID > 1000 ORDER BY EffectID LIMIT 10</div>
+        </div>
+        <div class="sql row">
+          <button class="sql-btn col">執行</button>
+          <div class="sql-stmt col">SELECT * FROM `Skill` LIMIT 30</div>
+        </div>
+        <div class="sql row">
+          <button class="sql-btn col">執行</button>
+          <div class="sql-stmt col">SELECT * FROM `monster` WHERE  id > 20000 ORDER BY id</div>
+        </div>
+        <div class="sql row">
+          <button class="sql-btn col">執行</button>
+          <div class="sql-stmt col">SELECT * FROM `card` as c, `monster` as m WHERE  m.id = c.id</div>
+        </div>
+        <div class="sql row">
+          <button class="sql-btn col">執行</button>
+          <div class="sql-stmt col">SELECT * FROM `card` as c, `monster` as m WHERE  m.id = c.id  AND (c.quality = 3 OR c.quality = 4 OR c.quality = 5 OR c.quality = 6) AND m.phyle = 7 AND m.attacktype = 0 AND c.initReady = 4</div>
+        </div>
+        <div class="sql row">
+          <button class="sql-btn-monster col">執行</button>
+          <label>怪物ID:</label><input id="monster-id" class="col" value="45306">
+        </div>
+        <div class="sql row">
+          <button class="sql-btn-monster col">執行</button>
+          <label>怪物名稱:</label><input id="monster-name" class="col" value="劍聖">
+        </div>
+        <div class="sql row">
+          <button class="sql-btn-card col">執行</button>
+          <label>卡片ID:</label><input id="card-id" class="col" value="45306">
+          <label>Ex:45306 10738 36565 45298 10496 45311 45276 24060 36162 36168 24063 24055</label>
+        </div>
+        
+        <label>Enter an SQL select statement (query updates as you type): &nbsp; &nbsp;</label>
+        <input type="text" id="sql" disabled="true" class="winpt">
+        <input type="submit" id="exporter" value="Export Results" onclick="exportXlsx();" disabled="">
+        <pre id="sqlpre">SQL Errors will show up here</pre>
+        <pre id="sqldiv" hidden>WebSQL not supported show up here</pre>
+      </div>
+      <div id="hot-table" style="overflow: scroll" class="handsontable"></div>
+      <div class="page-load-complete" style="display: block;">
+        <div class="row justify-content-center mb-2">
+          <div class="col gold-f search-title">
+            <input class="form-check-input toggle-title" type="checkbox" name="quality-title" id="quality-title" value="quality-filter" checked="checked">
+            <label for="quality-title" class="form-check-label">
+              <div class="d-inline-block toggle-arrow">
+                <div class="toggle-arrow-screw"></div>
+              </div><strong>品質</strong>
+            </label>
+          </div>
+        </div>
+        <div id="quality-filter" class="row justify-content-center mt-1">
+          <div class="col filter-list quality-checkbox gold-f">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="quality[]" id="qt-4" value="3" checked="checked">
+              <label for="qt-4" class="form-check-label" alt="★4" title="★4"></label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="quality[]" id="qt-5" value="4" checked="checked">
+              <label for="qt-5" class="form-check-label" alt="★5" title="★5"></label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="quality[]" id="qt-6" value="5" checked="checked">
+              <label for="qt-6" class="form-check-label" alt="★6" title="★6"></label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="quality[]" id="qt-7" value="6" checked="checked">
+              <label for="qt-7" class="form-check-label" alt="★7" title="★7"></label>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-2">
+          <div class="col gold-f search-title">
+            <input class="form-check-input toggle-title" type="checkbox" name="elite-title" id="elite-title" value="elite-search" checked="checked" disabled="disabled">
+            <label for="elite-title" class="form-check-label">
+              <div class="d-inline-block toggle-arrow">
+                <div class="toggle-arrow-screw"></div>
+              </div><strong>單位</strong>
+            </label>
+          </div>
+        </div>
+        <div id="elite-search" class="row justify-content-center mt-1">
+          <div class="col search-list gold-f">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="elite" id="elite-1" value="1" checked="checked">
+              <label for="elite-1" class="form-check-label filter-name">菁英</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="elite" id="elite-0" value="0">
+              <label for="elite-0" class="form-check-label filter-name">士兵</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="elite" id="elite-2" value="2">
+              <label for="elite-2" class="form-check-label filter-name">技能</label>
+            </div>
+          </div>
+        </div>
+        <div id="race-title-wrap" class="">
+          <div class="row justify-content-center mt-3 mb-2">
+            <div class="col gold-f search-title">
+              <input class="form-check-input toggle-title" type="checkbox" name="race-title" id="race-title" value="race-filter" checked="checked">
+              <label for="race-title" class="form-check-label">
+                <div class="d-inline-block toggle-arrow">
+                  <div class="toggle-arrow-screw"></div>
+                </div><strong>種族</strong>
+              </label>
+            </div>
+          </div>
+          <div id="race-filter" class="row justify-content-center mt-1" style="">
+            <div class="col filter-list gold-f">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="race" id="race-0" value="all" checked="checked">
+                <label for="race-0" class="form-check-label filter-name">全部</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-1" value="1-0">
+                <label for="race-1" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_1-0.png" width="22" height="22">人類</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-2" value="2-0">
+                <label for="race-2" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_2-0.png" width="22" height="22">亡靈</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-3" value="3-0">
+                <label for="race-3" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_3-0.png" width="22" height="22">野獸</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-4" value="4-0">
+                <label for="race-4" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_4-0.png" width="22" height="22">地精</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-5" value="5-0">
+                <label for="race-5" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_5-0.png" width="22" height="22">巨魔</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-6" value="6-0">
+                <label for="race-6" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_6-0.png" width="22" height="22">精靈</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-7" value="7-0">
+                <label for="race-7" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_7-0.png" width="22" height="22">獸人</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-8" value="8-0">
+                <label for="race-8" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_8-0.png" width="22" height="22">異界</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-9" value="9-0">
+                <label for="race-9" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_9-0.png" width="22" height="22">龍族</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-10" value="10-0">
+                <label for="race-10" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_10-0.png" width="22" height="22">天使</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-11" value="11-0">
+                <label for="race-11" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_11-0.png" width="22" height="22">惡魔</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-10-1" value="10-1">
+                <label for="race-10-1" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_10-1.png" width="22" height="22">天・人</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-6-1" value="6-1">
+                <label for="race-6-1" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_6-1.png" width="22" height="22">人・精</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-10-6" value="10-6">
+                <label for="race-10-6" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_10-6.png" width="22" height="22">天・精</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-11-5" value="11-5">
+                <label for="race-11-5" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_11-5.png" width="22" height="22">惡・巨</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-11-2" value="11-2">
+                <label for="race-11-2" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_11-2.png" width="22" height="22">惡・亡</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-5-2" value="5-2">
+                <label for="race-5-2" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_5-2.png" width="22" height="22">巨・亡</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-9-3" value="9-3">
+                <label for="race-9-3" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_9-3.png" width="22" height="22">龍・野</label>
+              </div>
+              <div class="form-check form-check-inline race-monster-radio">
+                <input class="form-check-input" type="radio" name="race" id="race-9-4" value="9-4">
+                <label for="race-9-4" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_9-4.png" width="22" height="22">龍・地</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="race" id="race-100" value="100">
+                <label for="race-100" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_100-0.png" width="22" height="22">戰士</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="race" id="race-101" value="101">
+                <label for="race-101" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_101-0.png" width="22" height="22">遊俠</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="race" id="race-102" value="102">
+                <label for="race-102" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_102-0.png" width="22" height="22">法師</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="race" id="race-103" value="103">
+                <label for="race-103" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/filter_icon/rc_103-0.png" width="22" height="22">牧師</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="attack_type_wrap" class="">
+          <div class="row justify-content-center mt-3 mb-2">
+            <div class="col gold-f search-title">
+              <input class="form-check-input toggle-title" type="checkbox" name="attack-type-title" id="attack-type-title" value="attack_type_filter" checked="checked">
+              <label for="attack-type-title" class="form-check-label">
+                <div class="d-inline-block toggle-arrow">
+                  <div class="toggle-arrow-screw"></div>
+                </div><strong>攻擊型態</strong>
+              </label>
+            </div>
+          </div>
+          <div id="attack_type_filter" class="row justify-content-center mt-1" style="">
+            <div class="col filter-list gold-f">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="attack_type" id="at-all" value="all" checked="checked">
+                <label for="at-all" class="form-check-label filter-name">全部</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="attack_type" id="at-0" value="0">
+                <label for="at-0" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/at_0.png" width="22" height="26">近戰</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="attack_type" id="at-1" value="1">
+                <label for="at-1" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/at_1.png" width="22" height="26">遠程</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="attack_type" id="at-2" value="2">
+                <label for="at-2" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/at_2.png" width="24" height="27">火</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="attack_type" id="at-3" value="3">
+                <label for="at-3" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/at_3.png" width="22" height="26">冰</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="attack_type" id="at-4" value="4">
+                <label for="at-4" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/at_4.png" width="22" height="26">電</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="attack_type" id="at-5" value="5">
+                <label for="at-5" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/at_5.png" width="22" height="26">神聖</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="attack_type" id="at-6" value="6">
+                <label for="at-6" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/at_6.png" width="22" height="26">暗影</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="attack_type" id="at-7" value="7">
+                <label for="at-7" class="form-check-label filter-name"><img src="https://kakasfighter.github.io/images/card_ui/at_7.png?" width="22" height="26">牆</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-3 mb-2">
+          <div class="col gold-f search-title">
+            <input class="form-check-input toggle-title" type="checkbox" name="init-ready-title" id="init-ready-title" value="init_ready_filter" checked="checked">
+            <label for="init-ready-title" class="form-check-label">
+              <div class="d-inline-block toggle-arrow">
+                <div class="toggle-arrow-screw"></div>
+              </div><strong>初始準備時間</strong>
+            </label>
+          </div>
+        </div>
+        <div id="init_ready_filter" class="row justify-content-center mt-1" style="">
+          <div class="col filter-list init-ready-radio gold-f">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="init_ready" id="ir-all" value="all" checked="checked">
+              <label for="ir-all" class="form-check-label" alt="全部" title="全部">全部</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="init_ready" id="ir-1" value="1">
+              <label for="ir-1" class="form-check-label" alt="1" title="1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="init_ready" id="ir-2" value="2">
+              <label for="ir-2" class="form-check-label" alt="2" title="2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="init_ready" id="ir-3" value="3">
+              <label for="ir-3" class="form-check-label" alt="3" title="3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="init_ready" id="ir-4" value="4">
+              <label for="ir-4" class="form-check-label" alt="4" title="4">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="init_ready" id="ir-5" value="5">
+              <label for="ir-5" class="form-check-label" alt="5" title="5">5</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="init_ready" id="ir-6" value="6">
+              <label for="ir-6" class="form-check-label" alt="6" title="6">6</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="init_ready" id="ir-7" value="7">
+              <label for="ir-7" class="form-check-label" alt="7" title="7">7</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="init_ready" id="ir-8" value="8">
+              <label for="ir-8" class="form-check-label" alt="8" title="8">8</label>
+            </div>
+            <span id="orver-ir-wrap" class="">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="init_ready" id="ir-9" value="9">
+                <label for="ir-9" class="form-check-label" alt="9" title="9">9</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="init_ready" id="ir-10" value="10">
+                <label for="ir-10" class="form-check-label" alt="10" title="10">10</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="init_ready" id="ir-12" value="12">
+                <label for="ir-12" class="form-check-label" alt="12" title="12">12</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="init_ready" id="ir-15" value="15">
+                <label for="ir-15" class="form-check-label" alt="15" title="15">15</label>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-3 mb-2">
+          <div class="col gold-f search-title">
+            <input class="form-check-input toggle-title" type="checkbox" name="card_name_title" id="card-name-title" value="" checked="checked" disabled="disabled">
+            <label for="card-name-title" class="form-check-label">
+              <div class="d-inline-block toggle-arrow">
+                <div class="toggle-arrow-screw"></div>
+              </div><strong>卡片名稱</strong>
+            </label>
+          </div>
+        </div>
+        <div id="card-name-search" class="row mt-1">
+          <div class="col-md-6 col-12 search-list gold-f mb-2">
+            <input type="text" class="form-control" id="search-card-name" name="card_name" value="" placeholder="輸入卡片部分名稱">
+          </div>
+          <div class="col-auto">
+            <button id="btn-search-cards" class="btn btn-search">收尋</button>
+          </div>
+          <div class="col-auto page-load-incomplete" style="display: none;">
+            <span class="spinner-border" role="status"></span>掃描中
+          </div>
+        </div>
+      </div>
+      <div id="hot-card" ></div>
+      <div id="footnote">
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/shim.min.js"></script>
+    <script type="text/javascript" src="js/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="js/loadsheet.js"></script>
+    <!-- Spinner: http://spin.js.org/ -->
+    <script type="text/javascript" src="js/spin.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/kakas.js"></script>
+  </div>
+</body>
+</html>
