@@ -381,7 +381,7 @@ function queryStmts(var_args) {
  * @const
  */
 const SQL_CREATE_CARD_TABLE =
-  "CREATE TABLE IF NOT EXISTS`card` (`Name` TEXT, `ID` REAL PRIMARY KEY NOT NULL, `ResID` TEXT, `Type` REAL, `Quality` REAL, `InitReady` REAL, `MonsterID` REAL, " + 
+  "CREATE TABLE IF NOT EXISTS`card` (`Name` TEXT, `ID` REAL PRIMARY KEY NOT NULL, `ResID` TEXT, `cardType` REAL, `Quality` REAL, `InitReady` REAL, `MonsterID` REAL, " + 
       "`SkillID` TEXT, `Des` TEXT, `NextCardID` REAL, `heChengRate` REAL, `returnRate` REAL, `file` TEXT, `CardsForBuilding` TEXT, `BGDes` TEXT, `Artist` TEXT, `Remarks` TEXT, " + 
       "`Race` REAL, `Auction Reserve Price` REAL, `Auction Ceiling Price` REAL, `Flag` REAL, `cardAbility1` TEXT, `cardAbility2` TEXT, `cardAbility3` TEXT, `cardAbility4` TEXT, `cardAbility5` TEXT, " +
       "`dummyattr1` TEXT, `dummyattr2` TEXT, `dummyattr3` TEXT, `dummyattr4` TEXT, `dummyattr5` TEXT);";
@@ -413,7 +413,7 @@ const SQL_CREATE_SKILL_TABLE =
  * @const
  */
 const SQL_CREATE_MONSTER_TABLE = 
-    "CREATE TABLE IF NOT EXISTS`monster` (`Name` TEXT, `ID` REAL PRIMARY KEY NOT NULL, `animateitem` TEXT, `Type` REAL, `Phyle` REAL, `HP` REAL, `Attack` REAL, `AIType` REAL, " +
+    "CREATE TABLE IF NOT EXISTS`monster` (`Name` TEXT, `ID` REAL PRIMARY KEY NOT NULL, `animateitem` TEXT, `monsterType` REAL, `Phyle` REAL, `HP` REAL, `Attack` REAL, `AIType` REAL, " +
       "`AttackType` REAL, `monsterAbility1` REAL, `monsterAbility2` REAL, `monsterAbility3` REAL, `monsterAbility4` REAL, `monsterAbility5` REAL, `normalSkillID` REAL, " + 
       "`Unique` REAL, `Speed` REAL, `Aura` TEXT, `MoveStyle` TEXT, `IsTask` TEXT, `Phyle2` REAL);";
 
@@ -441,7 +441,7 @@ const CARD_ATTRIBUTES = [
   ["`Name`", "TEXT"],
   ["`ID`", "REAL"],
   ["`ResID`", "TEXT"],
-  ["`Type`", "REAL"],
+  ["`cardType`", "REAL"],
   ["`Quality`", "REAL"],
   ["`InitReady`", "REAL"],
   ["`MonsterID`", "REAL"],
@@ -551,7 +551,7 @@ const MONSTER_ATTRIBUTES = [
   ["`Name`", "TEXT"],
   ["`ID`", "REAL"],
   ["`animateitem`", "TEXT"],
-  ["`Type`", "REAL"],
+  ["`monsterType`", "REAL"],
   ["`Phyle`", "REAL"],
   ["`HP`", "REAL"],
   ["`Attack`", "REAL"],
@@ -1048,7 +1048,6 @@ function setJsonSkill(tx) {
   });
 }
 
-//TODO: jsonCard:undefined when SQL empty results
 /**
  * Search card by its id and present it in html.
  * @param {!number} cardId The card ID corresponds to id of `card`, `monster` table.
@@ -1059,7 +1058,35 @@ function searchCardById(cardId) {
     tx.executeSql(stmt, [cardId], function(tx, results) {
       var jsonCard = getJsonResult(results);
       setCardsDescription(jsonCard);
-      createSearchedCards(jsonCard, createMonsterItem);
+      //createSearchedCards(jsonCard, createMonsterItem);
+      var cards = "";
+      var smallCards = "";
+      jsonCard.forEach(function(c) {
+        if (c) {
+          cards += createMonsterItem(c);
+          smallCards += createCardSmallItem(c);
+        }
+      });
+      $('#hot-single-card').empty();
+      $('#hot-single-card').append(`
+<div id="my-card-big" class="card-table">
+  <div class="row mb-3">
+    <div class="col unit-title">
+      <div class="m-1" title="收尋結果">收尋結果<span class="group-name gold-f">【官方連結】 <a href="https://nothing/detail.php?id=6666" class="text-white" target="_blank"><u>卡包名稱</u></a></span></div>
+    </div>
+  </div>
+  <div class="row mb-3">
+${cards}
+  </div><!--row end-->
+</div><!--card-table end-->
+<div id="my-card-small" class="col-auto">
+  <div id="my-card-boad">
+    <div class="row" id="my-card-list">
+${smallCards}
+    </div><!--row end-->
+  </div><!--my-card-boad end-->
+</div><!--my-card end-->
+      `);
     }, function(tx, e) {
       $sqlPrepareStatement.innerText += "\n" + e + "\n" + (e.message||"") +"\n"+ (e.stack||"");
       $sqlPrepareStatement.classList.add("error");
@@ -1080,7 +1107,7 @@ function searchCard(condition) {
       var jsonCard = getJsonResult(results);
       jsonCard ? (setCardsDescription(jsonCard), createSearchedCards(jsonCard, createCardItem)) : "";
       // console.log("jsonCard:", jsonCard);
-      $cardSearchedResults = $('#hot-card .card-table .card-line');
+      $cardSearchedResults = $('#hot-card .card-line');
       hideFilterClass();
       $('.page-load-incomplete').hide();
     }, function(tx, e) {
@@ -1119,10 +1146,16 @@ function searchMonster(condition) {
  */
 function createSearchedCards(jsonCard, createItemFunction) {
   var cards = "";
+  var smallCards = "";
   jsonCard.forEach(function(c) {
-    if (c) cards += createItemFunction(c);
+    if (c) {
+      cards += createItemFunction(c);
+      smallCards += createCardSmallItem(c);
+    }
   });
-  createCardTable(cards);
+  createBigCardTable(cards);
+  createSmallCardTable(smallCards);
+  hideShowMode();
 }
 
 /**
@@ -1257,6 +1290,7 @@ function createCardNormalSkill(card, ability, abilityName, abilityDescription) {
               <span class="card-ability-title">${name}</span>:${des}
             </div>`;
   } 
+  card[abilityName] = ""; // 避免縮圖的能力名稱是undefined
   return ``;
 }
 
@@ -1276,6 +1310,7 @@ function createCardAbility(card, ability, abilityName, abilityDescription) {
               <span class="card-ability-title">${name}</span>:${des}
             </div>`;
   } 
+  card[abilityName] = ""; // 避免縮圖的能力名稱是undefined
   return ``;
 }
 
@@ -1287,20 +1322,21 @@ function createCardItem(card) {
   var jobid = cardId2JobId(card['ID']);
   var jobname = jobid2String(jobid);
   var unique = card['Unique'] ? '/菁英' : '';
-  var hide = card['Type'] == 2 ? "hide" : ''; // 技能(Type:2)
+  var hide = card['cardType'] == 2 ? "hide" : ''; // 技能(Type:2)
   card['cardAbility1'] = card['SkillID'];
   card['cardAbility1name'] = card['Name'];
   card['cardAbility1des'] = card['Des'];
   if (card['returnRate']) {
-    card['cardAbility2'] = 9999; // 無意義單純設置不為0
-    card['cardAbility2name'] = '精通';
-    card['cardAbility2des'] = '本技能卡使用後有' + card['returnRate'] + '%機率回到準備欄';
+    card['cardAbility6'] = 9999; // 無意義單純設置不為0
+    card['cardAbility6name'] = '精通';
+    card['cardAbility6des'] = '本技能卡使用後有' + card['returnRate'] + '%機率回到準備欄';
   }
   var cardAbility1 = createCardAbility(card, 'cardAbility1', 'cardAbility1name', 'cardAbility1des');
   var cardAbility2 = createCardAbility(card, 'cardAbility2', 'cardAbility2name', 'cardAbility2des');
   var cardAbility3 = createCardAbility(card, 'cardAbility3', 'cardAbility3name', 'cardAbility3des');
   var cardAbility4 = createCardAbility(card, 'cardAbility4', 'cardAbility4name', 'cardAbility4des');
   var cardAbility5 = createCardAbility(card, 'cardAbility5', 'cardAbility5name', 'cardAbility5des');
+  var cardAbility6 = createCardAbility(card, 'cardAbility6', 'cardAbility6name', 'cardAbility6des'); // 精通:技能卡專有能力
   var phyleImg = (jobid == 999 ? 100 : jobid) + "-0_n"; //地下城王的技能顯示為戰士技能
   // var phyle_hide = jobid > 103 ? "hide" : "";
   card["ResID_URL"] = "https://kakasfighter.github.io/images/cards/" + card["ResID"] + ".jpg";
@@ -1327,6 +1363,7 @@ function createCardItem(card) {
             ${cardAbility3}
             ${cardAbility4}
             ${cardAbility5}
+            ${cardAbility6}
           </div>
         </div>
       </div>
@@ -1339,7 +1376,7 @@ function createCardItem(card) {
         <div class="bg-description"></div>
       </div>
     </div><!--col end-->
-`
+`;
 }
 
 /**
@@ -1349,7 +1386,7 @@ function createCardItem(card) {
 function createMonsterItem(card) {
   var phyle = phyle2String(card['Phyle'] + '-' + card['Phyle2']);
   var unique = card['Unique'] ? '/菁英' : '';
-  var hide = card['Type'] == 2 ? "hide" : ''; // 牆壁(Type:2):不顯示攻擊圖片
+  var hide = card['monsterType'] == 2 ? "hide" : ''; // 牆壁(Type:2):不顯示攻擊圖片
   var normalSkillId = createCardNormalSkill(card, 'normalSkillID', 'normalSkillIDname', 'normalSkillIDdes');
   var cardAbility1 = createCardAbility(card, 'cardAbility1', 'cardAbility1name', 'cardAbility1des');
   var cardAbility2 = createCardAbility(card, 'cardAbility2', 'cardAbility2name', 'cardAbility2des');
@@ -1409,17 +1446,78 @@ function createMonsterItem(card) {
         <div class="bg-description"></div>
       </div>
     </div><!--col end-->
-`
+`;
+}
+
+/**
+ * TODO: load ability name/description only once.
+ * Create DOM of a monster/skill card.
+ * @param {object} card The row value of `card`, `monster` table.
+ */
+function createCardSmallItem(card) {
+  var hideSkill = card['cardType'] == 2 ? "hide" : ''; // 技能(Type:2)
+  var hideWall = card['monsterType'] == 2 ? "hide" : ''; // 牆壁(Type:2):不顯示攻擊圖片
+  var phyleImg = card['Phyle'] + "-0";
+  var jobid = 0;
+  var jobname = '';
+  if (hideSkill) {
+    jobid = cardId2JobId(card['ID']);
+    jobname = jobid2String(jobid);
+    card['cardAbility1'] = card['SkillID'];
+    card['cardAbility1name'] = card['Name'];
+    card['cardAbility1des'] = card['Des'];
+    phyleImg = (jobid == 999 ? 100 : jobid) + "-0"; //地下城王的技能顯示為戰士技能
+  }
+
+  var phyle = phyle2String(card['Phyle'] + '-' + card['Phyle2']);
+  var unique = card['Unique'] ? '/菁英' : '';
+  var normalSkillId = createCardNormalSkill(card, 'normalSkillID', 'normalSkillIDname', 'normalSkillIDdes');
+  var cardAbility1 = createCardAbility(card, 'cardAbility1', 'cardAbility1name', 'cardAbility1des');
+  var cardAbility2 = createCardAbility(card, 'cardAbility2', 'cardAbility2name', 'cardAbility2des');
+  var cardAbility3 = createCardAbility(card, 'cardAbility3', 'cardAbility3name', 'cardAbility3des');
+  var cardAbility4 = createCardAbility(card, 'cardAbility4', 'cardAbility4name', 'cardAbility4des');
+  var cardAbility5 = createCardAbility(card, 'cardAbility5', 'cardAbility5name', 'cardAbility5des');
+  var monsterAbility1 = createCardAbility(card, 'monsterAbility1', 'monsterAbility1name', 'monsterAbility1des');
+  var monsterAbility2 = createCardAbility(card, 'monsterAbility2', 'monsterAbility2name', 'monsterAbility2des');
+  var monsterAbility3 = createCardAbility(card, 'monsterAbility3', 'monsterAbility3name', 'monsterAbility3des');
+  var monsterAbility4 = createCardAbility(card, 'monsterAbility4', 'monsterAbility4name', 'monsterAbility4des');
+  var monsterAbility5 = createCardAbility(card, 'monsterAbility5', 'monsterAbility5name', 'monsterAbility5des');
+  card["ResID_URL"] = "https://kakasfighter.github.io/images/cards/" + card["ResID"] + ".jpg";
+  checkImageExists(card["ResID_URL"], null /*loadImageSuccess*/, loadImageError);
+  return `
+      <div class="col-4 mb-1 card-line phyle-id-${jobid} phyle-id-${card['Phyle']}-${card['Phyle2']} at-id-${card['AttackType']} ir-id-${card['InitReady']} qt-${card['Quality']}">
+        <div class="card-img-s" style="background-image:url(${card['ResID_URL']});">
+          <div class="card-frame-s">
+            <div class="init-ready-s">
+              <span>${card['InitReady']}</span>
+            </div>
+            <img class="card-phyle-s" src="https://kakasfighter.github.io/images/card_ui/rc_${phyleImg}_n.png">
+            <div class="card-quality-s">
+              <img src="https://kakasfighter.github.io/images/card_ui/q${card['Quality']+1}.png">
+            </div>
+            <div class="card-ability-s">
+              ${card['normalSkillIDname']} ${card['monsterAbility1name']} ${card['monsterAbility2name']} ${card['monsterAbility3name']} ${card['monsterAbility4name']} 
+              ${card['cardAbility1name']} ${card['cardAbility2name']} ${card['cardAbility3name']} ${card['cardAbility4name']} ${card['cardAbility5name']} 
+              ${card['monsterAbility5name']}
+            </div>
+            <div class="attack-volume-s ${hideSkill} ${hideWall}">${card['Attack']}</div>
+            <div class="card-hp-s ${hideSkill}">${card['HP']}</div>
+          </div>
+        </div>
+        <div class="card-name-s">${card['Name']}</div>
+        <div class="btn-add-deck" data-uid="mBX1BX2{todo_imm_card_id}"></div>
+      </div>
+`;
 }
 
 // 可參考使用Fragments https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Performance_best_practices_for_Firefox_fe_engineers
 /**
- * Create DOM of card table and present in html.
+ * Create DOM of big card table and present in html.
  * @param {string} cards The DOM of cards.
  */
-function createCardTable(cards) {
+function createBigCardTable(cards) {
   $('#hot-card').append(`
-<div class="card-table">
+<div id="my-card-big" class="card-table">
   <div class="row mb-3">
     <div class="col unit-title">
       <div class="m-1" title="收尋結果">收尋結果<span class="group-name gold-f">【官方連結】 <a href="https://nothing/detail.php?id=6666" class="text-white" target="_blank"><u>卡包名稱</u></a></span></div>
@@ -1429,6 +1527,22 @@ function createCardTable(cards) {
 ${cards}
   </div><!--row end-->
 </div><!--card-table end-->
+  `);
+}
+
+/**
+ * Create DOM of small card table and present in html.
+ * @param {string} cards The DOM of cards.
+ */
+function createSmallCardTable(cards) {
+  $('#hot-card').append(`
+<div id="my-card-small" class="col-auto">
+  <div id="my-card-boad">
+    <div class="row" id="my-card-list">
+${cards}
+    </div><!--row end-->
+  </div><!--my-card-boad end-->
+</div><!--my-card end-->
   `);
 }
 
@@ -1516,6 +1630,21 @@ function hideFilterClass() {
   // console.log("hideFilterClass[end]", elite, race, attackType, initReady, name);
 }
 
+/**
+ * Check mode and show big/small card image.
+ */
+function hideShowMode() {
+  var showMode = $('input[name="show_mode"]:checked').val();
+  console.log("[hideShowMode]show_mode:", showMode);
+  if (showMode == "big") {
+    $('#my-card-big').removeClass('hide');
+    $('#my-card-small').addClass('hide');
+  } else {
+    $('#my-card-big').addClass('hide');
+    $('#my-card-small').removeClass('hide');
+  }
+}
+
 $('input[name="quality[]"]').change(function() {
   console.log("[radio:change]quality:");
   $previousFilterTimeoutId ? clearTimeout($previousFilterTimeoutId) : "";
@@ -1541,6 +1670,9 @@ $('input[name="init_ready"]:radio').change(function() {
   $previousFilterTimeoutId ? clearTimeout($previousFilterTimeoutId) : "";
   $previousFilterTimeoutId = setTimeout(function() { hideFilterClass(); }, 0.02);
 });
+$('input[name="show_mode"]:radio').change(function() {
+  hideShowMode();
+});
 
 $("#search-card-name").keypress(function(e) {
   var code = (e.keyCode ? e.keyCode : e.which);
@@ -1559,7 +1691,7 @@ $("#search-card-name").on('input propertychange', function() {
 $("#btn-search-cards").on('click', function() {
   console.log("[btn-search-cards]:");
   $('.page-load-incomplete').show();
-  $("#hot-card").empty();
+  $('#hot-card').empty();
   var qualityCondition = "";
   var qualityOrConditionArray = [];
   var eliteCondition = "";
@@ -1579,23 +1711,23 @@ $("#btn-search-cards").on('click', function() {
   
   if ($('input[name="elite"]:checked').val() != "all") {
     var elite = $('input[name="elite"]:checked').val();
-    eliteCondition = elite == 2 ? " c.Type = " + elite : " m.'Unique' = " + elite;
+    eliteCondition = elite == 2 ? " c.cardType = " + elite : " m.'Unique' = " + elite;
     console.log("elite:", elite);
   }
 
   if ($('input[name="race"]:checked').val() != "all") {
     var race = $('input[name="race"]:checked').val().split('-');
     var phyle = race[0];
-    var phyle2 = race[1];
+    var phyle2 = race[1] ? race[1] : 0;
     raceCondition = " m.phyle = " + phyle + " AND m.phyle2 = " + phyle2;
-    console.log("phyle:", race);
+    console.log("race:", race, "phyle:", phyle, "phyle2:", phyle2);
   }
 
   if ($('input[name="attack_type"]:checked').val() != "all") {
     var attackType = $('input[name="attack_type"]:checked').val();
-    // (7:牆壁)[SQL Cond] m.Type = 2
+    // (7:牆壁)[SQL Cond] m.monsterType = 2
     if (attackType == 7) {
-      attackTypeCondition = " m.Type = 2";
+      attackTypeCondition = " m.monsterType = 2";
     } else {
       attackTypeCondition = " m.attacktype = " + attackType;
     }

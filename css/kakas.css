@@ -265,19 +265,19 @@ body.home pre.javascript {
 **/
 button,
 .button {
-	box-shadow: 0px 0px 0px 0px #f0f7fa;
-	background-color: #f2ab1e;
-	border-radius: 6px;
-	border: 1px solid #314179;
-	display: inline-block;
-	cursor: pointer;
-	color: #ffffff;
-	font-family: Arial;
-	font-size: 14px;
-	font-weight: bold;
-	padding: 4px 6px;
-	text-decoration: none;
-	text-shadow: -1px 1px 0px #5b6178;
+  box-shadow: 0px 0px 0px 0px #f0f7fa;
+  background-color: #f2ab1e;
+  border-radius: 6px;
+  border: 1px solid #314179;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 6px;
+  text-decoration: none;
+  text-shadow: -1px 1px 0px #5b6178;
   margin: 2px;
 }
 
@@ -344,28 +344,28 @@ button.mini {
 }
 
 .sql button {
-	box-shadow: 0px 0px 0px 0px #f0f7fa;
-	background-color: #3b5898;
-	border-radius: 6px;
-	border: 1px solid #314179;
-	display: inline-block;
-	cursor: pointer;
-	color: #ffffff;
-	font-family: Arial;
-	font-size: 14px;
-	font-weight: bold;
-	padding: 4px 6px;
-	text-decoration: none;
-	text-shadow: -1px 1px 0px #5b6178;
+  box-shadow: 0px 0px 0px 0px #f0f7fa;
+  background-color: #3b5898;
+  border-radius: 6px;
+  border: 1px solid #314179;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 6px;
+  text-decoration: none;
+  text-shadow: -1px 1px 0px #5b6178;
 }
 
 .sql button:hover {
-	background-color: #637aad;
+  background-color: #637aad;
 }
 
 .sql button:active {
-	position: relative;
-	top: 1px;
+  position: relative;
+  top: 1px;
 }
 
 .sql input {
@@ -657,11 +657,17 @@ input.toggle-title {
   margin-top: 1px;
 }
 
-input[name="race"], input[name="attack_type"], input[name="quality[]"], input[name="init_ready"] {
+input[name="race"],
+input[name="attack_type"],
+input[name="quality[]"],
+input[name="init_ready"],
+input[name="show_mode"] {
   display: none;
 }
 
-input[name="race"]+label, input[name="attack_type"]+label {
+input[name="race"]+label,
+input[name="attack_type"]+label,
+input[name="show_mode"]+label {
   cursor: pointer;
   text-align: center;
   position: relative;
@@ -680,7 +686,9 @@ input[name="race"]+label, input[name="attack_type"]+label {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25140a', endColorstr='#2b1a10', GradientType=0);
 }
 
-input[name="race"]:checked+label, input[name="attack_type"]:checked+label, input[name="elite"]:checked+label {
+input[name="race"]:checked+label,
+input[name="attack_type"]:checked+label,
+input[name="elite"]:checked+label {
   cursor: pointer;
   color: #fff;
   box-shadow: 0 0 5px #fff, 0 0 5px #fff;
@@ -688,6 +696,17 @@ input[name="race"]:checked+label, input[name="attack_type"]:checked+label, input
   background: -moz-linear-gradient(top, rgba(32, 42, 5, 1) 0%, rgba(43, 92, 3, 1) 50%, rgba(91, 122, 28, 1) 100%);
   background: -webkit-linear-gradient(top, rgba(32, 42, 5, 1) 0%, rgba(43, 92, 3, 1) 50%, rgba(91, 122, 28, 1) 100%);
   background: linear-gradient(to bottom, rgba(32, 42, 5, 1) 0%, rgba(43, 92, 3, 1) 50%, rgba(91, 122, 28, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202a05', endColorstr='#5b7a1c', GradientType=0);
+}
+
+input[name="show_mode"]:checked+label {
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 0 5px #fff, 0 0 5px #fff;
+  background: rgb(32, 42, 5);
+  background: -moz-linear-gradient(top, rgba(194, -30, 5, 1) 0%, rgba(204, 27, 9, 1) 50%, rgba(206, 47, 28, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(194, -30, 5, 1) 0%, rgba(204, 27, 9, 1) 50%, rgba(206, 47, 28, 1) 100%);
+  background: linear-gradient(to bottom, rgba(194, -30, 5, 1) 0%, rgba(204, 27, 9, 1) 50%, rgba(206, 47, 28, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202a05', endColorstr='#5b7a1c', GradientType=0);
 }
 
@@ -803,140 +822,140 @@ input[name="race"]:checked+label, input[name="attack_type"]:checked+label, input
 }
 
 .cb-success {
-	display: none;
-	position: absolute;
-	display: inline-block;
-	margin: 1.5em 0;
-	padding: 0 5px;
-	width: auto;
-	height: 50px;
-	line-height: 50px;
-	font-size: 10px;
-	text-align: center;
-	color: #FF0;
-	font-weight: bold;
-	background: #000;
-	border-radius: 50%;
-	box-sizing: border-box;
-	border: #ff0 solid 1px;
-	z-index: 1502;
+  display: none;
+  position: absolute;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 0 5px;
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  font-size: 10px;
+  text-align: center;
+  color: #FF0;
+  font-weight: bold;
+  background: #000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: #ff0 solid 1px;
+  z-index: 1502;
 }
 
 .cb-success:before {
-	content: "";
-	position: absolute;
-	bottom: -17px;
-	left: 50%;
-	margin-left: -10px;
-	border: 10px solid transparent;
-	border-top: 10px solid #000;
-	z-index: 1501;
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  margin-left: -10px;
+  border: 10px solid transparent;
+  border-top: 10px solid #000;
+  z-index: 1501;
 }
 
 .cb-success:after {
-	content: "";
-	position: absolute;
-	bottom: -19px;
-	left: 50%;
-	margin-left: -10px;
-	border: 10px solid transparent;
-	border-top: 10px solid #ff0;
-	z-index: 1500;
+  content: "";
+  position: absolute;
+  bottom: -19px;
+  left: 50%;
+  margin-left: -10px;
+  border: 10px solid transparent;
+  border-top: 10px solid #ff0;
+  z-index: 1500;
 }
 
 /* card.css */
 #search_result {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .boad_head {
-	height: 25px;
+  height: 25px;
 }
 
 .card-table {
-	font-size: 0.8rem;
-	color: #fff;
+  font-size: 0.8rem;
+  color: #fff;
 }
 
 .unit-title {
-	border: solid 1px #ca8;
-	border-radius: 4px;
-	background: rgb(112, 44, 32);
-	background: rgb(37, 20, 10);
-	background: -moz-linear-gradient(top, rgba(37, 20, 10, 1) 0%, rgba(43, 26, 16, 1) 100%);
-	background: -webkit-linear-gradient(top, rgba(37, 20, 10, 1) 0%, rgba(43, 26, 16, 1) 100%);
-	background: linear-gradient(to bottom, rgba(37, 20, 10, 1) 0%, rgba(43, 26, 16, 1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25140a', endColorstr='#2b1a10', GradientType=0);
+  border: solid 1px #ca8;
+  border-radius: 4px;
+  background: rgb(112, 44, 32);
+  background: rgb(37, 20, 10);
+  background: -moz-linear-gradient(top, rgba(37, 20, 10, 1) 0%, rgba(43, 26, 16, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(37, 20, 10, 1) 0%, rgba(43, 26, 16, 1) 100%);
+  background: linear-gradient(to bottom, rgba(37, 20, 10, 1) 0%, rgba(43, 26, 16, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25140a', endColorstr='#2b1a10', GradientType=0);
 }
 
 .card-image {
-	position: relative;
-	width: 404px;
-	height: 276px;
-	margin: auto;
+  position: relative;
+  width: 404px;
+  height: 276px;
+  margin: auto;
 }
 
 .card-l {
-	width: 202px;
-	height: 276px;
-	vertical-align: top;
-	position: absolute;
-	background-position: center;
-	z-index: 1;
-	filter: saturate(125%);
+  width: 202px;
+  height: 276px;
+  vertical-align: top;
+  position: absolute;
+  background-position: center;
+  z-index: 1;
+  filter: saturate(125%);
 }
 
 .card-l-mask {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	z-index: 2;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
 }
 
 .card-l .card-name {
-	width: 202px;
-	font-size: 15px;
-	font-weight: 600;
-	position: absolute;
-	top: 4px;
-	z-index: 5;
-	text-align: center;
-	text-shadow: #000 1px 1px 2px, #000 -1px 1px 2px, #000 1px -1px 2px, #000 -1px -1px 2px;
+  width: 202px;
+  font-size: 15px;
+  font-weight: 600;
+  position: absolute;
+  top: 4px;
+  z-index: 5;
+  text-align: center;
+  text-shadow: #000 1px 1px 2px, #000 -1px 1px 2px, #000 1px -1px 2px, #000 -1px -1px 2px;
 }
 
 .qt-3 .card-name {
-	color: #da05e2;
+  color: #da05e2;
 }
 
 .qt-4 .card-name {
-	color: #f90;
+  color: #f90;
 }
 
 .qt-5 .card-name {
-	color: #e70000;
+  color: #e70000;
 }
 
 .qt-6 .card-name {
-	color: #a47d32;
+  color: #a47d32;
 }
 
 .card-quality-bg {
-	width: 180px;
-	height: 20px;
-	background: rgba(0, 0, 0, 0.3);
-	position: absolute;
-	top: 25px;
-	left: 11px;
-	z-index: 3;
+  width: 180px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 25px;
+  left: 11px;
+  z-index: 3;
 }
 
 .card-frame {
-	width: 202px;
-	height: 276px;
+  width: 202px;
+  height: 276px;
   background-image: url("https://kakasfighter.github.io/images/card_ui/card_frame.png");
-	background-repeat: no-repeat;
-	position: absolute;
-	z-index: 4;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 4;
 }
 
 .skill-card-frame {
@@ -944,412 +963,428 @@ input[name="race"]:checked+label, input[name="attack_type"]:checked+label, input
 }
 
 .card-l div.init-ready {
-	width: 36px;
-	height: 36px;
+  width: 36px;
+  height: 36px;
   background-image: url("https://kakasfighter.github.io/images/card_ui/init_ready_circle.png");
-	background-repeat: no-repeat;
-	color: #fff;
-	position: absolute;
-	top: 20px;
-	left: 5px;
-	z-index: 5;
-	font-size: 21px;
-	font-family: Arial, sans-serif;
-	text-align: center;
-	text-shadow: 2px 2px #300, 2px -2px #300, -2px 2px #300, -2px -2px #300;
-	padding: 1px 3px 0 0;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  z-index: 5;
+  font-size: 21px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px #300, 2px -2px #300, -2px 2px #300, -2px -2px #300;
+  padding: 1px 3px 0 0;
 }
 
 .card-phyle {
-	position: absolute;
-	top: 20px;
-	right: 0px;
+  position: absolute;
+  top: 20px;
+  right: 0px;
 }
 
 .card-quality {
-	width: 180px;
-	height: 20px;
-	position: absolute;
-	top: 25px;
-	left: 11px;
-	text-align: center;
-	z-index: 5;
+  width: 180px;
+  height: 20px;
+  position: absolute;
+  top: 25px;
+  left: 11px;
+  text-align: center;
+  z-index: 5;
 }
 
 .card-hp {
-	position: absolute;
-	bottom: 9px;
-	right: 30px;
-	font-size: 21px;
-	font-family: Arial, sans-serif;
-	text-align: center;
-	text-shadow: 2px 2px #300, 2px -2px #300, -2px 2px #300, -2px -2px #300;
+  position: absolute;
+  bottom: 9px;
+  right: 30px;
+  font-size: 21px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px #300, 2px -2px #300, -2px 2px #300, -2px -2px #300;
 }
 
 .card-attack {
-	position: absolute;
-	bottom: 0px;
-	left: 12px;
+  position: absolute;
+  bottom: 0px;
+  left: 12px;
 }
 
 .attack-type {
-	position: relative;
-	bottom: 9px;
-	display: inline-block;
+  position: relative;
+  bottom: 9px;
+  display: inline-block;
 }
 
 .attack-volume {
-	position: relative;
-	bottom: 6px;
-	margin-left: 3px;
-	font-size: 21px;
-	font-family: Arial, sans-serif;
-	text-shadow: 2px 2px #300, 2px -2px #300, -2px 2px #300, -2px -2px #300;
-	display: inline-block;
+  position: relative;
+  bottom: 6px;
+  margin-left: 3px;
+  font-size: 21px;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px #300, 2px -2px #300, -2px 2px #300, -2px -2px #300;
+  display: inline-block;
 }
 
 .card-r {
-	display: inline-block;
-	width: 202px;
-	height: 276px;
+  display: inline-block;
+  width: 202px;
+  height: 276px;
   background-image: url("https://kakasfighter.github.io/images/card_ui/card_r.png");
-	background-repeat: no-repeat;
-	padding: 7px;
-	vertical-align: top;
-	position: absolute;
-	left: 202px;
-	z-index: 1;
+  background-repeat: no-repeat;
+  padding: 7px;
+  vertical-align: top;
+  position: absolute;
+  left: 202px;
+  z-index: 1;
 }
 
 .card-ability-top {
-	color: #F60;
-	text-align: center;
-	margin-bottom: 4px;
+  color: #F60;
+  text-align: center;
+  margin-bottom: 4px;
 }
 
 .card-ability-title {
-	color: #F60;
-	font-weight: bold;
+  color: #F60;
+  font-weight: bold;
 }
 
 .card-ability {
-	overflow-y: auto;
-	height: 210px;
-	font-size: 12px;
-	line-height: 14px;
+  overflow-y: auto;
+  height: 210px;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 .card-ability-skill {
-	overflow-y: auto;
-	height: 235px;
-	font-size: 12px;
-	line-height: 14px;
-	padding-top: 5px;
+  overflow-y: auto;
+  height: 235px;
+  font-size: 12px;
+  line-height: 14px;
+  padding-top: 5px;
 }
 
 .card-description {
-	width: 404px;
-	text-align: center;
-	margin: 3px auto 0;
+  width: 404px;
+  text-align: center;
+  margin: 3px auto 0;
 }
 
 .card_abilty_overwrite {
-	color: #0f0;
+  color: #0f0;
 }
 
 .card-race-txt {
-	text-align: center;
-	color: #1af;
-	font-size: 12px;
-	margin: 0 0 15px;
-	line-height: 12px;
+  text-align: center;
+  color: #1af;
+  font-size: 12px;
+  margin: 0 0 15px;
+  line-height: 12px;
 }
 
 .card-skill-job-txt {
-	text-align: center;
-	color: #F60;
-	font-size: 12px;
-	margin: 0 0 15px;
-	line-height: 12px;
+  text-align: center;
+  color: #F60;
+  font-size: 12px;
+  margin: 0 0 15px;
+  line-height: 12px;
 }
 
 #deck_editer {
-	padding-right: 0;
+  padding-right: 0;
 }
 
 #deck_boad {
-	position: relative;
-	margin-top: 5px;
-	width: 380px;
-	height: 504px;
+  position: relative;
+  margin-top: 5px;
+  width: 380px;
+  height: 504px;
   background: url(https://kakasfighter.github.io/images/card_ui/deck_boad.png) no-repeat;
 }
 
 #deck_boad input {
-	position: absolute;
-	top: 19px;
-	left: 62px;
-	border: solid 1px #ca8;
-	border-radius: 4px;
-	background: rgb(37, 20, 10);
-	color: #fff;
-	height: 24px;
-	width: 200px;
-	padding: 2px 4px;
-	font-size: 13px;
+  position: absolute;
+  top: 19px;
+  left: 62px;
+  border: solid 1px #ca8;
+  border-radius: 4px;
+  background: rgb(37, 20, 10);
+  color: #fff;
+  height: 24px;
+  width: 200px;
+  padding: 2px 4px;
+  font-size: 13px;
 }
 
 #deck_boad button {
-	position: absolute;
-	top: 18px;
-	right: 35px;
+  position: absolute;
+  top: 18px;
+  right: 35px;
 }
 
 #deck_list {
-	padding: 2px 4px;
-	font-size: 13px;
-	border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 13px;
+  border-radius: 3px;
 }
 
 .deck_card_list {
-	position: absolute;
-	width: 320px;
-	max-height: 420px;
-	top: 48px;
-	right: 35px;
-	overflow-y: auto;
-	padding-top: 5px;
+  position: absolute;
+  width: 320px;
+  max-height: 420px;
+  top: 48px;
+  right: 35px;
+  overflow-y: auto;
+  padding-top: 5px;
 }
 
 .deck_card_list>div {
-	padding-right: 7px;
-	padding-left: 8px;
+  padding-right: 7px;
+  padding-left: 8px;
 }
 
-#my_card {
-	padding-left: 0;
+#my-card {
+  padding-left: 0;
 }
 
-#my_card_boad {
-	position: relative;
-	width: 380px;
-	height: 504px;
-	margin-top: 5px;
+#my-card-boad {
+  position: relative;
+  width: 380px;
+  height: 504px;
+  margin-top: 5px;
   background: url(https://kakasfighter.github.io/images/card_ui/deck_boad.png) no-repeat;
-	transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
-#my_card_list {
-	transform: scale(-1, 1);
-	position: absolute;
-	width: 320px;
-	max-height: 424px;
-	top: 48px;
-	right: 35px;
-	overflow-x: auto;
+#my-card-list {
+  transform: scale(-1, 1);
+  position: absolute;
+  width: 320px;
+  max-height: 424px;
+  top: 48px;
+  right: 35px;
+  overflow-x: auto;
 }
 
-#my_card_list .card_frame_s, #deck_card_list .card_frame_s {
-	position: relative;
-	height: 117px;
+#my-card-list .card-frame-s, #deck_card_list .card-frame-s {
+  position: relative;
+  height: 117px;
   background: url(https://kakasfighter.github.io/images/card_ui/card_frame_s.png) no-repeat;
-	font-size: 15px;
-	font-family: Arial, sans-serif;
-	text-shadow: 1px 1px #300, 1px -1px #300, -1px 1px #300, -1px -1px #300;
-	font-weight: 600;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  text-shadow: 1px 1px #300, 1px -1px #300, -1px 1px #300, -1px -1px #300;
+  font-weight: 600;
 }
 
-#my_card_list>div {
-	padding-right: 8px;
-	padding-left: 7px;
+#my-card-list>div {
+  padding-right: 8px;
+  padding-left: 7px;
 }
 
-.card_img_s {
-	width: 85px;
-	height: 117px;
-	filter: saturate(120%);
-	background-size: 84px 115px;
-	background-position: center;
-	background-repeat: no-repeat;
+.card-img-s {
+  width: 85px;
+  height: 117px;
+  filter: saturate(120%);
+  background-size: 84px 115px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.c_double .card_img_s:nth-child(1) {
-	margin: 3px 0 0 3px;
+.c_double .card-img-s:nth-child(1) {
+  margin: 3px 0 0 3px;
 }
 
-.c_double .card_img_s:nth-child(2) {
-	margin: -121px -4px 4px 0;
+.c_double .card-img-s:nth-child(2) {
+  margin: -121px -4px 4px 0;
 }
 
-.c_triple .card_img_s:nth-child(1) {
-	margin: 4px 0px 0px 4px;
+.c_triple .card-img-s:nth-child(1) {
+  margin: 4px 0px 0px 4px;
 }
 
-.c_triple .card_img_s:nth-child(2) {
-	margin: -121px 0px 0px 0px;
+.c_triple .card-img-s:nth-child(2) {
+  margin: -121px 0px 0px 0px;
 }
 
-.c_triple .card_img_s:nth-child(3) {
-	margin: -121px 0px 8px -4px;
+.c_triple .card-img-s:nth-child(3) {
+  margin: -121px 0px 8px -4px;
 }
 
-.card_name_s {
-	color: #000;
-	text-align: center;
-	top: 117px;
-	font-size: 11px
+.card-name-s {
+  color: #000;
+  text-align: center;
+  top: 117px;
+  font-size: 11px;
+  width: 84px;
 }
 
-.init_ready_s {
-	width: 20px;
-	height: 20px;
+.init-ready-s {
+  width: 20px;
+  height: 20px;
   background-image: url(https://kakasfighter.github.io/images/card_ui/init_ready_circle.png);
-	background-size: 20px 20px;
-	background-repeat: no-repeat;
-	color: #fff;
-	position: absolute;
-	top: 5px;
-	left: 4px;
-	z-index: 5;
-	text-align: center;
-	padding: 0 2px 2px 0;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  z-index: 5;
+  text-align: center;
+  padding: 0 2px 2px 0;
 }
 
-.init_ready_s span {
-	position: absolute;
-	bottom: 0;
-	left: 5px;
+.init-ready-s span {
+  position: absolute;
+  bottom: -1px;
+  left: 5px;
 }
 
-.card_quality_s {
-	position: absolute;
-	z-index: 6;
-	top: 4px;
-	left: 50%;
-	transform: translate(-50%, -50%);
+.card-quality-s {
+  position: absolute;
+  z-index: 6;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.card_quality_s img {
-	height: 9px;
+.card-quality-s img {
+  height: 8px;
 }
 
-.attack_volume_s {
-	position: absolute;
-	bottom: 5px;
-	left: 5px;
+.card-ability-s {
+  position: absolute;
+  color: #fff;
+  font-size: 11px;
+  bottom: 25px;
+  width: 78px;
+  left: 4px;
+  line-height: 14px;
+  text-shadow: none;
+  font-weight: initial;
+  background-color: rgba(25, 25, 25, 0.6);
 }
 
-.card_hp_s {
-	position: absolute;
-	bottom: 5px;
-	right: 5px;
+.attack-volume-s {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: #fff;
 }
 
-.card_phyle_s {
-	position: absolute;
-	width: 22px;
-	top: 5px;
-	right: 4px;
-	z-index: 5;
+.card-hp-s {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: #fff;
 }
 
-.btn_add_deck, .btn_del_deck {
-	width: 85px;
-	height: 117px;
-	top: 0;
-	position: absolute;
-	z-index: 50;
-	cursor: pointer;
+.card-phyle-s {
+  position: absolute;
+  width: 22px;
+  top: 5px;
+  right: 4px;
+  z-index: 5;
+}
+
+.btn-add-deck, .btn_del_deck {
+  width: 85px;
+  height: 117px;
+  top: 0;
+  position: absolute;
+  z-index: 50;
+  cursor: pointer;
 }
 
 #job_icon {
-	position: absolute;
-	top: 17px;
-	left: 35px;
+  position: absolute;
+  top: 17px;
+  left: 35px;
 }
 
 #card_total_number {
-	position: absolute;
-	top: 19px;
-	right: 35px;
-	border: solid 1px #ca8;
-	border-radius: 4px;
-	background: rgb(37, 20, 10);
-	height: 24px;
-	width: 60px;
-	padding: 2px 4px;
-	font-size: 13px;
-	text-align: center;
-	color: #db8;
+  position: absolute;
+  top: 19px;
+  right: 35px;
+  border: solid 1px #ca8;
+  border-radius: 4px;
+  background: rgb(37, 20, 10);
+  height: 24px;
+  width: 60px;
+  padding: 2px 4px;
+  font-size: 13px;
+  text-align: center;
+  color: #db8;
 }
 
 .text-red {
-	color: red !important;
+  color: red !important;
 }
 
 .deck_info_icon {
-	height: calc(1.4rem + 2px);
-	padding: .1rem .25rem;
-	line-height: 1.4rem;
-	position: absolute;
-	cursor: pointer;
+  height: calc(1.4rem + 2px);
+  padding: .1rem .25rem;
+  line-height: 1.4rem;
+  position: absolute;
+  cursor: pointer;
 }
 
 #deck_info {
-	transform: scale(-1, 1);
-	position: absolute;
-	top: 20px;
-	right: 30px;
-	width: 297px;
+  transform: scale(-1, 1);
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 297px;
 }
 
 #deck_info_boad {
-	position: absolute;
-	border: solid 1px #ca8;
-	border-radius: 4px;
-	background: rgb(37, 20, 10);
-	height: 300px;
-	padding: 3px;
-	font-size: 13px;
-	line-height: 120%;
-	width: 297px;
-	top: 28px;
-	color: #db8;
+  position: absolute;
+  border: solid 1px #ca8;
+  border-radius: 4px;
+  background: rgb(37, 20, 10);
+  height: 300px;
+  padding: 3px;
+  font-size: 13px;
+  line-height: 120%;
+  width: 297px;
+  top: 28px;
+  color: #db8;
 }
 
 .deck_info_title {
-	font-size: 13px;
-	position: absolute;
+  font-size: 13px;
+  position: absolute;
 }
 
 #deck_info_title_1 {
-	top: 5px;
+  top: 5px;
 }
 
 #deck_info_title_2 {
-	top: 335px;
+  top: 335px;
 }
 
 #deck_info_title_3 {
-	top: 387px;
+  top: 387px;
 }
 
 #share_deck_url {
-	top: 357px;
+  top: 357px;
 }
 
 #share_deck_iframe {
-	top: 409px;
+  top: 409px;
 }
 
 .share_deck_input{
-	position: absolute;
-	border: solid 1px #ca8;
-	border-radius: 4px;
-	background: rgb(37, 20, 10);
-	color: #db8;
-	height: 24px;
-	width: 297px;
-	padding: 2px 4px;
-	font-size: 13px;
+  position: absolute;
+  border: solid 1px #ca8;
+  border-radius: 4px;
+  background: rgb(37, 20, 10);
+  color: #db8;
+  height: 24px;
+  width: 297px;
+  padding: 2px 4px;
+  font-size: 13px;
 }
