@@ -1099,7 +1099,7 @@ ${smallCards}
  * @param {string} condition The SQL condition is composed of card attributes(name, job, ...)
  */
 function searchCard(condition) {
-  var stmt = "SELECT * FROM 'card' as c WHERE " + condition;
+  var stmt = "SELECT * FROM 'card' as c WHERE " + condition + " AND c.Name NOT LIKE '(%'";
   $sql.value = stmt;
   // console.log("searchCard:", stmt);
   sqlDatabase.transaction(function(tx) {
@@ -1122,7 +1122,7 @@ function searchCard(condition) {
  * @param {string} condition The SQL condition is composed of card attributes(name, race, attack type, ...)
  */
 function searchMonster(condition) {
-  var stmt = "SELECT * FROM 'card' as c, `monster` as m WHERE m.id = c.id AND " + condition;
+  var stmt = "SELECT * FROM 'card' as c, `monster` as m WHERE m.id = c.id AND " + condition + " AND c.Name NOT LIKE '(%'";
   $sql.value = stmt;
   // console.log("searchMonster:", stmt);
   sqlDatabase.transaction(function(tx) {
@@ -1607,6 +1607,13 @@ function hideFilterClass() {
 		filterCount++;
   });
   
+  if (!$('input[name="quality[]"]:checked').length) {
+    checkedQualityArray.push("qt-0");
+    checkedQualityArray.push("qt-1");
+    checkedQualityArray.push("qt-2");
+		filterCount++;
+  }
+  
   if (filterCount == 0) {
     $cardSearchedResults.removeClass('hide');
   } else {
@@ -1707,6 +1714,11 @@ $("#btn-search-cards").on('click', function() {
     qualityOrConditionArray.push("c.quality = " + quality);
     console.log("quality:", quality);
   });
+  if (!$('input[name="quality[]"]:checked').length) {
+    qualityOrConditionArray.push("c.quality = 0");
+    qualityOrConditionArray.push("c.quality = 1");
+    qualityOrConditionArray.push("c.quality = 2");
+  }
   qualityCondition = "(" + qualityOrConditionArray.join(" OR ") + ")";
   
   if ($('input[name="elite"]:checked').val() != "all") {
