@@ -1069,7 +1069,7 @@ function searchCardById(cardId) {
       });
       $('#hot-single-card').empty();
       $('#hot-single-card').append(`
-<div id="my-card-big" class="card-table">
+<div id="my-single-card-big" class="card-table">
   <div class="row mb-3">
     <div class="col unit-title">
       <div class="m-1" title="收尋結果">收尋結果<span class="group-name gold-f">【官方連結】 <a href="https://nothing/detail.php?id=6666" class="text-white" target="_blank"><u>卡包名稱</u></a></span></div>
@@ -1079,7 +1079,7 @@ function searchCardById(cardId) {
 ${cards}
   </div><!--row end-->
 </div><!--card-table end-->
-<div id="my-card-small" class="col-auto">
+<div id="my-single-card-small" class="col-auto">
   <div id="my-card-boad">
     <div class="row" id="my-card-list">
 ${smallCards}
