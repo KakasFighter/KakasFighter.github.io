@@ -35,10 +35,11 @@
 const DEBUG_CHECK_IF_IMAGE_EXIST = false;
 
 /* Update XLSX_* variable information manually after one week around patch */
-const XLSX_CARD = {'name': 'card' , 'url': 'https://kakasfighter.github.io/db/Resources_xml1.xml', 'modifiedDate': "2019-04-29T07:21:45Z", 'size': 9885484, 'updatable': false};
-const XLSX_EFFECT = {'name': 'effect', 'url': 'https://kakasfighter.github.io/db/Resources_xml4.xml' , 'modifiedDate': "2019-05-23T01:45:59Z", 'size': 5093442, 'updatable': false};
-const XLSX_SKILL = {'name': 'Skill', 'url': 'https://kakasfighter.github.io/db/Resources_xml3.xml' , 'modifiedDate': "2018-12-06T09:45:14Z", 'size': 1022260, 'updatable': false};
-const XLSX_MONSTER = {'name': 'monster', 'url': 'https://kakasfighter.github.io/db/Resources_xml7.xml' , 'modifiedDate': "2019-05-07T07:10:02Z", 'size': 7411934, 'updatable': false};
+const XLSX_CARD = {'name': 'card' , 'url': 'https://kakasfighter.github.io/db/Resources_xml1.xml', 'modifiedDate': "2019-04-29T07:21:45Z", 'size': 9885484, 'updatable': true};
+const XLSX_EFFECT = {'name': 'effect', 'url': 'https://kakasfighter.github.io/db/Resources_xml4.xml' , 'modifiedDate': "2019-05-23T01:45:59Z", 'size': 5093442, 'updatable': true};
+const XLSX_SKILL = {'name': 'Skill', 'url': 'https://kakasfighter.github.io/db/Resources_xml3.xml' , 'modifiedDate': "2018-12-06T09:45:14Z", 'size': 1022260, 'updatable': true};
+const XLSX_MONSTER = {'name': 'monster', 'url': 'https://kakasfighter.github.io/db/Resources_xml7.xml' , 'modifiedDate': "2019-05-07T07:10:02Z", 'size': 7411934, 'updatable': true};
+const XLSX_STATUS = {'name': 'status', 'url': 'https://kakasfighter.github.io/db/Resources_xml6.xml' , 'modifiedDate': "2019-05-07T07:10:02Z", 'size': 327953, 'updatable': true};
 
 //@deprecated
 // var _isCardTableUpdatable = true;
@@ -156,6 +157,12 @@ var $cleanSkillTable = null;
 var $cleanCardTable = null;
 
 /** 
+ * Drop `status` table and delete its meta data from `sheets`.
+ * @type {Element}
+ */
+var $cleanStatusTable = null;
+
+/** 
  * Drop all tables from 'kaka' database.
  * @type {Element}
  */
@@ -240,16 +247,18 @@ $(document).ready(function() {
   $sqlNotSupported = document.getElementById('sqldiv');
   $schema = document.getElementById('schema');
   
-  $cleanMonsterTable = document.getElementById('clean-monster')
-  $cleanEffectTable = document.getElementById('clean-effect')
-  $cleanSkillTable = document.getElementById('clean-skill')
-  $cleanCardTable = document.getElementById('clean-card')
-  $cleanKakaDatabase = document.getElementById('clean-db')
+  $cleanMonsterTable = document.getElementById('clean-monster');
+  $cleanEffectTable = document.getElementById('clean-effect');
+  $cleanSkillTable = document.getElementById('clean-skill');
+  $cleanCardTable = document.getElementById('clean-card');
+  $cleanStatusTable = document.getElementById('clean-status');
+  $cleanKakaDatabase = document.getElementById('clean-db');
 
   $cleanMonsterTable.addEventListener('click', cleanMonsterTable, false);
   $cleanEffectTable.addEventListener('click', cleanEffectTable, false);
   $cleanSkillTable.addEventListener('click', cleanSkillTable, false);
   $cleanCardTable.addEventListener('click', cleanCardTable, false);
+  $cleanStatusTable.addEventListener('click', cleanStatusTable, false);
   $cleanKakaDatabase.addEventListener('click', cleanKakaDatabase, false);
   
   $raceMonsterRadio = $(".race-monster-radio");
@@ -419,6 +428,15 @@ const SQL_CREATE_MONSTER_TABLE =
 
 
 /**
+ * A SQL statement to create `status` table.
+ * @type {string}
+ * @const
+ */
+const SQL_CREATE_STATUS_TABLE = 
+    "CREATE TABLE IF NOT EXISTS`status` (`ID` REAL PRIMARY KEY NOT NULL, `Name` TEXT, `Des` TEXT, `Turns` REAL, `Harm` REAL, `Image` TEXT, `Effect1` REAL, `Effect2` REAL, `Effect3` REAL, `Effect4` REAL, " + 
+      "`Effect5` REAL, `StatusView` TEXT, `SubFlag` REAL);";
+
+/**
  * The index to get column name of table `card`, `effect`, `Skill`, `monster` from CARD_ATTRIBUTES, EFFECT_ATTRIBUTES, SKILL_ATTRIBUTES, MONSTER_ATTRIBUTES.
  * @type {number}
  * @const
@@ -571,6 +589,27 @@ const MONSTER_ATTRIBUTES = [
   ["`Phyle2`", "REAL"]
 ];
 
+/**
+ * The attributes of the table `status` define the column name and its type.
+ * @type {Array<Array<string, string>>}
+ * @const
+ */
+const STATUS_ATTRIBUTES = [
+  ["`ID`", "REAL"],
+  ["`Name`", "TEXT"],
+  ["`Des`", "TEXT"],
+  ["`Turns`", "REAL"],
+  ["`Harm`", "REAL"],
+  ["`Image`", "TEXT"],
+  ["`Effect1`", "REAL"],
+  ["`Effect2`", "REAL"],
+  ["`Effect3`", "REAL"],
+  ["`Effect4`", "REAL"],
+  ["`Effect5`", "REAL"],
+  ["`StatusView`", "TEXT"],
+  ["`SubFlag`", "REAL"]
+];
+
 // 不需要Promise,故不採用: https://github.com/oskarer/websql-promisified/ errorCallback, successCallback in executeSql
 // 使用Promise會需要同步,除非在webworker中執行,不然會卡住UI
 
@@ -680,6 +719,9 @@ function buildSheet(workSheet, sheetName, modifiedDate, size) {
       case "monster":
         buildtable(workSheet, sheetName, range, tx, SQL_CREATE_MONSTER_TABLE, MONSTER_ATTRIBUTES);
         break;
+      case "status":
+        buildtable(workSheet, sheetName, range, tx, SQL_CREATE_STATUS_TABLE, STATUS_ATTRIBUTES);
+        break;
       default:
         console.log('Table(`'+ sheetName + '`) unkown table name');
     }
@@ -764,29 +806,35 @@ function checkLatestXml() {
           for (var i=0; i < results.rows.length; i++) {
             switch (results.rows[i]["Name"]) {
               case XLSX_CARD['name']/*"card"*/:
-                if (XLSX_CARD['modifiedDate'] <= results.rows[i]["ModifiedDate"]/* && 9885484 > results.rows[i]["Size"]*/) {
+                if (XLSX_CARD['modifiedDate'] <= results.rows[i]["ModifiedDate"]) {
                   console.log("Table `card` is the latest version");
                   XLSX_CARD['updatable'] = false;
                 }
                 break;
               case XLSX_EFFECT['name']/*"effect"*/:
-                if (XLSX_EFFECT['modifiedDate'] <= results.rows[i]["ModifiedDate"]/* && 5093442 > results.rows[i]["Size"]*/) {
+                if (XLSX_EFFECT['modifiedDate'] <= results.rows[i]["ModifiedDate"]) {
                   console.log("Table `effect` is the latest version");
                   XLSX_EFFECT['updatable'] = false;
                   setJsonEffect(tx);
                 }
                 break;
               case XLSX_SKILL['name']/*"Skill"*/:
-                if (XLSX_SKILL['modifiedDate'] <= results.rows[i]["ModifiedDate"]/* && 5093442 > results.rows[i]["Size"]*/) {
+                if (XLSX_SKILL['modifiedDate'] <= results.rows[i]["ModifiedDate"]) {
                   console.log("Table `skill` is the latest version");
                   XLSX_SKILL['updatable'] = false;
                   setJsonSkill(tx);
                 }
                 break;
               case XLSX_MONSTER['name']/*"monster"*/:
-                if (XLSX_MONSTER['modifiedDate'] <= results.rows[i]["ModifiedDate"]/* && 7411934 > results.rows[i]["Size"]*/) {
+                if (XLSX_MONSTER['modifiedDate'] <= results.rows[i]["ModifiedDate"]) {
                   console.log("Table `monster` is the latest version");
                   XLSX_MONSTER['updatable'] = false;
+                }
+                break;
+              case XLSX_STATUS['name']/*"status"*/:
+                if (XLSX_STATUS['modifiedDate'] <= results.rows[i]["ModifiedDate"]) {
+                  console.log("Table `status` is the latest version");
+                  XLSX_STATUS['updatable'] = false;
                 }
                 break;
             }
@@ -800,6 +848,7 @@ function checkLatestXml() {
             effect: XLSX_EFFECT,
             skill: XLSX_SKILL,
             monster: XLSX_MONSTER,
+            status: XLSX_STATUS,
           },
           on: {
             workstart: _workStart, /* perfect time to start a spinner */ 
@@ -816,16 +865,13 @@ function checkLatestXml() {
         });
       }, function(tx, error) {
         console.log("checkLatestXml error: ", error, "Not found tables, update all now!");
-        XLSX_CARD['updatable'] = true;
-        XLSX_EFFECT['updatable'] = true;
-        XLSX_SKILL['updatable'] = true;
-        XLSX_MONSTER['updatable'] = true;
         LoadSheet({
           update: {
             card: XLSX_CARD,
             effect: XLSX_EFFECT,
             skill: XLSX_SKILL,
             monster: XLSX_MONSTER,
+            status: XLSX_STATUS,
           },
           on: {
             workstart: _workStart, /* perfect time to start a spinner */ 
@@ -845,6 +891,39 @@ function checkLatestXml() {
 }
 
 checkLatestXml();
+
+// TODO: create a table to record it, and read into a variable like jsonEffect.
+function checkAnimateXml() {
+  var rawFile = new XMLHttpRequest();
+  var xmlDoc;
+  var $xml;
+  rawFile.onreadystatechange = function() {
+      if(rawFile.readyState === 0) {
+        // console.log('UNSENT');
+      } else if(rawFile.readyState === 1) {
+      } else if(rawFile.readyState === 2) {
+      } else if(rawFile.readyState === 3) {
+      } else if(rawFile.readyState === 4) {
+        console.log('checkAnimateXml::XMLHttpRequest::DONE');
+        if(rawFile.status === 200 || rawFile.status == 0) {
+          // console.log(rawFile.responseText);
+          // var parser = new DOMParser();
+          // xmlDoc = parser.parseFromString(rawFile.responseText, "text/xml");
+          // xmlDoc.getElementsByTagName("animateitem");
+          xmlDoc = $.parseXML(rawFile.responseText);
+          $xml = $(xmlDoc);
+          var h = $xml.find("animateitem[name='hero_taidaotuzi']"); // hero_taidaotuzi from table card [animateitem]
+          var atk = h.find('status[name=atk]');
+          var stand = h.find('status[name=stand]');
+          var walk = h.find('status[name=walk]');
+          console.log(atk[0].attributes["file"].value, stand[0].attributes["file"].value, walk[0].attributes["file"].value);
+        }
+      }
+  };
+
+  rawFile.open("GET", 'https://kakasfighter.github.io/db/Resources_xml5.xml', true);
+  rawFile.send(null);
+}
 
 /**
  * Delete monster table for testing update it automatically.
@@ -872,6 +951,13 @@ function cleanSkillTable() {
  */
 function cleanCardTable() {
   queryStmts('Drop TABLE card', 'DELETE FROM `sheets` WHERE Name = "card"');
+}
+
+/**
+ * Delete status table for testing update it automatically.
+ */
+function cleanStatusTable() {
+  queryStmts('Drop TABLE status', 'DELETE FROM `sheets` WHERE Name = "status"');
 }
 
 /**
@@ -1086,6 +1172,88 @@ ${smallCards}
     </div><!--row end-->
   </div><!--my-card-boad end-->
 </div><!--my-card end-->
+      `);
+    }, function(tx, e) {
+      $sqlPrepareStatement.innerText += "\n" + e + "\n" + (e.message||"") +"\n"+ (e.stack||"");
+      $sqlPrepareStatement.classList.add("error");
+    });
+  });
+}
+
+/**
+ * Search all status and present it in html.
+ */
+function searchStatus() {
+  var stmt = "SELECT * FROM `status`";
+  sqlDatabase.transaction(function(tx) {
+    tx.executeSql(stmt, [], function(tx, results) {
+      var jsonStatus = getJsonResult(results);
+      var status = "";
+      jsonStatus.forEach(function(s) {
+        if (s) {
+          status += createStatusItem(s);
+        }
+      });
+      $('#hot-status').empty();
+      $('#hot-status').append(`
+<div id="my-status-card-big" class="card-table">
+  <div class="row mb-3">
+    <div class="col unit-title">
+      <div class="m-1" title="狀態列表">狀態列表<span class="group-name gold-f">【官方連結】 <a href="https://nothing/detail.php?id=6666" class="text-white" target="_blank"><u>無</u></a></span></div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col mb-3 bg-dark card-line phyle-id-9-0 at-id-0 ir-id-4 qt-5">
+      <div class="card-image">
+        <div class="card-l lazyloaded" style="background-image: url(&quot;https://kakasfighter.github.io/images/cards/JP_Dragon_Angers.jpg&quot;);" data-bg="https://kakasfighter.github.io/images/cards/JP_Dragon_Angers.jpg">
+          <img class="card-l-mask" src="https://kakasfighter.github.io/images/card_ui/card_l_mask.png">
+          <div class="card-name cb" data-clipboard-text="★6 銀龍公主昂熱" style="opacity: 1;">銀龍公主昂熱</div>
+          <div class="card-quality-bg"></div>
+          <div class="card-frame">
+            <div class="init-ready">4</div>
+            <img class="card-phyle" src="https://kakasfighter.github.io/images/card_ui/rc_9-0.png">
+            <div class="card-quality"><img src="https://kakasfighter.github.io/images/card_ui/q6.png" alt="★6" title="★6"></div>
+            <div class="card-attack ">
+              <img class="attack-type" src="https://kakasfighter.github.io/images/card_ui/at_0.png">
+              <div class="attack-volume">15</div>
+            </div>
+            <div class="card-hp">7</div>
+          </div>
+        </div>
+        <div class="card-r-auto">
+          <div class="card-race-txt">龍族士兵/菁英</div>
+          <div class="card-ability-line"></div>
+          <div class="card-ability-top">能力</div>
+          <div class="card-ability">
+            <div class="cb" data-clipboard-text="[近戰能量]:友方所有其他士兵造成的近戰傷害×2。">
+              <span class="card-ability-title">近戰能量</span>:友方所有其他士兵造成的近戰傷害×2。
+            </div>
+            <div class="cb" data-clipboard-text="[孤獨]:己方場上沒有其他士兵時，無法行動。">
+              <span class="card-ability-title">孤獨</span>:己方場上沒有其他士兵時，無法行動。
+            </div>
+            <div class="cb" data-clipboard-text="[真最強劍士召喚]:進場後第一回合在周圍一格隨機召喚1只逆天品質的的冥王、劍聖艾拉EX、神龍澤諾比婭或普通品質的地精流氓。">
+              <span class="card-ability-title">真最強劍士召喚</span>:進場後第一回合在周圍一格隨機召喚1只逆天品質的的冥王、劍聖艾拉EX、神龍澤諾比婭或普通品質的地精流氓。
+            </div>
+            <div class="cb" data-clipboard-text="[化身真龍2]:死亡時，轉化為昂熱（真龍）（8/1/11冷風/破甲/活下去吧/活下去吧/逆襲）。">
+              <span class="card-ability-title">化身真龍2</span>:死亡時，轉化為昂熱（真龍）（8/1/11冷風/破甲/活下去吧/活下去吧/逆襲）。
+            </div>
+          </div>
+          <div class="card-status-line"></div>
+          <div class="card-status-top">狀態</div>
+          ${status}
+        </div>
+      </div>
+      <div class="card-description">
+        <div class="svg-wrap">
+          <div class="add-mycard float-left svg-plus" id="undefined" data-state="plus"></div>
+          <div class="cb card-des" data-clipboard-text="★6 銀龍公主昂熱 (4/15/7)">★6 銀龍公主昂熱 (4/15/7)</div>
+        </div>
+        <div class="note-1"></div>
+        <div class="bg-description"></div>
+      </div>
+    </div><!--col end-->
+  </div><!--row end-->
+</div><!--card-table end-->
       `);
     }, function(tx, e) {
       $sqlPrepareStatement.innerText += "\n" + e + "\n" + (e.message||"") +"\n"+ (e.stack||"");
@@ -1421,6 +1589,7 @@ function createMonsterItem(card) {
         </div>
         <div class="card-r">
           <div class="card-race-txt">${phyle}士兵${unique}</div>
+          <div class="card-ability-line"></div>
           <div class="card-ability-top">能力</div>
           <div class="card-ability">
             ${normalSkillId}
@@ -1510,6 +1679,26 @@ function createCardSmallItem(card) {
 `;
 }
 
+/**
+ * Create DOM of a status
+ * @param {object} status The row value of `status` table.
+ */
+function createStatusItem(status) {
+  // console.log("status:", status);
+  var noHarm = status['Harm'] ? '': 'no';
+  
+  return `
+<div class="cb card-status" data-clipboard-text="${status['Name']} ${status['Des']}">
+  <div class="card-status-image">
+    <img src="https://kakasfighter.github.io/images/status/${status['Image']}.png">
+    <span class="card-status-${noHarm}harm-title">${status['Name']}</span>
+  </div>
+  ${status['Des']}
+</div>
+`
+}
+
+
 // 可參考使用Fragments https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Performance_best_practices_for_Firefox_fe_engineers
 /**
  * Create DOM of big card table and present in html.
@@ -1549,6 +1738,10 @@ ${cards}
 $(".sql-btn-card").on('click', function() {
   var cardId = $( this ).siblings("#card-id")[0].value;
   searchCardById(cardId);
+});
+
+$(".sql-btn-status").on('click', function() {
+  searchStatus();
 });
 
 // TODO: 效能問題卡住UI, google: 'javascript async database calls'

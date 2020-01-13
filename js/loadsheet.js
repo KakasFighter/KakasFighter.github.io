@@ -108,6 +108,10 @@ var LoadSheet = function LoadSheet(opts) {
   barcard.opened = false;
   barcard.done = false;
   
+  var barstatus = new ProgressBar.Line('#bar-status', progressbar_setting);
+  barstatus.opened = false;
+  barstatus.done = false;
+    
   function progress(pbar, pid, pvalue) {
     $(pid).show()
     pbar.set(pvalue);
@@ -189,6 +193,11 @@ var LoadSheet = function LoadSheet(opts) {
     handleFile(opts.update.monster['url'], opts.update.monster['size'], progress.bind(null, barmonster, "#bar-monster"));
   }
   
+  // 6748筆資料
+  function handleRealStatusFile() {
+    handleFile(opts.update.status['url'], opts.update.status['size'], progress.bind(null, barstatus, "#bar-status"));
+  }
+  
   // 新增直接處理monster,effect,card檔案的按鈕功能
   document.getElementById('demo-monster').addEventListener('click', handleMonsterFile, false);
   document.getElementById('demo-effect').addEventListener('click', handleEffectFile, false);
@@ -206,4 +215,5 @@ var LoadSheet = function LoadSheet(opts) {
   if(opts.update.effect['updatable']) handleRealEffectFile();
   if(opts.update.skill['updatable']) handleRealSkillFile();
   if(opts.update.monster['updatable']) handleRealMonsterFile();
+  if(opts.update.status['updatable']) handleRealStatusFile();
 };

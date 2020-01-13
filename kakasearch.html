@@ -40,6 +40,9 @@
       <div id="bar-card" class="progressbar" style="display:none">
         <h5>card</h5>
       </div>
+      <div id="bar-status" class="progressbar" style="display:none">
+        <h5>status</h5>
+      </div>
       <h4>Simple Demo:</h4>
       <button id="demo-monster">怪物</button>
       <button id="demo-effect">效果</button>
@@ -53,6 +56,7 @@
       <button id="clean-effect">刪除效果</button>
       <button id="clean-skill">刪除技能</button>
       <button id="clean-card">刪除卡片</button>
+      <button id="clean-status">刪除狀態</button>
       <button id="clean-db">清空資料庫</button>
       <h3> Tables and Fields:</h3>
       <div id="schema"></div>
@@ -413,6 +417,10 @@
         </div>
         <div class="sql row">
           <button class="sql-btn col">執行</button>
+          <div class="sql-stmt col">SELECT * FROM `status` ORDER BY id</div>
+        </div>
+        <div class="sql row">
+          <button class="sql-btn col">執行</button>
           <div class="sql-stmt col">SELECT * FROM `card` as c, `monster` as m WHERE  m.id = c.id</div>
         </div>
         <div class="sql row">
@@ -433,6 +441,11 @@
           <label>Ex:45306 10738 36565 45298 10496 45311 45276 24060 36162 36168 24063 24055</label>
         </div>
         <div id="hot-single-card"></div>
+        <div class="sql row">
+          <button class="sql-btn-status col">執行</button>
+          查詢所有狀態
+        </div>
+        <div id="hot-status"></div>
         <label>Enter an SQL select statement (query updates as you type): &nbsp; &nbsp;</label>
         <input type="text" id="sql" disabled="true" class="winpt">
         <input type="submit" id="exporter" value="Export Results" onclick="exportXlsx();" disabled="">

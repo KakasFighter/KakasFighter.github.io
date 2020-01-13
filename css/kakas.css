@@ -54,7 +54,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #F5F5FF;
+  background-color: #f5f5ff;
   font-family: Helvetica, Arial, FreeSans, sans-serif;
   color: #454545;
   font-size: 14px;
@@ -110,7 +110,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #4267B6;
+  color: #4267b6;
   cursor: pointer;
 }
 
@@ -165,16 +165,16 @@ ul ul {
 }
 
 .warning {
-  border: 1px solid #D4D8EB;
+  border: 1px solid #d4d8eb;
   padding: 10px;
-  background: #F0F1F8;
+  background: #f0f1f8;
   box-shadow: 2px 2px 7px #777;
   margin-bottom: 40px;
 }
 
 .warning strong {
   background: #747477;
-  color: #FFF;
+  color: #fff;
   border-radius: 4px;
   padding: 2px 4px;
 }
@@ -197,7 +197,7 @@ ul ul {
  * home page
  */
 body.home {
-  background: #FFF;
+  background: #fff;
 }
 
 body.home h1 {
@@ -864,7 +864,7 @@ input[name="show_mode"]:checked+label {
   line-height: 50px;
   font-size: 10px;
   text-align: center;
-  color: #FF0;
+  color: #ff0;
   font-weight: bold;
   background: #000;
   border-radius: 50%;
@@ -1069,25 +1069,79 @@ input[name="show_mode"]:checked+label {
   vertical-align: top;
   position: absolute;
   left: 202px;
-  z-index: 1;
+  z-index: 100;
+}
+
+.card-r-auto {
+  display: inline-block;
+  width: 202px;
+  background-color: #001113;
+  border: solid 1px #ccac69;
+  border-radius: 10px;
+  padding: 7px;
+  vertical-align: top;
+  position: absolute;
+  left: 202px;
+  z-index: 100;
+  margin: 1px;
+}
+
+.card-r-auto:before {
+  background: none;
+  border: 1px solid #000;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 10px;
+}
+
+.card-ability-line,
+.card-status-line {
+  height: 1px;
+}
+
+.card-ability-line:before,
+.card-status-line:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 202px;
+  height: 3px;
+  background-image: url(https://kakasfighter.github.io/images/Newplayer/cardtipsbgxian.png);
+  background-repeat:no-repeat;
 }
 
 .card-ability-top {
-  color: #F60;
+  color: #f60;
   text-align: center;
-  margin-bottom: 4px;
+  margin: 6px 0 8px;
+}
+
+.card-status {
+  line-height: 15px;
+  margin: 0 0 9px;
+}
+
+.card-status-top {
+  color: #f60;
+  text-align: center;
+  margin: 6px 0 5px;
 }
 
 .card-ability-title {
-  color: #F60;
+  color: #f60;
   font-weight: bold;
 }
 
 .card-ability {
   overflow-y: auto;
-  height: 210px;
   font-size: 12px;
   line-height: 14px;
+  margin: 0 0 7px;
 }
 
 .card-ability-skill {
@@ -1112,16 +1166,24 @@ input[name="show_mode"]:checked+label {
   text-align: center;
   color: #1af;
   font-size: 12px;
-  margin: 0 0 15px;
+  margin: 0 0 8px;
   line-height: 12px;
 }
 
 .card-skill-job-txt {
   text-align: center;
-  color: #F60;
+  color: #f60;
   font-size: 12px;
   margin: 0 0 15px;
   line-height: 12px;
+}
+
+.card-status-harm-title {
+  color: #f00;
+}
+
+.card-status-noharm-title {
+  color: #0f0;
 }
 
 #deck_editer {
