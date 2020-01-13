@@ -1566,7 +1566,7 @@ function createMonsterItem(card) {
   var monsterAbility3 = createCardAbility(card, 'monsterAbility3', 'monsterAbility3name', 'monsterAbility3des');
   var monsterAbility4 = createCardAbility(card, 'monsterAbility4', 'monsterAbility4name', 'monsterAbility4des');
   var monsterAbility5 = createCardAbility(card, 'monsterAbility5', 'monsterAbility5name', 'monsterAbility5des');
-  var phyleImg = card['Phyle'] + "-0" + (card['Phyle'] > 99 ? "_n" : "");
+  var phyleImg = card['Phyle'] + "-" + card['Phyle2'] + (card['Unique'] && card['Phyle'] < 99 ? "" : "_n");
   card["ResID_URL"] = "https://kakasfighter.github.io/images/cards/" + card["ResID"] + ".jpg";
   checkImageExists(card["ResID_URL"], null /*loadImageSuccess*/, loadImageError);
   return `
@@ -1626,7 +1626,7 @@ function createMonsterItem(card) {
 function createCardSmallItem(card) {
   var hideSkill = card['cardType'] == 2 ? "hide" : ''; // 技能(Type:2)
   var hideWall = card['monsterType'] == 2 ? "hide" : ''; // 牆壁(Type:2):不顯示攻擊圖片
-  var phyleImg = card['Phyle'] + "-0";
+  var phyleImg = card['Phyle'] + "-" + card['Phyle2'] + (card['Unique'] && card['Phyle'] < 99 ? "" : "_n");
   var jobid = 0;
   var jobname = '';
   if (hideSkill) {
@@ -1635,7 +1635,7 @@ function createCardSmallItem(card) {
     card['cardAbility1'] = card['SkillID'];
     card['cardAbility1name'] = card['Name'];
     card['cardAbility1des'] = card['Des'];
-    phyleImg = (jobid == 999 ? 100 : jobid) + "-0"; //地下城王的技能顯示為戰士技能
+    phyleImg = (jobid == 999 ? 100 : jobid) + "-0_n"; //地下城王的技能顯示為戰士技能
   }
 
   var phyle = phyle2String(card['Phyle'] + '-' + card['Phyle2']);
@@ -1660,7 +1660,7 @@ function createCardSmallItem(card) {
             <div class="init-ready-s">
               <span>${card['InitReady']}</span>
             </div>
-            <img class="card-phyle-s" src="https://kakasfighter.github.io/images/card_ui/rc_${phyleImg}_n.png">
+            <img class="card-phyle-s" src="https://kakasfighter.github.io/images/card_ui/rc_${phyleImg}.png">
             <div class="card-quality-s">
               <img src="https://kakasfighter.github.io/images/card_ui/q${card['Quality']+1}.png">
             </div>
