@@ -426,7 +426,6 @@ const SQL_CREATE_MONSTER_TABLE =
       "`AttackType` REAL, `monsterAbility1` REAL, `monsterAbility2` REAL, `monsterAbility3` REAL, `monsterAbility4` REAL, `monsterAbility5` REAL, `normalSkillID` REAL, " + 
       "`Unique` REAL, `Speed` REAL, `Aura` TEXT, `MoveStyle` TEXT, `IsTask` TEXT, `Phyle2` REAL);";
 
-
 /**
  * A SQL statement to create `status` table.
  * @type {string}
@@ -1383,6 +1382,67 @@ function phyle2String(phyle) {
   }
 }
 
+/**
+ * Transform phyle to chinese pinyin string.
+ * @param {string} phyle The race id from column name (Phyle - Phyle2) of `monster` table.
+ */
+function phyle2Pinyin(phyle) {
+  switch (phyle) {
+    case "1-0":
+      return 'renlei';
+    case "2-0":
+      return 'wangling';
+    case "3-0":
+      return 'yeshou';
+    case "4-0":
+      return 'dijing';
+    case "5-0":
+      return 'jumo';
+    case "6-0":
+      return 'jingling';
+    case "7-0":
+      return 'shouren';
+    case "8-0":
+      return 'yijie';
+    case "9-0":
+      return 'longzu';
+    case "10-0":
+      return 'tianshi';
+    case "11-0":
+      return 'emo';
+    case "10-1":
+      return 'tianshirenlei';
+    case "6-1":
+      return 'renleijingling';
+    case "6-3":
+      return 'renleiyeshou';
+    case "10-6":
+      return 'tianshijingling';
+    case "11-5":
+      return 'jumoemo';
+    case "11-2":
+      return 'wanglingemo';
+    case "5-2":
+      return 'jumowangling';
+    case "9-2":
+      return 'longzuwangling';
+    case "9-3":
+      return 'longzuyeshou';
+    case "9-4":
+      return 'longzudijing';
+    case "100-0":
+      return 'ZS';
+    case "101-0":
+      return 'LR';
+    case "102-0":
+      return 'FS';
+    case "103-0":
+      return 'MS';
+    default:
+      return '未知';
+  }
+}
+
 // 100:戰士, 101:遊俠, 102:法師, 103:牧師
 /**
  * Guess the job id of skill card id.
@@ -1552,7 +1612,8 @@ function createCardItem(card) {
  * @param {object} card The row value of `card`, `monster` table.
  */
 function createMonsterItem(card) {
-  var phyle = phyle2String(card['Phyle'] + '-' + card['Phyle2']);
+  var phyleId = card['Phyle'] + '-' + card['Phyle2'];
+  var phyle = phyle2String(phyleId);
   var unique = card['Unique'] ? '/菁英' : '';
   var hide = card['monsterType'] == 2 ? "hide" : ''; // 牆壁(Type:2):不顯示攻擊圖片
   var normalSkillId = createCardNormalSkill(card, 'normalSkillID', 'normalSkillIDname', 'normalSkillIDdes');
@@ -1566,7 +1627,8 @@ function createMonsterItem(card) {
   var monsterAbility3 = createCardAbility(card, 'monsterAbility3', 'monsterAbility3name', 'monsterAbility3des');
   var monsterAbility4 = createCardAbility(card, 'monsterAbility4', 'monsterAbility4name', 'monsterAbility4des');
   var monsterAbility5 = createCardAbility(card, 'monsterAbility5', 'monsterAbility5name', 'monsterAbility5des');
-  var phyleImg = card['Phyle'] + "-" + card['Phyle2'] + (card['Unique'] && card['Phyle'] < 99 ? "" : "_n");
+  var phyleImg = phyleId + (card['Unique'] && card['Phyle'] < 99 ? "" : "_n");
+  var cardFramePhyle = phyle2Pinyin(phyleId) + (card['Unique'] ? '-jingying' : '');
   card["ResID_URL"] = "https://kakasfighter.github.io/images/cards/" + card["ResID"] + ".jpg";
   checkImageExists(card["ResID_URL"], null /*loadImageSuccess*/, loadImageError);
   return `
@@ -1576,18 +1638,21 @@ function createMonsterItem(card) {
           <img class="card-l-mask" src="https://kakasfighter.github.io/images/card_ui/card_l_mask.png">
           <div class="card-name cb" data-clipboard-text="★${card['Quality']+1} ${card['Name']}" style="opacity: 1;">${card['Name']}</div>
           <div class="card-quality-bg"></div>
-          <div class="card-frame">
+          <div class="card-frame-${cardFramePhyle}">
             <div class="init-ready">${card['InitReady']}</div>
             <img class="card-phyle" src="https://kakasfighter.github.io/images/card_ui/rc_${phyleImg}.png">
             <div class="card-quality"><img src="https://kakasfighter.github.io/images/card_ui/q${card['Quality']+1}.png" alt="★${card['Quality']+1}" title="★${card['Quality']+1}"></div>
-            <div class="card-attack ${hide}">
-              <img class="attack-type" src="https://kakasfighter.github.io/images/card_ui/at_${card['AttackType']}.png">
-              <div class="attack-volume">${card['Attack']}</div>
-            </div>
-            <div class="card-hp">${card['HP']}</div>
+          </div>
+          <div class="card-attack ${hide}">
+            <img class="attack-type" src="https://kakasfighter.github.io/images/card_ui/at_${card['AttackType']}.png">
+            <div class="attack-volume">${card['Attack']}</div>
+          </div>
+          <div class="card-hp">
+            <img class="hp-type" src="https://kakasfighter.github.io/images/Newplayer/xueliang.png">
+            <div class="hp-volume">${card['HP']}</div>
           </div>
         </div>
-        <div class="card-r">
+        <div class="card-r-auto">
           <div class="card-race-txt">${phyle}士兵${unique}</div>
           <div class="card-ability-line"></div>
           <div class="card-ability-top">能力</div>
@@ -1637,8 +1702,8 @@ function createCardSmallItem(card) {
     card['cardAbility1des'] = card['Des'];
     phyleImg = (jobid == 999 ? 100 : jobid) + "-0_n"; //地下城王的技能顯示為戰士技能
   }
-
-  var phyle = phyle2String(card['Phyle'] + '-' + card['Phyle2']);
+  var phyleId = card['Phyle'] + '-' + card['Phyle2'];
+  var phyle = phyle2String(phyleId);
   var unique = card['Unique'] ? '/菁英' : '';
   var normalSkillId = createCardNormalSkill(card, 'normalSkillID', 'normalSkillIDname', 'normalSkillIDdes');
   var cardAbility1 = createCardAbility(card, 'cardAbility1', 'cardAbility1name', 'cardAbility1des');
@@ -1651,12 +1716,13 @@ function createCardSmallItem(card) {
   var monsterAbility3 = createCardAbility(card, 'monsterAbility3', 'monsterAbility3name', 'monsterAbility3des');
   var monsterAbility4 = createCardAbility(card, 'monsterAbility4', 'monsterAbility4name', 'monsterAbility4des');
   var monsterAbility5 = createCardAbility(card, 'monsterAbility5', 'monsterAbility5name', 'monsterAbility5des');
+  var cardFramePhyle = phyle2Pinyin(phyleId) + (card['Unique'] ? '-jingying' : '');
   card["ResID_URL"] = "https://kakasfighter.github.io/images/cards/" + card["ResID"] + ".jpg";
   checkImageExists(card["ResID_URL"], null /*loadImageSuccess*/, loadImageError);
   return `
       <div class="col-4 mb-1 card-line phyle-id-${jobid} phyle-id-${card['Phyle']}-${card['Phyle2']} at-id-${card['AttackType']} ir-id-${card['InitReady']} qt-${card['Quality']}">
         <div class="card-img-s" style="background-image:url(${card['ResID_URL']});">
-          <div class="card-frame-s">
+          <div class="card-frame-s-${cardFramePhyle}">
             <div class="init-ready-s">
               <span>${card['InitReady']}</span>
             </div>
@@ -1669,7 +1735,9 @@ function createCardSmallItem(card) {
               ${card['cardAbility1name']} ${card['cardAbility2name']} ${card['cardAbility3name']} ${card['cardAbility4name']} ${card['cardAbility5name']} 
               ${card['monsterAbility5name']}
             </div>
+            <div class="attack-volume-s-diban"></div>
             <div class="attack-volume-s ${hideSkill} ${hideWall}">${card['Attack']}</div>
+            <div class="card-hp-s-diban"></div>
             <div class="card-hp-s ${hideSkill}">${card['HP']}</div>
           </div>
         </div>

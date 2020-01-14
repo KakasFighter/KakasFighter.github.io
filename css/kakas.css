@@ -981,13 +981,224 @@ input[name="show_mode"]:checked+label {
   z-index: 3;
 }
 
-.card-frame {
+.card-frame,
+.card-frame-dijing, .card-frame-dijing-jingying,
+.card-frame-emo, .card-frame-emo-jingying,
+.card-frame-jingling, .card-frame-jingling-jingying,
+.card-frame-jumoemo, .card-frame-jumoemo-jingying,
+.card-frame-jumo, .card-frame-jumo-jingying,
+.card-frame-jumowangling, .card-frame-jumowangling-jingying,
+.card-frame-longzudijing, .card-frame-longzudijing-jingying,
+.card-frame-longzu, .card-frame-longzu-jingying,
+.card-frame-longzuwangling, .card-frame-longzuwangling-jingying,
+.card-frame-longzuyeshou, .card-frame-longzuyeshou-jingying,
+.card-frame-renleijingling, .card-frame-renleijingling-jingying,
+.card-frame-renlei, .card-frame-renlei-jingying,
+.card-frame-renleiyeshou, .card-frame-renleiyeshou-jingying,
+.card-frame-shouren, .card-frame-shouren-jingying,
+.card-frame-tianshijingling, .card-frame-tianshijingling-jingying,
+.card-frame-tianshi, .card-frame-tianshi-jingying,
+.card-frame-tianshirenlei, .card-frame-tianshirenlei-jingying,
+.card-frame-wanglingemo, .card-frame-wanglingemo-jingying,
+.card-frame-wangling, .card-frame-wangling-jingying,
+.card-frame-yeshou, .card-frame-yeshou-jingying,
+.card-frame-yijie, .card-frame-yijie-jingying,
+.card-frame-FS, .card-frame-FS-jingying,
+.card-frame-LR, .card-frame-LR-jingying,
+.card-frame-MS, .card-frame-MS-jingying,
+.card-frame-ZS, .card-frame-ZS-jingying {
   width: 202px;
   height: 276px;
   background-image: url("https://kakasfighter.github.io/images/card_ui/card_frame.png");
   background-repeat: no-repeat;
   position: absolute;
   z-index: 4;
+}
+
+/* 地精 */
+.card-frame-dijing {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/dijingkuang.png");
+}
+/* 地精-菁英 */
+.card-frame-dijing-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/dijingkuangjingying.png");
+}
+/* 惡魔 */
+.card-frame-emo {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/emokuang.png");
+}
+/* 惡魔-菁英 */
+.card-frame-emo-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/emokuangjingying.png");
+}
+/* 精靈 */
+.card-frame-jingling {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/jinglingkuang.png");
+}
+/* 精靈-菁英 */
+.card-frame-jingling-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/jinglingkuangjingying.png");
+}
+/* 巨魔惡魔 */
+.card-frame-jumoemo {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/jumoemokuang.png");
+}
+/* 巨魔惡魔-菁英 */
+.card-frame-jumoemo-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/jumoemokuangjingying.png");
+}
+/* 巨魔 */
+.card-frame-jumo {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/jumokuang.png");
+}
+/* 巨魔-菁英 */
+.card-frame-jumo-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/jumokuangjingying.png");
+}
+/* 巨魔亡靈 */
+.card-frame-jumowangling {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/jumowanglingkuang.png");
+}
+/* 巨魔亡靈-菁英 */
+.card-frame-jumowangling-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/jumowanglingkuangjingying.png");
+}
+/* 龍族地精 */
+.card-frame-longzudijing {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/longzudijingkuang.png");
+}
+/* 龍族地精-菁英 */
+.card-frame-longzudijing-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/longzudijingkuangjingying.png");
+}
+/* 龍族 */
+.card-frame-longzu {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/longzukuang.png");
+}
+/* 龍族-菁英 */
+.card-frame-longzu-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/longzukuangjingying.png");
+}
+/* 龍族亡靈 */
+.card-frame-longzuwangling {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/longzuwanglingkuang.png");
+}
+/* 龍族亡靈-菁英 */
+.card-frame-longzuwangling-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/longzuwanglingkuangjingying.png");
+}
+/* 龍族野獸 */
+.card-frame-longzuyeshou {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/longzuyeshoukuang.png");
+}
+/* 龍族野獸-菁英 */
+.card-frame-longzuyeshou-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/longzuyeshoukuangjingying.png");
+}
+/* 人類精靈 */
+.card-frame-renleijingling {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/renleijinglingkuang.png");
+}
+/* 人類精靈-菁英 */
+.card-frame-renleijingling-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/renleijinglingkuangjingying.png");
+}
+/* 人類 */
+.card-frame-renlei {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/renleikuang.png");
+}
+/* 人類-菁英 */
+.card-frame-renlei-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/renleikuangjingying.png");
+}
+/* 人類野獸 */
+.card-frame-renleiyeshou {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/renleiyeshoukuang.png");
+}
+/* 人類野獸-菁英 */
+.card-frame-renleiyeshou-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/renleiyeshoukuangjingying.png");
+}
+/* 獸人 */
+.card-frame-shouren {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/shourenkuang.png");
+}
+/* 獸人-菁英 */
+.card-frame-shouren-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/shourenkuangjingying.png");
+}
+/* 天使精靈 */
+.card-frame-tianshijingling {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/tianshijinglingkuang.png");
+}
+/* 天使精靈-菁英 */
+.card-frame-tianshijingling-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/tianshijinglingkuangjingying.png");
+}
+/* 天使 */
+.card-frame-tianshi {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/tianshikuang.png");
+}
+/* 天使-菁英 */
+.card-frame-tianshi-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/tianshikuangjingying.png");
+}
+/* 天使人類 */
+.card-frame-tianshirenlei {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/tianshirenleikuang.png");
+}
+/* 天使人類-菁英 */
+.card-frame-tianshirenlei-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/tianshirenleikuangjingying.png");
+}
+/* 亡靈惡魔 */
+.card-frame-wanglingemo {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/wanglingemokuang.png");
+}
+/* 亡靈惡魔-菁英 */
+.card-frame-wanglingemo-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/wanglingemokuangjingying.png");
+}
+/* 亡靈 */
+.card-frame-wangling {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/wanglingkuang.png");
+}
+/* 亡靈-菁英 */
+.card-frame-wangling-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/wanglingkuangjingying.png");
+}
+/* 野獸 */
+.card-frame-yeshou {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/yeshoukuang.png");
+}
+/* 野獸-菁英 */
+.card-frame-yeshou-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/yeshoukuangjingying.png");
+}
+/* 異界 */
+.card-frame-yijie {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/yijiekuang.png");
+}
+/* 異界-菁英 */
+.card-frame-yijie-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/yijiekuangjingying.png");
+}
+
+/* 法師 */
+.card-frame-FS, .card-frame-FS-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/FSkuang.png");
+}
+/* 遊俠 */
+.card-frame-LR, .card-frame-LR-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/LRkuang.png");
+}
+/* 牧師 */
+.card-frame-MS, .card-frame-MS-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/MSkuang.png");
+}
+/* 戰士 */
+.card-frame-ZS, .card-frame-ZS-jingying {
+  background-image: url("https://kakasfighter.github.io/images/Newplayer/ZSkuang.png");
 }
 
 .skill-card-frame {
@@ -1029,34 +1240,60 @@ input[name="show_mode"]:checked+label {
 
 .card-hp {
   position: absolute;
-  bottom: 9px;
-  right: 30px;
+  width: 80px;
+  background-image: url(https://kakasfighter.github.io/images/Newplayer/shengmingdiban.png);
+  background-repeat: no-repeat;
+  bottom: 7px;
+  right: -13px;
+}
+
+.hp-type {
+  position: absolute;
+  bottom: 4px;
+  right: 23px;
+  display: inline-block;
+  z-index: 4;
+}
+
+.hp-volume {
+  position: relative;
+  bottom: 2px;
+  right: 4px;
+  width: 40px;
+  text-align: right;
   font-size: 21px;
   font-family: Arial, sans-serif;
-  text-align: center;
   text-shadow: 2px 2px #300, 2px -2px #300, -2px 2px #300, -2px -2px #300;
+  display: inline-block;
+  z-index: 4;
 }
 
 .card-attack {
   position: absolute;
-  bottom: 0px;
-  left: 12px;
+  width: 80px;
+  background-image: url(https://kakasfighter.github.io/images/Newplayer/gongjidiban.png);
+  background-repeat: no-repeat;
+  bottom: 5px;
+  left: 10px;
 }
 
 .attack-type {
   position: relative;
-  bottom: 9px;
+  bottom: 6px;
+  left: 2px;
   display: inline-block;
+  z-index: 4;
 }
 
 .attack-volume {
   position: relative;
-  bottom: 6px;
-  margin-left: 3px;
+  bottom: 2px;
+  margin-left: 2px;
   font-size: 21px;
   font-family: Arial, sans-serif;
   text-shadow: 2px 2px #300, 2px -2px #300, -2px 2px #300, -2px -2px #300;
   display: inline-block;
+  z-index: 4;
 }
 
 .card-r {
@@ -1074,11 +1311,12 @@ input[name="show_mode"]:checked+label {
 
 .card-r-auto {
   display: inline-block;
-  width: 202px;
+  width: 200px;
+  min-height: 274px;
   background-color: #001113;
   border: solid 1px #ccac69;
   border-radius: 10px;
-  padding: 7px;
+  padding: 5px 5px 6px 5px;
   vertical-align: top;
   position: absolute;
   left: 202px;
@@ -1262,7 +1500,32 @@ input[name="show_mode"]:checked+label {
   overflow-x: auto;
 }
 
-#my-card-list .card-frame-s, #deck_card_list .card-frame-s {
+#my-card-list .card-frame-s, #deck_card_list .card-frame-s,
+.card-frame-s-dijing, .card-frame-s-dijing-jingying,
+.card-frame-s-emo, .card-frame-s-emo-jingying,
+.card-frame-s-jingling, .card-frame-s-jingling-jingying,
+.card-frame-s-jumoemo, .card-frame-s-jumoemo-jingying,
+.card-frame-s-jumo, .card-frame-s-jumo-jingying,
+.card-frame-s-jumowangling, .card-frame-s-jumowangling-jingying,
+.card-frame-s-longzudijing, .card-frame-s-longzudijing-jingying,
+.card-frame-s-longzu, .card-frame-s-longzu-jingying,
+.card-frame-s-longzuwangling, .card-frame-s-longzuwangling-jingying,
+.card-frame-s-longzuyeshou, .card-frame-s-longzuyeshou-jingying,
+.card-frame-s-renleijingling, .card-frame-s-renleijingling-jingying,
+.card-frame-s-renlei, .card-frame-s-renlei-jingying,
+.card-frame-s-renleiyeshou, .card-frame-s-renleiyeshou-jingying,
+.card-frame-s-shouren, .card-frame-s-shouren-jingying,
+.card-frame-s-tianshijingling, .card-frame-s-tianshijingling-jingying,
+.card-frame-s-tianshi, .card-frame-s-tianshi-jingying,
+.card-frame-s-tianshirenlei, .card-frame-s-tianshirenlei-jingying,
+.card-frame-s-wanglingemo, .card-frame-s-wanglingemo-jingying,
+.card-frame-s-wangling, .card-frame-s-wangling-jingying,
+.card-frame-s-yeshou, .card-frame-s-yeshou-jingying,
+.card-frame-s-yijie, .card-frame-s-yijie-jingying,
+.card-frame-s-FS, .card-frame-s-FS-jingying,
+.card-frame-s-LR, .card-frame-s-LR-jingying,
+.card-frame-s-MS, .card-frame-s-MS-jingying,
+.card-frame-s-ZS, .card-frame-s-ZS-jingying {
   position: relative;
   height: 117px;
   background: url(https://kakasfighter.github.io/images/card_ui/card_frame_s.png) no-repeat;
@@ -1271,6 +1534,193 @@ input[name="show_mode"]:checked+label {
   text-shadow: 1px 1px #300, 1px -1px #300, -1px 1px #300, -1px -1px #300;
   font-weight: 600;
 }
+
+/* 地精 */
+.card-frame-s-dijing {
+  background: url("https://kakasfighter.github.io/images/Newplayer/dijingkuangxiao.png") no-repeat;
+}
+/* 地精-菁英 */
+.card-frame-s-dijing-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/dijingkuangjingyingxiao.png") no-repeat;
+}
+/* 惡魔 */
+.card-frame-s-emo {
+  background: url("https://kakasfighter.github.io/images/Newplayer/emokuangxiao.png") no-repeat;
+}
+/* 惡魔-菁英 */
+.card-frame-s-emo-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/emokuangjingyingxiao.png") no-repeat;
+}
+/* 精靈 */
+.card-frame-s-jingling {
+  background: url("https://kakasfighter.github.io/images/Newplayer/jinglingkuangxiao.png") no-repeat;
+}
+/* 精靈-菁英 */
+.card-frame-s-jingling-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/jinglingkuangjingyingxiao.png") no-repeat;
+}
+/* 巨魔惡魔 */
+.card-frame-s-jumoemo {
+  background: url("https://kakasfighter.github.io/images/Newplayer/jumoemokuangxiao.png") no-repeat;
+}
+/* 巨魔惡魔-菁英 */
+.card-frame-s-jumoemo-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/jumoemokuangjingyingxiao.png") no-repeat;
+}
+/* 巨魔 */
+.card-frame-s-jumo {
+  background: url("https://kakasfighter.github.io/images/Newplayer/jumokuangxiao.png") no-repeat;
+}
+/* 巨魔-菁英 */
+.card-frame-s-jumo-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/jumokuangjingyingxiao.png") no-repeat;
+}
+/* 巨魔亡靈 */
+.card-frame-s-jumowangling {
+  background: url("https://kakasfighter.github.io/images/Newplayer/jumowanglingkuangxiao.png") no-repeat;
+}
+/* 巨魔亡靈-菁英 */
+.card-frame-s-jumowangling-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/jumowanglingkuangjingyingxiao.png") no-repeat;
+}
+/* 龍族地精 */
+.card-frame-s-longzudijing {
+  background: url("https://kakasfighter.github.io/images/Newplayer/longzudijingkuangxiao.png") no-repeat;
+}
+/* 龍族地精-菁英 */
+.card-frame-s-longzudijing-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/longzudijingkuangjingyingxiao.png") no-repeat;
+}
+/* 龍族 */
+.card-frame-s-longzu {
+  background: url("https://kakasfighter.github.io/images/Newplayer/longzukuangxiao.png") no-repeat;
+}
+/* 龍族-菁英 */
+.card-frame-s-longzu-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/longzukuangjingyingxiao.png") no-repeat;
+}
+/* 龍族亡靈 */
+.card-frame-s-longzuwangling {
+  background: url("https://kakasfighter.github.io/images/Newplayer/longzuwanglingkuangxiao.png") no-repeat;
+}
+/* 龍族亡靈-菁英 */
+.card-frame-s-longzuwangling-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/longzuwanglingkuangjingyingxiao.png") no-repeat;
+}
+/* 龍族野獸 */
+.card-frame-s-longzuyeshou {
+  background: url("https://kakasfighter.github.io/images/Newplayer/longzuyeshoukuangxiao.png") no-repeat;
+}
+/* 龍族野獸-菁英 */
+.card-frame-s-longzuyeshou-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/longzuyeshoukuangjingyingxiao.png") no-repeat;
+}
+/* 人類精靈 */
+.card-frame-s-renleijingling {
+  background: url("https://kakasfighter.github.io/images/Newplayer/renleijinglingkuangxiao.png") no-repeat;
+}
+/* 人類精靈-菁英 */
+.card-frame-s-renleijingling-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/renleijinglingkuangjingyingxiao.png") no-repeat;
+}
+/* 人類 */
+.card-frame-s-renlei {
+  background: url("https://kakasfighter.github.io/images/Newplayer/renleikuangxiao.png") no-repeat;
+}
+/* 人類-菁英 */
+.card-frame-s-renlei-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/renleikuangjingyingxiao.png") no-repeat;
+}
+/* 人類野獸 */
+.card-frame-s-renleiyeshou {
+  background: url("https://kakasfighter.github.io/images/Newplayer/renleiyeshoukuangxiao.png") no-repeat;
+}
+/* 人類野獸-菁英 */
+.card-frame-s-renleiyeshou-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/renleiyeshoukuangjingyingxiao.png") no-repeat;
+}
+/* 獸人 */
+.card-frame-s-shouren {
+  background: url("https://kakasfighter.github.io/images/Newplayer/shourenkuangxiao.png") no-repeat;
+}
+/* 獸人-菁英 */
+.card-frame-s-shouren-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/shourenkuangjingyingxiao.png") no-repeat;
+}
+/* 天使精靈 */
+.card-frame-s-tianshijingling {
+  background: url("https://kakasfighter.github.io/images/Newplayer/tianshijinglingkuangxiao.png") no-repeat;
+}
+/* 天使精靈-菁英 */
+.card-frame-s-tianshijingling-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/tianshijinglingkuangjingyingxiao.png") no-repeat;
+}
+/* 天使 */
+.card-frame-s-tianshi {
+  background: url("https://kakasfighter.github.io/images/Newplayer/tianshikuangxiao.png") no-repeat;
+}
+/* 天使-菁英 */
+.card-frame-s-tianshi-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/tianshikuangjingyingxiao.png") no-repeat;
+}
+/* 天使人類 */
+.card-frame-s-tianshirenlei {
+  background: url("https://kakasfighter.github.io/images/Newplayer/tianshirenleikuangxiao.png") no-repeat;
+}
+/* 天使人類-菁英 */
+.card-frame-s-tianshirenlei-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/tianshirenleikuangjingyingxiao.png") no-repeat;
+}
+/* 亡靈惡魔 */
+.card-frame-s-wanglingemo {
+  background: url("https://kakasfighter.github.io/images/Newplayer/wanglingemokuangxiao.png") no-repeat;
+}
+/* 亡靈惡魔-菁英 */
+.card-frame-s-wanglingemo-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/wanglingemokuangjingyingxiao.png") no-repeat;
+}
+/* 亡靈 */
+.card-frame-s-wangling {
+  background: url("https://kakasfighter.github.io/images/Newplayer/wanglingkuangxiao.png") no-repeat;
+}
+/* 亡靈-菁英 */
+.card-frame-s-wangling-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/wanglingkuangjingyingxiao.png") no-repeat;
+}
+/* 野獸 */
+.card-frame-s-yeshou {
+  background: url("https://kakasfighter.github.io/images/Newplayer/yeshoukuangxiao.png") no-repeat;
+}
+/* 野獸-菁英 */
+.card-frame-s-yeshou-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/yeshoukuangjingyingxiao.png") no-repeat;
+}
+/* 異界 */
+.card-frame-s-yijie {
+  background: url("https://kakasfighter.github.io/images/Newplayer/yijiekuangxiao.png") no-repeat;
+}
+/* 異界-菁英 */
+.card-frame-s-yijie-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/yijiekuangjingyingxiao.png") no-repeat;
+}
+
+/* 法師 */
+.card-frame-s-FS, .card-frame-s-FS-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/FSkuangxiao.png") no-repeat;
+}
+/* 遊俠 */
+.card-frame-s-LR, .card-frame-s-LR-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/LRkuangxiao.png") no-repeat;
+}
+/* 牧師 */
+.card-frame-s-MS, .card-frame-s-MS-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/MSkuangxiao.png") no-repeat;
+}
+/* 戰士 */
+.card-frame-s-ZS, .card-frame-s-ZS-jingying {
+  background: url("https://kakasfighter.github.io/images/Newplayer/ZSkuangxiao.png") no-repeat;
+}
+
 
 #my-card-list>div {
   padding-right: 8px;
@@ -1360,16 +1810,41 @@ input[name="show_mode"]:checked+label {
   background-color: rgba(25, 25, 25, 0.6);
 }
 
+.attack-volume-s::before {
+  background: url(https://kakasfighter.github.io/images/Newplayer/gongjidibanxiao.png) no-repeat;
+  width: 32px;
+}
+
+.attack-volume-s-diban {
+  position: absolute;
+  background: url(https://kakasfighter.github.io/images/Newplayer/gongjidibanxiao.png) no-repeat;
+  width: 32px;
+  height: 20px;
+  bottom: 5px;
+  left: 0px;
+  z-index: -1;
+}
+
 .attack-volume-s {
   position: absolute;
-  bottom: 5px;
+  bottom: 3px;
   left: 5px;
   color: #fff;
 }
 
+.card-hp-s-diban {
+  position: absolute;
+  background: url(https://kakasfighter.github.io/images/Newplayer/shengmingdibanxiao.png) no-repeat;
+  width: 32px;
+  height: 20px;
+  bottom: 5px;
+  right: 0px;
+  z-index: -1;
+}
+
 .card-hp-s {
   position: absolute;
-  bottom: 5px;
+  bottom: 3px;
   right: 5px;
   color: #fff;
 }
