@@ -886,13 +886,29 @@
     <status name="walk" dir="east" file="JP_BoomBox_walk000" loop="1" framerate="8"/>
   </animateitem>
   
+ <animateitem scale="1.0" name="JP_Immortal_man" width="170" height="170" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Human/Human_23.swf" anchor="87,90" mount="-4,1">
+    <status name="atk" dir="east" file="JP_Immortal_man_atk000" loop="0" framerate="8" attack="3,0,39,-5"/>
+    <status name="stand" dir="east" file="JP_Immortal_man_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Immortal_man_walk000" loop="1" framerate="8"/>
+  </animateitem> 
   
+ <animateitem scale="1.0" name="JP_Rubber_fly" width="170" height="170" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Human/Human_23.swf" anchor="87,90" mount="-4,1">
+    <status name="atk" dir="east" file="JP_Rubber_fly_atk000" loop="0" framerate="8" attack="3,0,39,-5"/>
+    <status name="stand" dir="east" file="JP_Rubber_fly_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Rubber_fly_walk000" loop="1" framerate="8"/>
+  </animateitem> 
   
+ <animateitem scale="1.0" name="TW_bowalia_standcolor3" width="170" height="170" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Human/Human_23.swf" anchor="87,90" mount="-4,1">
+    <status name="atk" dir="east" file="TW_bowalia_standcolor3_atk000" loop="0" framerate="8" attack="3,0,39,-5"/>
+    <status name="stand" dir="east" file="TW_bowalia_standcolor3_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="TW_bowalia_standcolor3_walk000" loop="1" framerate="8"/>
+  </animateitem> 
   
-  
-  
-  
-  
+ <animateitem scale="1.0" name="JP_En_no_Gyoja" width="170" height="170" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Human/Human_23.swf" anchor="83,89" mount="-4,1">
+    <status name="atk" dir="east" file="JP_En_no_Gyoja_atk000" loop="0" framerate="8" attack="3,0,39,-5"/>
+    <status name="stand" dir="east" file="JP_En_no_Gyoja_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_En_no_Gyoja_walk000" loop="1" framerate="8"/>
+  </animateitem> 
   
   
   
@@ -4744,15 +4760,35 @@
     <status name="walk" dir="east" file="JP_SpiritLover_walk000" loop="1" framerate="8"/>
   </animateitem>
   
+ <animateitem scale="1" name="JP_Pencil_HB" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Elf/elf_16.swf" anchor="82,89" mount="2,4">
+    <status name="atk" dir="east" file="JP_Pencil_HB_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="JP_Pencil_HB_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Pencil_HB_walk000" loop="1" framerate="8"/>
+  </animateitem> 
   
+ <animateitem scale="1" name="JP_Erlenmeyer_flask" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Elf/elf_16.swf" anchor="79,88" mount="2,4">
+    <status name="atk" dir="east" file="JP_Erlenmeyer_flask_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="JP_Erlenmeyer_flask_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Erlenmeyer_flask_walk000" loop="1" framerate="8"/>
+  </animateitem> 
   
+ <animateitem scale="1" name="JP_Snow_woman" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Elf/elf_16.swf" anchor="79,88" mount="2,4">
+    <status name="atk" dir="east" file="JP_Snow_woman_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="JP_Snow_woman_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Snow_woman_walk000" loop="1" framerate="8"/>
+  </animateitem> 
   
+ <animateitem scale="1" name="JP_Ammut" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Elf/elf_16.swf" anchor="79,88" mount="2,4">
+    <status name="atk" dir="east" file="JP_Ammut_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="JP_Ammut_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Ammut_walk000" loop="1" framerate="8"/>
+  </animateitem>  
   
-  
-  
-  
-  
-  
+ <animateitem scale="1" name="TW_heitian" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Elf/elf_16.swf" anchor="82,88" mount="2,4">
+    <status name="atk" dir="east" file="TW_heitian_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="TW_heitian_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="TW_heitian_walk000" loop="1" framerate="8"/>
+  </animateitem> 
   
   
   
@@ -5810,7 +5846,11 @@
     <status name="walk" dir="east" file="JP_GymShoes_walk000" loop="1" framerate="8"/>
   </animateitem>
   
-  
+  <animateitem scale="1.0" name="JP_Pork_and_beans" width="170" height="170" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Orc/Orc_19.swf" anchor="82,92" mount="3,1">
+    <status name="atk" dir="east" file="JP_Pork_and_beans_atk000" loop="0" framerate="8" attack="3,0,32,-20"/>
+    <status name="stand" dir="east" file="JP_Pork_and_beans_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Pork_and_beans_walk000" loop="1" framerate="8"/>
+  </animateitem>
   
   
   
@@ -6446,6 +6486,48 @@
     <status name="stand" dir="east" file="JP_MagicalAcademy_Teacher_std000" loop="1" framerate="8"/>
     <status name="walk" dir="east" file="JP_MagicalAcademy_Teacher_walk000" loop="1" framerate="8"/>
     </animateitem>
+  
+ <animateitem scale="1" name="JP_Compass" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Undead/Undead_14.swf" anchor="79,85" mount="1,3">
+    <status name="atk" dir="east" file="JP_Compass_atk000" loop="0" framerate="8" attack="3,0,43,-23"/>
+    <status name="stand" dir="east" file="JP_Compass_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Compass_walk000" loop="1" framerate="8"/>
+    </animateitem> 
+  
+ <animateitem scale="1" name="JP_Blackboard" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Undead/Undead_14.swf" anchor="79,85" mount="1,3">
+    <status name="atk" dir="east" file="JP_Blackboard_atk000" loop="0" framerate="8" attack="3,0,43,-23"/>
+    <status name="stand" dir="east" file="JP_Blackboard_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Blackboard_walk000" loop="1" framerate="8"/>
+    </animateitem> 
+  
+ <animateitem scale="1" name="JP_Blackboard_eraser" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Undead/Undead_14.swf" anchor="81,89" mount="1,3">
+    <status name="atk" dir="east" file="JP_Blackboard_eraser_atk000" loop="0" framerate="8" attack="3,0,43,-23"/>
+    <status name="stand" dir="east" file="JP_Blackboard_eraser_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Blackboard_eraser_walk000" loop="1" framerate="8"/>
+    </animateitem>  
+  
+  
+  
+ <animateitem scale="1" name="JP_Scissors" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Undead/Undead_15.swf" anchor="81,89" mount="1,3">
+    <status name="atk" dir="east" file="JP_Scissors_atk000" loop="0" framerate="8" attack="3,0,43,-23"/>
+    <status name="stand" dir="east" file="JP_Scissors_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Scissors_walk000" loop="1" framerate="8"/>
+    </animateitem> 
+  
+ <animateitem scale="1" name="JP_Speaker" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Undead/Undead_15.swf" anchor="81,89" mount="1,3">
+    <status name="atk" dir="east" file="JP_Speaker_atk000" loop="0" framerate="8" attack="3,0,43,-23"/>
+    <status name="stand" dir="east" file="JP_Speaker_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Speaker_walk000" loop="1" framerate="8"/>
+    </animateitem> 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -8104,17 +8186,41 @@
     <status name="walk" dir="east" file="JP_Himiko_walk000" loop="1" framerate="8"/>
   </animateitem>  
    
+ <animateitem scale="1.0" name="JP_Eraser" width="170" height="170" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Ej/Ej_34.swf" anchor="80,87" mount="0,6">
+    <status name="atk" dir="east" file="JP_Eraser_atk000" loop="0" framerate="8" attack="3,0,43,-15"/>
+    <status name="stand" dir="east" file="JP_Eraser_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Eraser_walk000" loop="1" framerate="8"/>
+  </animateitem>  
    
+ <animateitem scale="1.0" name="JP_Poseidon_Santa" width="170" height="170" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Ej/Ej_34.swf" anchor="82,86" mount="0,6">
+    <status name="atk" dir="east" file="JP_Poseidon_Santa_atk000" loop="0" framerate="8" attack="3,0,43,-15"/>
+    <status name="stand" dir="east" file="JP_Poseidon_Santa_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Poseidon_Santa_walk000" loop="1" framerate="8"/>
+  </animateitem>  
    
+  <animateitem scale="1.0" name="TW_lihuadaoxue" width="170" height="170" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Ej/Ej_34.swf" anchor="82,86" mount="0,6">
+    <status name="atk" dir="east" file="TW_lihuadaoxue_atk000" loop="0" framerate="8" attack="3,0,43,-15"/>
+    <status name="stand" dir="east" file="TW_lihuadaoxue_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="TW_lihuadaoxue_walk000" loop="1" framerate="8"/>
+  </animateitem>  
    
+  <animateitem scale="1.0" name="TW_zahesunyi" width="170" height="170" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Ej/Ej_34.swf" anchor="82,86" mount="0,6">
+    <status name="atk" dir="east" file="TW_zahesunyi_atk000" loop="0" framerate="8" attack="3,0,43,-15"/>
+    <status name="stand" dir="east" file="TW_zahesunyi_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="TW_zahesunyi_walk000" loop="1" framerate="8"/>
+  </animateitem> 
    
+ <animateitem scale="1.0" name="TW_jiafeiji" width="170" height="170" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Ej/Ej_34.swf" anchor="82,86" mount="0,6">
+    <status name="atk" dir="east" file="TW_jiafeiji_atk000" loop="0" framerate="8" attack="3,0,43,-15"/>
+    <status name="stand" dir="east" file="TW_jiafeiji_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="TW_jiafeiji_walk000" loop="1" framerate="8"/>
+  </animateitem>  
    
-   
-   
-   
-   
-   
-   
+ <animateitem scale="1.0" name="JP_hundun" width="170" height="170" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Ej/Ej_34.swf" anchor="82,86" mount="0,6">
+    <status name="atk" dir="east" file="JP_hundun_atk000" loop="0" framerate="8" attack="3,0,43,-15"/>
+    <status name="stand" dir="east" file="JP_hundun_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_hundun_walk000" loop="1" framerate="8"/>
+  </animateitem>  
    
    
    
@@ -9967,13 +10073,29 @@
     <status name="walk" dir="east" file="JP_Dragon_Tamer02_walk000" loop="1" framerate="8"/>
   </animateitem>
  
+ <animateitem scale="1" name="JP_Bloody_women" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Dragon/dragon_12.swf" anchor="78,87" mount="4,3">
+    <status name="atk" dir="east" file="JP_Bloody_women_atk000" loop="0" framerate="8" attack="3,0,41,-21"/>
+    <status name="stand" dir="east" file="JP_Bloody_women_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Bloody_women_walk000" loop="1" framerate="8"/>
+  </animateitem>
  
+ <animateitem scale="1" name="JP_Sandbox" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Dragon/dragon_12.swf" anchor="78,87" mount="4,3">
+    <status name="atk" dir="east" file="JP_Sandbox_atk000" loop="0" framerate="8" attack="3,0,41,-21"/>
+    <status name="stand" dir="east" file="JP_Sandbox_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Sandbox_walk000" loop="1" framerate="8"/>
+  </animateitem>
  
+ <animateitem scale="1" name="JP_Kendama" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Dragon/dragon_12.swf" anchor="79,90" mount="4,3">
+    <status name="atk" dir="east" file="JP_Kendama_atk000" loop="0" framerate="8" attack="3,0,41,-21"/>
+    <status name="stand" dir="east" file="JP_Kendama_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Kendama_walk000" loop="1" framerate="8"/>
+  </animateitem>
  
- 
- 
- 
- 
+ <animateitem scale="1" name="JP_Bradley_Santa" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Dragon/dragon_12.swf" anchor="79,90" mount="4,3">
+    <status name="atk" dir="east" file="JP_Bradley_Santa_atk000" loop="0" framerate="8" attack="3,0,41,-21"/>
+    <status name="stand" dir="east" file="JP_Bradley_Santa_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Bradley_Santa_walk000" loop="1" framerate="8"/>
+  </animateitem>
  
  
  
@@ -10404,6 +10526,93 @@
     <status name="stand" dir="east" file="JP_SmallWizard_std000" loop="1" framerate="8"/>
     <status name="walk" dir="east" file="JP_SmallWizard_walk000" loop="1" framerate="8"/>
   </animateitem>
+  
+  <animateitem scale="1" name="JP_Love_letter" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/angel/angel_11.swf" anchor="80,85" mount="2,4">
+    <status name="atk" dir="east" file="JP_Love_letter_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="JP_Love_letter_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Love_letter_walk000" loop="1" framerate="8"/>
+  </animateitem>
+  
+ <animateitem scale="1" name="JP_Sign_pen" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/angel/angel_11.swf" anchor="80,85" mount="2,4">
+    <status name="atk" dir="east" file="JP_Sign_pen_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="JP_Sign_pen_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Sign_pen_walk000" loop="1" framerate="8"/>
+  </animateitem> 
+  
+ <animateitem scale="1" name="JP_Arithmetic_set" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/angel/angel_11.swf" anchor="79,87" mount="2,4">
+    <status name="atk" dir="east" file="JP_Arithmetic_set_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="JP_Arithmetic_set_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Arithmetic_set_walk000" loop="1" framerate="8"/>
+  </animateitem> 
+  
+ <animateitem scale="1" name="JP_Chocolate_snack" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/angel/angel_11.swf" anchor="85,87" mount="2,4">
+    <status name="atk" dir="east" file="JP_Chocolate_snack_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="JP_Chocolate_snack_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Chocolate_snack_walk000" loop="1" framerate="8"/>
+  </animateitem>  
+  
+ <animateitem scale="1" name="JP_Crayon" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/angel/angel_11.swf" anchor="82,90" mount="2,4">
+    <status name="atk" dir="east" file="JP_Crayon_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="JP_Crayon_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Crayon_walk000" loop="1" framerate="8"/>
+  </animateitem> 
+  
+  
+  
+ <animateitem scale="1" name="TW_chuyunaguo" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/angel/angel_12.swf" anchor="79,86" mount="2,4">
+    <status name="atk" dir="east" file="TW_chuyunaguo_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="TW_chuyunaguo_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="TW_chuyunaguo_walk000" loop="1" framerate="8"/>
+  </animateitem>  
+  
+ <animateitem scale="1" name="JP_Samael" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/angel/angel_12.swf" anchor="79,86" mount="2,4">
+    <status name="atk" dir="east" file="JP_Samael_atk000" loop="0" framerate="8" attack="3,0,61,-5"/>
+    <status name="stand" dir="east" file="JP_Samael_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Samael_walk000" loop="1" framerate="8"/>
+  </animateitem>  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -11075,11 +11284,19 @@
     <status name="walk" dir="east" file="JP_Doris_walk000" loop="1" framerate="8"/>
   </animateitem> 
   
+  <animateitem scale="1" name="JP_Profile_book" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Demon/demon_10.swf" anchor="79,90" mount="1,4">
+    <status name="atk" dir="east" file="JP_Profile_book_atk000" loop="0" framerate="8" attack="3,0,76,-5"/>
+    <status name="stand" dir="east" file="JP_Profile_book_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Profile_book_walk000" loop="1" framerate="8"/>
+  </animateitem> 
   
   
   
-  
-  
+  <animateitem scale="1" name="JP_Furfur" width="180" height="180" atktextoffset="-33,23" bloodtextoffset="-16,23" nameoffset="1,32" swf="data/monsters/Demon/demon_11.swf" anchor="79,76" mount="1,4">
+    <status name="atk" dir="east" file="JP_Furfur_atk000" loop="0" framerate="8" attack="3,0,76,-5"/>
+    <status name="stand" dir="east" file="JP_Furfur_std000" loop="1" framerate="8"/>
+    <status name="walk" dir="east" file="JP_Furfur_walk000" loop="1" framerate="8"/>
+  </animateitem>
   
   
   
