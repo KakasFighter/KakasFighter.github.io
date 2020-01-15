@@ -1277,6 +1277,7 @@ function searchCard(condition) {
       $cardSearchedResults = $('#hot-card .card-line');
       hideFilterClass();
       $('.page-load-incomplete').hide();
+      loadPopover();
     }, function(tx, e) {
       $sqlPrepareStatement.innerText += "\n" + e + "\n" + (e.message||"") +"\n"+ (e.stack||"");
       $sqlPrepareStatement.classList.add("error");
@@ -1299,6 +1300,7 @@ function searchMonster(condition) {
       // console.log("jsonCard:", jsonCard);
       $cardSearchedResults = $("#hot-card .card-line");
       $('.page-load-incomplete').hide();
+      loadPopover();
     }, function(tx, e) {
       $sqlPrepareStatement.innerText += "\n" + e + "\n" + (e.message||"") +"\n"+ (e.stack||"");
       $sqlPrepareStatement.classList.add("error");
@@ -1439,7 +1441,8 @@ function phyle2Pinyin(phyle) {
     case "103-0":
       return 'MS';
     default:
-      return '未知';
+      console.log('[phyle2Pinyin]未知', phyle);
+      return 'ZS';  // 地下城技能都用戰士技能顯示
   }
 }
 
@@ -1571,30 +1574,32 @@ function createCardItem(card) {
   checkImageExists(card["ResID_URL"], null /*loadImageSuccess*/, loadImageError);
   return `
     <div class="col mb-3 bg-dark card-line phyle-id-${jobid} ir-id-${card['InitReady']} qt-${card['Quality']}">
-      <div class="card-image">
-        <div class="card-l lazyload" style="background-image: url(&quot;https://kakasfighter.github.io/images/cards/testcard_2.jpg&quot;);" data-bg="${card['ResID_URL']}">
-          <img class="card-l-mask" src="https://kakasfighter.github.io/images/card_ui/card_l_mask.png">
-          <div class="card-name cb" data-clipboard-text="★${card['Quality']+1} ${card['Name']}" style="opacity: 1;">${card['Name']}</div>
-          <div class="card-quality-bg"></div>
-          <div class="card-frame skill-card-frame">
-            <div class="init-ready">${card['InitReady']}</div>
-            <img class="card-phyle" src="https://kakasfighter.github.io/images/card_ui/rc_${phyleImg}.png">
-            <div class="card-quality"><img src="https://kakasfighter.github.io/images/card_ui/q${card['Quality']+1}.png" alt="★${card['Quality']+1}" title="★${card['Quality']+1}"></div>
+      <div id="popover${card['ID']}">
+        <div class="card-image card-table qt-${card['Quality']}">
+          <div class="card-l lazyload" style="background-image: url(&quot;https://kakasfighter.github.io/images/cards/testcard_2.jpg&quot;);" data-bg="${card['ResID_URL']}">
+            <img class="card-l-mask" src="https://kakasfighter.github.io/images/card_ui/card_l_mask.png">
+            <div class="card-name cb" data-clipboard-text="★${card['Quality']+1} ${card['Name']}" style="opacity: 1;">${card['Name']}</div>
+            <div class="card-quality-bg"></div>
+            <div class="card-frame skill-card-frame">
+              <div class="init-ready">${card['InitReady']}</div>
+              <img class="card-phyle" src="https://kakasfighter.github.io/images/card_ui/rc_${phyleImg}.png">
+              <div class="card-quality"><img src="https://kakasfighter.github.io/images/card_ui/q${card['Quality']+1}.png" alt="★${card['Quality']+1}" title="★${card['Quality']+1}"></div>
+            </div>
           </div>
-        </div>
-        <div class="card-r">
-          <div class="card-skill-job-txt">${jobname}技能</div>
-          <div class="card-ability-top hide">能力</div>
-          <div class="card-ability">
-            ${cardAbility1}
-            ${cardAbility2}
-            ${cardAbility3}
-            ${cardAbility4}
-            ${cardAbility5}
-            ${cardAbility6}
+          <div class="card-r">
+            <div class="card-skill-job-txt">${jobname}技能</div>
+            <div class="card-ability-top hide">能力</div>
+            <div class="card-ability">
+              ${cardAbility1}
+              ${cardAbility2}
+              ${cardAbility3}
+              ${cardAbility4}
+              ${cardAbility5}
+              ${cardAbility6}
+            </div>
           </div>
-        </div>
-      </div>
+        </div><!--image end-->
+      </div><!--popover end-->
       <div class="card-description">
         <div class="svg-wrap">
           <div class="add-mycard float-left svg-plus" id="${card['todo_imm_card_id']}" data-state="plus"></div>													
@@ -1633,44 +1638,46 @@ function createMonsterItem(card) {
   checkImageExists(card["ResID_URL"], null /*loadImageSuccess*/, loadImageError);
   return `
     <div class="col mb-3 bg-dark card-line phyle-id-${card['Phyle']}-${card['Phyle2']} at-id-${card['AttackType']} ir-id-${card['InitReady']} qt-${card['Quality']}">
-      <div class="card-image">
-        <div class="card-l lazyload" style="background-image: url(&quot;https://kakasfighter.github.io/images/cards/testcard_2.jpg&quot;);" data-bg="${card['ResID_URL']}">
-          <img class="card-l-mask" src="https://kakasfighter.github.io/images/card_ui/card_l_mask.png">
-          <div class="card-name cb" data-clipboard-text="★${card['Quality']+1} ${card['Name']}" style="opacity: 1;">${card['Name']}</div>
-          <div class="card-quality-bg"></div>
-          <div class="card-frame-${cardFramePhyle}">
-            <div class="init-ready">${card['InitReady']}</div>
-            <img class="card-phyle" src="https://kakasfighter.github.io/images/card_ui/rc_${phyleImg}.png">
-            <div class="card-quality"><img src="https://kakasfighter.github.io/images/card_ui/q${card['Quality']+1}.png" alt="★${card['Quality']+1}" title="★${card['Quality']+1}"></div>
+      <div id="popover${card['ID']}">
+        <div class="card-image card-table qt-${card['Quality']}">
+          <div class="card-l lazyload" style="background-image: url(https://kakasfighter.github.io/images/cards/testcard_2.jpg);" data-bg="${card['ResID_URL']}">
+            <img class="card-l-mask" src="https://kakasfighter.github.io/images/card_ui/card_l_mask.png">
+            <div class="card-name cb" data-clipboard-text="★${card['Quality']+1} ${card['Name']}" style="opacity: 1;">${card['Name']}</div>
+            <div class="card-quality-bg"></div>
+            <div class="card-frame-${cardFramePhyle}">
+              <div class="init-ready">${card['InitReady']}</div>
+              <img class="card-phyle" src="https://kakasfighter.github.io/images/card_ui/rc_${phyleImg}.png">
+              <div class="card-quality"><img src="https://kakasfighter.github.io/images/card_ui/q${card['Quality']+1}.png" alt="★${card['Quality']+1}" title="★${card['Quality']+1}"></div>
+            </div>
+            <div class="card-attack ${hide}">
+              <img class="attack-type" src="https://kakasfighter.github.io/images/card_ui/at_${card['AttackType']}.png">
+              <div class="attack-volume">${card['Attack']}</div>
+            </div>
+            <div class="card-hp">
+              <img class="hp-type" src="https://kakasfighter.github.io/images/Newplayer/xueliang.png">
+              <div class="hp-volume">${card['HP']}</div>
+            </div>
           </div>
-          <div class="card-attack ${hide}">
-            <img class="attack-type" src="https://kakasfighter.github.io/images/card_ui/at_${card['AttackType']}.png">
-            <div class="attack-volume">${card['Attack']}</div>
+          <div class="card-r-auto">
+            <div class="card-race-txt">${phyle}士兵${unique}</div>
+            <div class="card-ability-line"></div>
+            <div class="card-ability-top">能力</div>
+            <div class="card-ability">
+              ${normalSkillId}
+              ${monsterAbility1}
+              ${monsterAbility2}
+              ${monsterAbility3}
+              ${monsterAbility4}
+              ${cardAbility1}
+              ${cardAbility2}
+              ${cardAbility3}
+              ${cardAbility4}
+              ${cardAbility5}
+              ${monsterAbility5}
+            </div>
           </div>
-          <div class="card-hp">
-            <img class="hp-type" src="https://kakasfighter.github.io/images/Newplayer/xueliang.png">
-            <div class="hp-volume">${card['HP']}</div>
-          </div>
-        </div>
-        <div class="card-r-auto">
-          <div class="card-race-txt">${phyle}士兵${unique}</div>
-          <div class="card-ability-line"></div>
-          <div class="card-ability-top">能力</div>
-          <div class="card-ability">
-            ${normalSkillId}
-            ${monsterAbility1}
-            ${monsterAbility2}
-            ${monsterAbility3}
-            ${monsterAbility4}
-            ${cardAbility1}
-            ${cardAbility2}
-            ${cardAbility3}
-            ${cardAbility4}
-            ${cardAbility5}
-            ${monsterAbility5}
-          </div>
-        </div>
-      </div>
+        </div><!--image end-->
+      </div><!--popover end-->
       <div class="card-description">
         <div class="svg-wrap">
           <div class="add-mycard float-left svg-plus" id="${card['todo_imm_card_id']}" data-state="plus"></div>													
@@ -1701,9 +1708,11 @@ function createCardSmallItem(card) {
     card['cardAbility1name'] = card['Name'];
     card['cardAbility1des'] = card['Des'];
     phyleImg = (jobid == 999 ? 100 : jobid) + "-0_n"; //地下城王的技能顯示為戰士技能
+    card['Phyle'] = jobid;
+    card['Phyle2'] = 0;
   }
   var phyleId = card['Phyle'] + '-' + card['Phyle2'];
-  var phyle = phyle2String(phyleId);
+  // var phyle = phyle2String(phyleId);
   var unique = card['Unique'] ? '/菁英' : '';
   var normalSkillId = createCardNormalSkill(card, 'normalSkillID', 'normalSkillIDname', 'normalSkillIDdes');
   var cardAbility1 = createCardAbility(card, 'cardAbility1', 'cardAbility1name', 'cardAbility1des');
@@ -1742,7 +1751,7 @@ function createCardSmallItem(card) {
           </div>
         </div>
         <div class="card-name-s">${card['Name']}</div>
-        <div class="btn-add-deck" data-uid="mBX1BX2{todo_imm_card_id}"></div>
+        <div id="${card['ID']}" class="btn-add-deck" data-uid="m${card['ID']}"></div>
       </div>
 `;
 }
@@ -2072,4 +2081,23 @@ function loadImageSuccess(ImageObject) {
  */
 function loadImageError(ImageObject) {
   console.log("[Image::(404)Not found] ", ImageObject.src);
+}
+
+/**
+ * Create popover for each small card image.
+ */
+function loadPopover() {
+  $('.btn-add-deck').popover({
+    html: true,
+    placement: 'auto',
+    boundary: 'viewport',
+    trigger: 'hover',
+    sanitize: false, // avoid to eliminate style and data-attributes
+    offset: 0,
+    delay: { 'show': 200, 'hide': 150 },
+    content: function() {
+      console.log('Id', this.id);
+      return $('#popover' + this.id).html();
+    }
+  });
 }
