@@ -1146,8 +1146,10 @@ function searchCardById(cardId) {
       //createSearchedCards(jsonCard, createMonsterItem);
       var cards = "";
       var smallCards = "";
+      var card = null;
       jsonCard.forEach(function(c) {
         if (c) {
+          card = c;
           cards += createMonsterItem(c);
           smallCards += createCardSmallItem(c);
         }
@@ -1172,6 +1174,16 @@ ${smallCards}
   </div><!--my-card-boad end-->
 </div><!--my-card end-->
       `);
+      $('#' + cardId).popover({
+        html: true,
+        placement: 'auto',
+        boundary: 'viewport',
+        trigger: 'hover',
+        sanitize: false, // avoid to eliminate style and data-attributes
+        offset: 0,
+        delay: { 'show': 200, 'hide': 150 },
+        content: createSingleCardItem(card)
+      });
     }, function(tx, e) {
       $sqlPrepareStatement.innerText += "\n" + e + "\n" + (e.message||"") +"\n"+ (e.stack||"");
       $sqlPrepareStatement.classList.add("error");
@@ -1687,6 +1699,74 @@ function createMonsterItem(card) {
         <div class="bg-description"></div>
       </div>
     </div><!--col end-->
+`;
+}
+
+/**
+ * Create DOM of a card.
+ * @param {object} card The row value of `card`, `monster` table.
+ */
+function createSingleCardItem(card) {
+  var phyleId = card['Phyle'] + '-' + card['Phyle2'];
+  var phyle = phyle2String(phyleId);
+  var unique = card['Unique'] ? '/菁英' : '';
+  var hide = card['monsterType'] == 2 ? "hide" : ''; // 牆壁(Type:2):不顯示攻擊圖片
+  var normalSkillId = createCardNormalSkill(card, 'normalSkillID', 'normalSkillIDname', 'normalSkillIDdes');
+  var cardAbility1 = createCardAbility(card, 'cardAbility1', 'cardAbility1name', 'cardAbility1des');
+  var cardAbility2 = createCardAbility(card, 'cardAbility2', 'cardAbility2name', 'cardAbility2des');
+  var cardAbility3 = createCardAbility(card, 'cardAbility3', 'cardAbility3name', 'cardAbility3des');
+  var cardAbility4 = createCardAbility(card, 'cardAbility4', 'cardAbility4name', 'cardAbility4des');
+  var cardAbility5 = createCardAbility(card, 'cardAbility5', 'cardAbility5name', 'cardAbility5des');
+  var monsterAbility1 = createCardAbility(card, 'monsterAbility1', 'monsterAbility1name', 'monsterAbility1des');
+  var monsterAbility2 = createCardAbility(card, 'monsterAbility2', 'monsterAbility2name', 'monsterAbility2des');
+  var monsterAbility3 = createCardAbility(card, 'monsterAbility3', 'monsterAbility3name', 'monsterAbility3des');
+  var monsterAbility4 = createCardAbility(card, 'monsterAbility4', 'monsterAbility4name', 'monsterAbility4des');
+  var monsterAbility5 = createCardAbility(card, 'monsterAbility5', 'monsterAbility5name', 'monsterAbility5des');
+  var phyleImg = phyleId + (card['Unique'] && card['Phyle'] < 99 ? "" : "_n");
+  var cardFramePhyle = phyle2Pinyin(phyleId) + (card['Unique'] ? '-jingying' : '');
+  card["ResID_URL"] = "https://kakasfighter.github.io/images/cards/" + card["ResID"] + ".jpg";
+  checkImageExists(card["ResID_URL"], null /*loadImageSuccess*/, loadImageError);
+  return `
+  <div id="popover${card['ID']}">
+    <div class="card-image card-table qt-${card['Quality']}">
+      <div class="card-l lazyload" style="background-image: url(https://kakasfighter.github.io/images/cards/testcard_2.jpg);" data-bg="${card['ResID_URL']}">
+        <img class="card-l-mask" src="https://kakasfighter.github.io/images/card_ui/card_l_mask.png">
+        <div class="card-name cb" data-clipboard-text="★${card['Quality']+1} ${card['Name']}" style="opacity: 1;">${card['Name']}</div>
+        <div class="card-quality-bg"></div>
+        <div class="card-frame-${cardFramePhyle}">
+          <div class="init-ready">${card['InitReady']}</div>
+          <img class="card-phyle" src="https://kakasfighter.github.io/images/card_ui/rc_${phyleImg}.png">
+          <div class="card-quality"><img src="https://kakasfighter.github.io/images/card_ui/q${card['Quality']+1}.png" alt="★${card['Quality']+1}" title="★${card['Quality']+1}"></div>
+        </div>
+        <div class="card-attack ${hide}">
+          <img class="attack-type" src="https://kakasfighter.github.io/images/card_ui/at_${card['AttackType']}.png">
+          <div class="attack-volume">${card['Attack']}</div>
+        </div>
+        <div class="card-hp">
+          <img class="hp-type" src="https://kakasfighter.github.io/images/Newplayer/xueliang.png">
+          <div class="hp-volume">${card['HP']}</div>
+        </div>
+      </div>
+      <div class="card-r-auto">
+        <div class="card-race-txt">${phyle}士兵${unique}</div>
+        <div class="card-ability-line"></div>
+        <div class="card-ability-top">能力</div>
+        <div class="card-ability">
+          ${normalSkillId}
+          ${monsterAbility1}
+          ${monsterAbility2}
+          ${monsterAbility3}
+          ${monsterAbility4}
+          ${cardAbility1}
+          ${cardAbility2}
+          ${cardAbility3}
+          ${cardAbility4}
+          ${cardAbility5}
+          ${monsterAbility5}
+        </div>
+      </div>
+    </div><!--image end-->
+  </div><!--popover end-->
 `;
 }
 
