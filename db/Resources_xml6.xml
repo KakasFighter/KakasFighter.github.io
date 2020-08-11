@@ -19,15 +19,13 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>9615</WindowHeight>
-  <WindowWidth>27240</WindowWidth>
+  <WindowHeight>12135</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <Calculation>ManualCalculation</Calculation>
-  <DoNotCalculateBeforeSave/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
-  <Uncalced/>
  </ExcelWorkbook>
  <Styles>
   <Style ss:ID="Default" ss:Name="Normal">
@@ -56,7 +54,7 @@
   </Style>
  </Styles>
  <Worksheet ss:Name="status">
-  <Table ss:ExpandedColumnCount="13" ss:ExpandedRowCount="525" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="13" ss:ExpandedRowCount="548" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="13.5">
    <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="67.5"/>
    <Column ss:AutoFitWidth="0" ss:Width="381.75"/>
@@ -3113,6 +3111,20 @@
     <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">234</Data></Cell>
+    <Cell><Data ss:Type="String">龍族信仰</Data></Cell>
+    <Cell><Data ss:Type="String">攻擊+2，生命+6。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">shengmingdaoyan</Data></Cell>
+    <Cell><Data ss:Type="Number">701</Data></Cell>
+    <Cell><Data ss:Type="Number">50106</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">235</Data></Cell>
     <Cell><Data ss:Type="String">隕落</Data></Cell>
     <Cell><Data ss:Type="String">生命值成為1。</Data></Cell>
@@ -3273,6 +3285,21 @@
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">261</Data></Cell>
+    <Cell><Data ss:Type="String">冰天雪地</Data></Cell>
+    <Cell><Data ss:Type="String">無法行動。</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">jinzu</Data></Cell>
+    <Cell><Data ss:Type="Number">2801</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">shendudongjie</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">262</Data></Cell>
@@ -3637,6 +3664,36 @@
     <Cell ss:Index="13"><Data ss:Type="Number">1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">288</Data></Cell>
+    <Cell><Data ss:Type="String">中毒6</Data></Cell>
+    <Cell><Data ss:Type="String">每回合受到6點暗影傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">zhongdu</Data></Cell>
+    <Cell><Data ss:Type="Number">2425</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">zhongdu_status</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">289</Data></Cell>
+    <Cell><Data ss:Type="String">中毒4</Data></Cell>
+    <Cell><Data ss:Type="String">每回合受到4點暗影傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">zhongdu</Data></Cell>
+    <Cell><Data ss:Type="Number">2423</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">zhongdu_status</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">290</Data></Cell>
     <Cell><Data ss:Type="String">麻痹</Data></Cell>
     <Cell><Data ss:Type="String">無法行動。</Data></Cell>
@@ -3931,6 +3988,20 @@
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell><Data ss:Type="String">wuqishanghai</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">325</Data></Cell>
+    <Cell><Data ss:Type="String">氣絕斬·改</Data></Cell>
+    <Cell><Data ss:Type="String">每回合受到5點近戰傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">pojia</Data></Cell>
+    <Cell><Data ss:Type="Number">2435</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">328</Data></Cell>
@@ -5703,6 +5774,21 @@
     <Cell><Data ss:Type="Number">4</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">478</Data></Cell>
+    <Cell><Data ss:Type="String">吸血狀態</Data></Cell>
+    <Cell><Data ss:Type="String">造成傷害時，對自己治療等量的傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">jili</Data></Cell>
+    <Cell><Data ss:Type="Number">2203</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">jili_status</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
     <Cell><Data ss:Type="Number">482</Data></Cell>
     <Cell><Data ss:Type="String">伴奏</Data></Cell>
     <Cell><Data ss:Type="String">死亡時，殺死隨機1名友方士兵。</Data></Cell>
@@ -5772,6 +5858,252 @@
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
     <Cell><Data ss:Type="String">diaoling</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">487</Data></Cell>
+    <Cell><Data ss:Type="String">勇氣11</Data></Cell>
+    <Cell><Data ss:Type="String">生命+11。造成的傷害無法被減免。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">jili</Data></Cell>
+    <Cell><Data ss:Type="Number">5101</Data></Cell>
+    <Cell><Data ss:Type="Number">50111</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">488</Data></Cell>
+    <Cell><Data ss:Type="String">勇氣21</Data></Cell>
+    <Cell><Data ss:Type="String">生命+21。造成的傷害無法被減免。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">jili</Data></Cell>
+    <Cell><Data ss:Type="Number">5101</Data></Cell>
+    <Cell><Data ss:Type="Number">50121</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">489</Data></Cell>
+    <Cell><Data ss:Type="String">凋零20</Data></Cell>
+    <Cell><Data ss:Type="String">生命-20。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">diaoling</Data></Cell>
+    <Cell><Data ss:Type="Number">50020</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">diaoling</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">490</Data></Cell>
+    <Cell><Data ss:Type="String">一矢5</Data></Cell>
+    <Cell><Data ss:Type="String">令受傷士兵立即死亡。自己行動結束時死亡。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">linghunchuanci</Data></Cell>
+    <Cell><Data ss:Type="Number">7102</Data></Cell>
+    <Cell><Data ss:Type="Number">14401</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">491</Data></Cell>
+    <Cell><Data ss:Type="String">一矢6</Data></Cell>
+    <Cell><Data ss:Type="String">自己行動結束時死亡。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">linghunchuanci</Data></Cell>
+    <Cell><Data ss:Type="Number">14401</Data></Cell>
+    <Cell><Data ss:Type="Number">999</Data></Cell>
+    <Cell><Data ss:Type="Number">7102</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">492</Data></Cell>
+    <Cell><Data ss:Type="String">加速1</Data></Cell>
+    <Cell><Data ss:Type="String">每回合使召喚者準備欄中準備值最高的1張卡牌準備值-2。持續5回合。</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">jili</Data></Cell>
+    <Cell><Data ss:Type="Number">3602</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">493</Data></Cell>
+    <Cell><Data ss:Type="String">凋零20</Data></Cell>
+    <Cell><Data ss:Type="String">生命-20。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">diaoling</Data></Cell>
+    <Cell><Data ss:Type="Number">50020</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">diaoling</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">494</Data></Cell>
+    <Cell><Data ss:Type="String">靈影6</Data></Cell>
+    <Cell><Data ss:Type="String">攻擊力+6，生命+6.</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">jili</Data></Cell>
+    <Cell><Data ss:Type="Number">706</Data></Cell>
+    <Cell><Data ss:Type="Number">50106</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">jili_status</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">495</Data></Cell>
+    <Cell><Data ss:Type="String">魅惑</Data></Cell>
+    <Cell><Data ss:Type="String">被敵方控制。</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">meihuo</Data></Cell>
+    <Cell><Data ss:Type="Number">5501</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">meihuo_status</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">496</Data></Cell>
+    <Cell><Data ss:Type="String">堅決</Data></Cell>
+    <Cell><Data ss:Type="String">受到近戰傷害時，對攻擊者造成99點無法被減免的傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">diaoling</Data></Cell>
+    <Cell><Data ss:Type="Number">455</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">diaoling</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">497</Data></Cell>
+    <Cell><Data ss:Type="String">冥助</Data></Cell>
+    <Cell><Data ss:Type="String">士兵在場上時，召喚者受到傷害時，將傷害減免到0。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">jili</Data></Cell>
+    <Cell><Data ss:Type="Number">1248</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">jili_status</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">498</Data></Cell>
+    <Cell><Data ss:Type="String">後撤</Data></Cell>
+    <Cell><Data ss:Type="String">受到射程內攻擊時，嘗試向身後移動。若能逃離攻擊範圍，則不受該次攻擊。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">xianzhinuhou</Data></Cell>
+    <Cell><Data ss:Type="Number">7901</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">xianzhinuhou_status</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">499</Data></Cell>
+    <Cell><Data ss:Type="String">守護</Data></Cell>
+    <Cell><Data ss:Type="String">代替周圍一格內所有友方士兵及英雄承受傷害。</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">fangwei</Data></Cell>
+    <Cell><Data ss:Type="Number">4403</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell><Data ss:Type="String">持續打擊</Data></Cell>
+    <Cell><Data ss:Type="String">攻擊次數+1。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">zhugong</Data></Cell>
+    <Cell><Data ss:Type="Number">6601</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">501</Data></Cell>
+    <Cell><Data ss:Type="String">靈魂收割3</Data></Cell>
+    <Cell><Data ss:Type="String">敵方士兵死亡時，自己攻擊力+3，生命+3。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">shengmingdaoyan</Data></Cell>
+    <Cell><Data ss:Type="Number">451</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">502</Data></Cell>
+    <Cell><Data ss:Type="String">靈魂收割5</Data></Cell>
+    <Cell><Data ss:Type="String">敵方士兵死亡時，自己攻擊力+5，生命+5。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">shengmingdaoyan</Data></Cell>
+    <Cell><Data ss:Type="Number">493</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Index="13"><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s66">
+    <Cell><Data ss:Type="Number">503</Data></Cell>
+    <Cell><Data ss:Type="String">出沒2</Data></Cell>
+    <Cell><Data ss:Type="String">卡牌品質下降2個等級。</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">xuruo</Data></Cell>
+    <Cell><Data ss:Type="Number">13602</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">shuailao</Data></Cell>
     <Cell><Data ss:Type="Number">0</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -7764,12 +8096,12 @@
    </PageSetup>
    <Unsynced/>
    <Selected/>
-   <TopRowVisible>369</TopRowVisible>
+   <TopRowVisible>234</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>386</ActiveRow>
-     <RangeSelection>R387</RangeSelection>
+     <ActiveRow>247</ActiveRow>
+     <RangeSelection>R248:R249</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
