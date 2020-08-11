@@ -36,7 +36,8 @@ const DEBUG_CHECK_IF_IMAGE_EXIST = false;
 
 /* Update XLSX_* variable information manually after one week around patch */
 const XLSX_CARD = {'name': 'card' , 'url': 'https://kakasfighter.github.io/db/Resources_xml1.xml', 'modifiedDate': "2019-12-23T04:24:04Z", 'size': 10230329, 'updatable': true};
-const XLSX_EFFECT = {'name': 'effect', 'url': 'https://kakasfighter.github.io/db/Resources_xml4.xml' , 'modifiedDate': "2020-04-13T10:25:44Z", 'size': 5384044, 'updatable': true};
+const XLSX_EFFECT = {'name': 'effect', 'url': 'https://kakasfighter.github.io/db/Resources_xml4.xml' , 'modifiedDate': "2020-04-13T10:25:44Z", 'size': 5383822, 'updatable': true};
+//const XLSX_EFFECT = {'name': 'effect', 'url': 'https://e4d6a831-53e0-4257-9c61-33ad9a2e3234.ws-us02.gitpod.io/files/download/?id=2782fc60-4943-4dc7-a78b-62cebc3e5d92' , 'modifiedDate': "2020-04-13T10:25:44Z", 'size': 5383822, 'updatable': true};
 const XLSX_SKILL = {'name': 'Skill', 'url': 'https://kakasfighter.github.io/db/Resources_xml3.xml' , 'modifiedDate': "2019-12-23T04:24:04Z", 'size': 1032215, 'updatable': true};
 const XLSX_MONSTER = {'name': 'monster', 'url': 'https://kakasfighter.github.io/db/Resources_xml7.xml' , 'modifiedDate': "2020-05-25T08:05:13Z", 'size': 7942724, 'updatable': true};
 const XLSX_STATUS = {'name': 'status', 'url': 'https://kakasfighter.github.io/db/Resources_xml6.xml' , 'modifiedDate': "2019-12-23T04:24:04Z", 'size': 394660, 'updatable': true};

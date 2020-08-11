@@ -31,6 +31,7 @@ onmessage = function(evt) {
               try {
                 v = XLSX.read(data64, evt.data.b);
               } catch (e) {
+                console.log("error:", e);
                 postMessage({ t: "error", d: e.stack });
               }
               postMessage({ t: evt.data.t, d: JSON.stringify(v) });
